@@ -1684,6 +1684,220 @@ def set_pending_publish(
     ] = "ready_to_publish"
 
 
+def _normalize_artwork_match(value):
+    value = str(value or "").casefold()
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
+def _artwork_response(url):
+    response = requests.get(
+        url,
+        timeout=REQUEST_TIMEOUT,
+        headers={"User-Agent": "MB-slsk-dl/1.0"},
+    )
+    response.raise_for_status()
+
+    content_type = response.headers.get("Content-Type", "").casefold()
+    if content_type and not content_type.startswith("image/"):
+        raise RuntimeError(
+            f"unexpected content type: {content_type}"
+        )
+
+    if not response.content:
+        raise RuntimeError("empty response")
+
+    return response.content
+
+
+def _musicbrainz_release_group_art_url(track):
+    data = metadata(track)
+    sources = track.get("sources", {})
+
+    release_group_id = (
+        data.get("release_group_id")
+        or data.get("releaseGroupId")
+    )
+
+    release_group_ids = sources.get("release_group_ids", [])
+    if not release_group_id and release_group_ids:
+        release_group_id = release_group_ids[0]
+
+    if not release_group_id:
+        return None
+
+    return (
+        "https://coverartarchive.org/release-group/"
+        f"{quote(str(release_group_id), safe='')}/front-500"
+    )
+
+
+def _itunes_artwork_url(track):
+    data = metadata(track)
+    artist = str(
+        data.get("album_artist")
+        or data.get("artist")
+        or ""
+    ).strip()
+    album = str(data.get("album") or "").strip()
+
+    if not artist or not album:
+        return None
+
+    response = requests.get(
+        "https://itunes.apple.com/search",
+        params={
+            "term": f"{artist} {album}",
+            "entity": "album",
+            "limit": 10,
+            "country": "US",
+        },
+        timeout=REQUEST_TIMEOUT,
+        headers={"User-Agent": "MB-slsk-dl/1.0"},
+    )
+    response.raise_for_status()
+
+    results = response.json().get("results", [])
+    target_artist = _normalize_artwork_match(artist)
+    target_album = _normalize_artwork_match(album)
+
+    best_url = None
+    best_score = -1
+
+    for result in results:
+        result_artist = _normalize_artwork_match(
+            result.get("artistName")
+        )
+        result_album = _normalize_artwork_match(
+            result.get("collectionName")
+        )
+
+        score = 0
+        if result_artist == target_artist:
+            score += 2
+        if result_album == target_album:
+            score += 3
+
+        artwork_url = result.get("artworkUrl100")
+        if score > best_score and artwork_url:
+            best_score = score
+            best_url = artwork_url
+
+    # Require an exact album match and an exact or sufficiently close
+    # artist match; this prevents a similarly named album from supplying
+    # the wrong cover.
+    if best_score < 5:
+        return None
+
+    return re.sub(
+        r"/(?:100x100|100x100bb)\.",
+        "/1200x1200bb.",
+        best_url,
+    )
+
+
+def _deezer_artwork_url(track):
+    data = metadata(track)
+    artist = str(
+        data.get("album_artist")
+        or data.get("artist")
+        or ""
+    ).strip()
+    album = str(data.get("album") or "").strip()
+
+    if not artist or not album:
+        return None
+
+    response = requests.get(
+        "https://api.deezer.com/search/album",
+        params={
+            "q": f'artist:"{artist}" album:"{album}"',
+            "limit": 10,
+        },
+        timeout=REQUEST_TIMEOUT,
+        headers={"User-Agent": "MB-slsk-dl/1.0"},
+    )
+    response.raise_for_status()
+
+    results = response.json().get("data", [])
+    target_artist = _normalize_artwork_match(artist)
+    target_album = _normalize_artwork_match(album)
+
+    best_url = None
+    best_score = -1
+
+    for result in results:
+        result_artist = _normalize_artwork_match(
+            (result.get("artist") or {}).get("name")
+        )
+        result_album = _normalize_artwork_match(
+            result.get("title")
+        )
+
+        score = 0
+        if result_artist == target_artist:
+            score += 2
+        if result_album == target_album:
+            score += 3
+
+        artwork_url = (
+            result.get("cover_xl")
+            or result.get("cover_big")
+            or result.get("cover_medium")
+        )
+
+        if score > best_score and artwork_url:
+            best_score = score
+            best_url = artwork_url
+
+    if best_score < 5:
+        return None
+
+    return best_url
+
+
+def fetch_album_art(track):
+    data = metadata(track)
+    album_art = data.get("album_art")
+    candidates = []
+
+    if isinstance(album_art, dict) and album_art.get("url"):
+        candidates.append(
+            ("MusicBrainz Cover Art Archive", album_art["url"])
+        )
+
+    release_group_url = _musicbrainz_release_group_art_url(track)
+    if release_group_url:
+        candidates.append(
+            ("MusicBrainz release-group artwork", release_group_url)
+        )
+
+    providers = [
+        ("Apple iTunes", _itunes_artwork_url),
+        ("Deezer", _deezer_artwork_url),
+    ]
+
+    for name, url in candidates:
+        try:
+            log(f"  Trying artwork: {name}")
+            return _artwork_response(url), name
+        except Exception as exc:
+            log(f"  Artwork source failed: {name}: {exc}")
+
+    for name, resolver in providers:
+        try:
+            log(f"  Trying artwork: {name}")
+            url = resolver(track)
+            if not url:
+                raise RuntimeError("no exact album match")
+            return _artwork_response(url), name
+        except Exception as exc:
+            log(f"  Artwork source failed: {name}: {exc}")
+
+    log("  No artwork source succeeded; continuing without cover art.")
+    return None, None
+
+
 def publish_item(
     client,
     item,
@@ -1709,37 +1923,35 @@ def publish_item(
         for entry in repo_state.get("files", [])
     }
 
-    # Fetch all payloads before creating any Git objects. If a download or
-    # artwork request fails, no partial library commit is created.
-    album_art = first_data.get("album_art")
-    if isinstance(album_art, dict) and album_art.get("url"):
-        artwork_response = requests.get(
-            album_art["url"],
-            timeout=REQUEST_TIMEOUT,
-        )
-        artwork_response.raise_for_status()
+    # Fetch all payloads before creating any Git objects. Artwork is
+    # best-effort: one provider failing must not abort the release.
+    artwork_content, artwork_source = fetch_album_art(tracks[0])
 
-        artist = sanitize_component(
-            first_data.get("album_artist")
-            or first_data.get("artist")
-            or "Unknown Artist"
-        )
-        album = sanitize_component(
-            first_data.get("album")
-            or "Unknown Album"
-        )
-        artwork_path = normalize_path(
-            f"{artist}/{album}/cover.jpg"
-        )
+    artist = sanitize_component(
+        first_data.get("album_artist")
+        or first_data.get("artist")
+        or "Unknown Artist"
+    )
+    album = sanitize_component(
+        first_data.get("album")
+        or "Unknown Album"
+    )
+    artwork_path = normalize_path(
+        f"{artist}/{album}/cover.jpg"
+    )
 
+    if artwork_content is not None:
         if artwork_path not in existing_paths:
             local_payloads.append(
                 {
                     "path": artwork_path,
-                    "content": artwork_response.content,
+                    "content": artwork_content,
                     "kind": "art",
                 }
             )
+            log(f"  Artwork source: {artwork_source}")
+        else:
+            log(f"  Cover already exists; keeping existing artwork.")
 
     for track in tracks:
         local_file = get_local_file(track)
