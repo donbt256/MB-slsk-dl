@@ -280800,17 +280800,82 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "6ac7a9420798c01e",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\A Simple Song (2022)\\01 - A Simple Song.m4a",
+              "size": 6665036,
+              "score": 97.26,
+              "extension": "m4a",
+              "candidate_title": "A Simple Song",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/A Simple Song (2022)/01 - A Simple Song.m4a",
+          "filename": "01 - A Simple Song.m4a",
+          "size": 6665036
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/A Simple Song/01 - A Simple Song.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "434303ba-0b23-49b3-8c09-fd99e817c424",
+            "query": "Sushi Soucy A Simple Song",
+            "candidate_count": 3,
+            "timestamp": 1790709963
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy A Simple Song"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "6ac7a9420798c01e",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\A Simple Song (2022)\\01 - A Simple Song.m4a",
+              "size": 6665036,
+              "score": 97.26,
+              "extension": "m4a",
+              "candidate_title": "A Simple Song",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "899d72bafd0ae216",
+              "username": "howehouse",
+              "filename": "music\\thesocialq\\Sushi Soucy\\A Simple Song\\A Simple Song.mp3",
+              "size": 6604977,
+              "score": 90.0,
+              "extension": "mp3",
+              "candidate_title": "A Simple Song",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -281258,8 +281323,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 326315.09525120095,
-      "last_speed_timestamp": 1790709925
+      "last_speed": 341926.64305920055,
+      "last_speed_timestamp": 1790709990
     },
     "howehouse": {
       "username": "howehouse",
