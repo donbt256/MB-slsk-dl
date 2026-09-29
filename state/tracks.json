@@ -271682,17 +271682,1110 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "56c65d0ec81cecc3",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+              "size": 6502635,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Welcome to the Loser’s Club",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/01 - Welcome to the Loser’s Club.mp3",
+          "filename": "01 - Welcome to the Loser’s Club.mp3",
+          "size": 1398627
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/01 - Welcome to the Loser’s Club.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [
+          {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.15,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "3d60fda0521c08d0",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\01 - Welcome to the Loser’s Club.mp3",
+                  "size": 1398627,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "707c367d1a6c3dcc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\02 - Call from Derry, Maine.mp3",
+                  "size": 1370869,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Call from Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "5f5dcca29b7a3936",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\03 - Stan’s Letter.mp3",
+                  "size": 1392616,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "0e4b536f752a0ce4",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\04 - Murder at the Movies.mp3",
+                  "size": 4817769,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "08a81924468e7a3e",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\05 - Cuts n Bruises.mp3",
+                  "size": 2788216,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "c3deda0d96dd217e",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\06 - Stay Positive.mp3",
+                  "size": 1680241,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "af274f99869085bf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\07 - Sugarcoat.mp3",
+                  "size": 1749458,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "b3433c61fcdc047f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\08 - Serve With a Smile.mp3",
+                  "size": 2357088,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "a3efff19a62d576a",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\09 - Is It Honor That I Want.mp3",
+                  "size": 2429096,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "c6fff95125f9ec34",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\10 - Do I Deserve It.mp3",
+                  "size": 1638641,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "42185837e966e7ed",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\11 - L.O.V.E.mp3",
+                  "size": 1259273,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "L.O.V.E",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "16a3a87df479d5c7",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sushi Soup (2021)\\12 - What You’re Worth (The Guitar Song).mp3",
+                  "size": 2458356,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "b86fe9dd3e4603d1",
+            "username": "howehouse",
+            "folder": "music/thesocialq/Sushi Soucy/Sushi Soup",
+            "file_count": 13,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.1,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "b39e915b12ffd6a3",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\01. Welcome to the Loser's Club.mp3",
+                  "size": 3880693,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Welcome to the Loser's Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "94b799eeca360e5f",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\02. Call from Derry, Maine.mp3",
+                  "size": 3840325,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Call from Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "01efd899e8cd2c7c",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\03. Stan's Letter.mp3",
+                  "size": 4498577,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Stan's Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "1d37bb23c845ee92",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\04. Murder at the Movies.mp3",
+                  "size": 14601367,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "d01d2dd7f61f4ef8",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\05. Cuts n Bruises.mp3",
+                  "size": 8284762,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "a758d28221f1ff1f",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\06. Stay Positive.mp3",
+                  "size": 4674431,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "635a0be2c4d8f592",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\07. Sugarcoat.mp3",
+                  "size": 5647880,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "34df0ea9665a87d1",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\08. Serve With a Smile.mp3",
+                  "size": 6712634,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "714c96e93916a73a",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\09. Is It Honor That I Want.mp3",
+                  "size": 6641528,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "f32f5f98a7912538",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\10. Do I Deserve It.mp3",
+                  "size": 4915635,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "47d97d60233919ce",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\11. L.O.V.E..mp3",
+                  "size": 3800913,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "5e1694f28af8e8e8",
+                  "username": "howehouse",
+                  "filename": "music\\thesocialq\\Sushi Soucy\\Sushi Soup\\12. What You're Worth (The Guitar Song).mp3",
+                  "size": 8595385,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "What You're Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "e99b1515b412d8da",
+            "username": "StonyTark",
+            "folder": "music/Sushi Soucy/Sushi Soup (2021)",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 64.75,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "54806ac14bdddeab",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 01 - Welcome to the Loser’s Club.flac",
+                  "size": 6613647,
+                  "score": 75.2,
+                  "extension": "flac",
+                  "candidate_title": "01 - Welcome to the Loser’s Club",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "6ce8a640efc092ae",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 02 - Call From Derry, Maine.flac",
+                  "size": 7173622,
+                  "score": 74.57,
+                  "extension": "flac",
+                  "candidate_title": "02 - Call From Derry, Maine",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "df65f2f2de543b93",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 03 - Stan’s Letter.flac",
+                  "size": 7382183,
+                  "score": 72.92,
+                  "extension": "flac",
+                  "candidate_title": "03 - Stan’s Letter",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "ed75e079c51dc50a",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 04 - Murder at the Movies.flac",
+                  "size": 23424293,
+                  "score": 74.43,
+                  "extension": "flac",
+                  "candidate_title": "04 - Murder at the Movies",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "72f03e3b90ee0dd4",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 05 - Cuts n Bruises.flac",
+                  "size": 13192062,
+                  "score": 73.22,
+                  "extension": "flac",
+                  "candidate_title": "05 - Cuts n Bruises",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f47fe832fe7011d9",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 06 - Stay Positive.flac",
+                  "size": 7957548,
+                  "score": 72.92,
+                  "extension": "flac",
+                  "candidate_title": "06 - Stay Positive",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "e8661b0b3c64bd7c",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 07 - Sugarcoat.flac",
+                  "size": 9540629,
+                  "score": 71.14,
+                  "extension": "flac",
+                  "candidate_title": "07 - Sugarcoat",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "914d516d397ef67a",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 08 - Serve With a Smile.flac",
+                  "size": 11838923,
+                  "score": 74.11,
+                  "extension": "flac",
+                  "candidate_title": "08 - Serve With a Smile",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "7d1a37b052d006ac",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 09 - Is It Honor That I Want.flac",
+                  "size": 12273508,
+                  "score": 74.82,
+                  "extension": "flac",
+                  "candidate_title": "09 - Is It Honor That I Want",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "1d58ebe12f071ae9",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 10 - Do I Deserve It.flac",
+                  "size": 7903001,
+                  "score": 73.48,
+                  "extension": "flac",
+                  "candidate_title": "10 - Do I Deserve It",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "824d966a49ce919f",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 11 - L.O.V.E.flac",
+                  "size": 6846955,
+                  "score": 69.63,
+                  "extension": "flac",
+                  "candidate_title": "11 - L.O.V.E",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "2b085d2ee0fca6a6",
+                  "username": "StonyTark",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup (2021)\\Sushi Soucy - Sushi Soup - 12 - What You’re Worth (The Guitar Song).flac",
+                  "size": 12742706,
+                  "score": 75.61,
+                  "extension": "flac",
+                  "candidate_title": "12 - What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        ],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271730,17 +272823,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ee42317f02efa47d",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+              "size": 7063692,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Call From Derry, Maine",
+              "candidate_track_number": 2,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/02 - Call from Derry, Maine.mp3",
+          "filename": "02 - Call from Derry, Maine.mp3",
+          "size": 1370869
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/02 - Call From Derry, Maine.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271778,17 +273139,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "9006ded4f99554a3",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+              "size": 7271908,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Stan’s Letter",
+              "candidate_track_number": 3,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/03 - Stan’s Letter.mp3",
+          "filename": "03 - Stan’s Letter.mp3",
+          "size": 1392616
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/03 - Stan’s Letter.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271826,17 +273455,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "fc5a7170f0c648ab",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+              "size": 23427110,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Murder at the Movies",
+              "candidate_track_number": 4,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/04 - Murder at the Movies.mp3",
+          "filename": "04 - Murder at the Movies.mp3",
+          "size": 4817769
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/04 - Murder at the Movies.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271874,17 +273771,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "9a1f42157cda32d1",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+              "size": 13193400,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Cuts n Bruises",
+              "candidate_track_number": 5,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/05 - Cuts n Bruises.mp3",
+          "filename": "05 - Cuts n Bruises.mp3",
+          "size": 2788216
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/05 - Cuts n Bruises.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271922,17 +274087,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "f01ec0f54a45371f",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+              "size": 7848098,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Stay Positive",
+              "candidate_track_number": 6,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/06 - Stay Positive.mp3",
+          "filename": "06 - Stay Positive.mp3",
+          "size": 1680241
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/06 - Stay Positive.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271970,17 +274403,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "a865dfb0f4741e78",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+              "size": 9433131,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Sugarcoat",
+              "candidate_track_number": 7,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/07 - Sugarcoat.mp3",
+          "filename": "07 - Sugarcoat.mp3",
+          "size": 1749458
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/07 - Sugarcoat.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -272018,17 +274719,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "4ff82b46f76938f6",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+              "size": 11840369,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Serve With a Smile",
+              "candidate_track_number": 8,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/08 - Serve With a Smile.mp3",
+          "filename": "08 - Serve With a Smile.mp3",
+          "size": 2357088
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/08 - Serve With a Smile.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -272066,17 +275035,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "b618c54acc789f84",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+              "size": 12274542,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Is It Honor That I Want",
+              "candidate_track_number": 9,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/09 - Is It Honor That I Want.mp3",
+          "filename": "09 - Is It Honor That I Want.mp3",
+          "size": 2429096
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/09 - Is It Honor That I Want.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -272114,17 +275351,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "72410d4af8c8f9d5",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+              "size": 7793626,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Do I Deserve It",
+              "candidate_track_number": 10,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/10 - Do I Deserve It.mp3",
+          "filename": "10 - Do I Deserve It.mp3",
+          "size": 1638641
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/10 - Do I Deserve It.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -272162,17 +275667,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "35e2f5ab4203392a",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+              "size": 6735716,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "L.O.V.E.",
+              "candidate_track_number": 11,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/11 - L.O.V.E.mp3",
+          "filename": "11 - L.O.V.E.mp3",
+          "size": 1259273
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/11 - L.O.V.E..mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -272210,17 +275983,285 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "92f5d3c5732e4f37",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+              "size": 12744282,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "What You’re Worth (The Guitar Song)",
+              "candidate_track_number": 12,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sushi Soup (2021)/12 - What You’re Worth (The Guitar Song).mp3",
+          "filename": "12 - What You’re Worth (The Guitar Song).mp3",
+          "size": 2458356
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sushi Soup/12 - What You’re Worth (The Guitar Song).mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "score": 97.71,
+            "status": "failed",
+            "timestamp": 1790709090
+          },
+          {
+            "attempt": 2,
+            "release_id": "a80a3de2e3c75fc9",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sushi Soup (2021)",
+            "score": 97.15,
+            "status": "succeeded",
+            "timestamp": 1790709187
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "e1897aa3-d6d3-4343-b6b0-bb8e50f013e6",
+            "query": "Sushi Soucy Sushi Soup",
+            "candidate_count": 62,
+            "timestamp": 1790708402
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sushi Soup"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "fc772f15c318d15d",
+          "release": {
+            "release_id": "fc772f15c318d15d",
+            "username": "gerard_way_estrogen",
+            "folder": "music/Sushi Soucy/Sushi Soup",
+            "file_count": 12,
+            "expected_tracks": 12,
+            "matched_tracks": 12,
+            "coverage": 1.0,
+            "score": 97.71,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "86897c6d-93de-480c-ace1-07307432e230",
+                "title": "Welcome to the Loser’s Club",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "56c65d0ec81cecc3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\01 Welcome to the Loser’s Club.flac",
+                  "size": 6502635,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Welcome to the Loser’s Club",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "1d228236-1e52-4798-b41d-4ac52d0bf167",
+                "title": "Call From Derry, Maine",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee42317f02efa47d",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\02 Call From Derry, Maine.flac",
+                  "size": 7063692,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Call From Derry, Maine",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "277d302f-aa9f-4512-848f-50de551decc0",
+                "title": "Stan’s Letter",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9006ded4f99554a3",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\03 Stan’s Letter.flac",
+                  "size": 7271908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stan’s Letter",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "d4c27274-e2b5-4023-ad63-5a7edc67e4f3",
+                "title": "Murder at the Movies",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fc5a7170f0c648ab",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\04 Murder at the Movies.flac",
+                  "size": 23427110,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Murder at the Movies",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ee89753c-dbac-4a9b-b115-7c9b9598c8b6",
+                "title": "Cuts n Bruises",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9a1f42157cda32d1",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\05 Cuts n Bruises.flac",
+                  "size": 13193400,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Cuts n Bruises",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9275055b-99ae-458a-9c8b-d7d949cc3e13",
+                "title": "Stay Positive",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f01ec0f54a45371f",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\06 Stay Positive.flac",
+                  "size": 7848098,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Stay Positive",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "16eecdd4-7af1-4ed7-9c83-e10573aae5ba",
+                "title": "Sugarcoat",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a865dfb0f4741e78",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\07 Sugarcoat.flac",
+                  "size": 9433131,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Sugarcoat",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "76f9da52-6fc4-4a1c-b39c-315814e15dfa",
+                "title": "Serve With a Smile",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "4ff82b46f76938f6",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\08 Serve With a Smile.flac",
+                  "size": 11840369,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Serve With a Smile",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "13895226-ff06-40a0-a899-585cb1d0698d",
+                "title": "Is It Honor That I Want",
+                "track_number": 9,
+                "candidate": {
+                  "candidate_id": "b618c54acc789f84",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\09 Is It Honor That I Want.flac",
+                  "size": 12274542,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Is It Honor That I Want",
+                  "candidate_track_number": 9,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08f1042f-2e3a-4263-ba35-2068b672cb10",
+                "title": "Do I Deserve It",
+                "track_number": 10,
+                "candidate": {
+                  "candidate_id": "72410d4af8c8f9d5",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\10 Do I Deserve It.flac",
+                  "size": 7793626,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Do I Deserve It",
+                  "candidate_track_number": 10,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "08dc3f32-2b44-45d5-8312-4c3507e8d23c",
+                "title": "L.O.V.E.",
+                "track_number": 11,
+                "candidate": {
+                  "candidate_id": "35e2f5ab4203392a",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\11 L.O.V.E..flac",
+                  "size": 6735716,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "L.O.V.E.",
+                  "candidate_track_number": 11,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "9d818896-f1df-4465-aeea-3d1beed8ab81",
+                "title": "What You’re Worth (The Guitar Song)",
+                "track_number": 12,
+                "candidate": {
+                  "candidate_id": "92f5d3c5732e4f37",
+                  "username": "gerard_way_estrogen",
+                  "filename": "music\\Sushi Soucy\\Sushi Soup\\12 What You’re Worth (The Guitar Song).flac",
+                  "size": 12744282,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "What You’re Worth (The Guitar Song)",
+                  "candidate_track_number": 12,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -274246,6 +278287,20 @@
       "blacklisted": false,
       "last_speed": 28106851.120127734,
       "last_speed_timestamp": 1790708321
+    },
+    "gerard_way_estrogen": {
+      "username": "gerard_way_estrogen",
+      "slow_transfers": 3,
+      "blacklisted": true,
+      "last_speed": 72672.37738177282,
+      "last_speed_timestamp": 1790709090
+    },
+    "pogmommy": {
+      "username": "pogmommy",
+      "slow_transfers": 0,
+      "blacklisted": false,
+      "last_speed": 574499.5321708437,
+      "last_speed_timestamp": 1790709187
     }
   }
 }
