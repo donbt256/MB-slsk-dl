@@ -8,6 +8,18 @@ albums:
   - artist: "Pixies"
     album: "Doolittle"
 
+  - artist: "Pixies"
+    album: "Surfer Rosa (2007 Remaster)"
+
+  - artist: "Pixies"
+    album: "Bossanova"
+
+  - artist: "Pixies"
+    album: "Head Carrier"
+
+  - artist: "Pixies"
+    album: "Come On Pilgrim"
+
   - artist: "Wilco"
     album: "Yankee Hotel Foxtrot (Expanded Edition)"
 
@@ -16,6 +28,81 @@ albums:
 
   - artist: "Wilco"
     album: "Sky Blue Sky"
+
+  - artist: "Pink Floyd"
+    album: "The Dark Side of the Moon"
+
+  - artist: "Radiohead"
+    album: "In Rainbows"
+
+  - artist: "Radiohead"
+    album: "OK Computer OKNOTOK 1997 2017"
+
+  - artist: "Radiohead"
+    album: "The Bends"
+
+  - artist: "Radiohead"
+    album: "Kid A"
+
+  - artist: "The Flaming Lips"
+    album: "At War with the Mystics (Deluxe Version)"
+
+  - artist: "The Flaming Lips"
+    album: "Yoshimi Battles the Pink Robots (20th Anniversary Deluxe Edition)"
+
+  - artist: "The Flaming Lips"
+    album: "The Soft Bulletin (25th Anniversary)"
+
+  - artist: "The Flaming Lips"
+    album: "Transmissions from the Satellite Heart"
+
+  - artist: "The New Pornographers"
+    album: "Mass Romantic"
+
+  - artist: "The New Pornographers"
+    album: "Electric Version"
+
+  - artist: "The New Pornographers"
+    album: "Twin Cinema"
+
+  - artist: "The New Pornographers"
+    album: "Challengers"
+
+  - artist: "The New Pornographers"
+    album: "The Former Site Of"
+
+  - artist: "Bo Burnham"
+    album: "Bo Burnham"
+
+  - artist: "Bo Burnham"
+    album: "Words Words Words"
+
+  - artist: "Bo Burnham"
+    album: "what."
+
+  - artist: "Bo Burnham"
+    album: "Inside (The Songs)"
+
+  - artist: "Bo Burnham"
+    album: "THE INSIDE OUTTAKES"
+
+  - artist: "Bo Burnham"
+    album: "Bo fo Sho"
+
+  - artist: "Conan Gray"
+    album: "Kid Krow, Decomposed (5 Year Anniversary)"
+
+  - artist: "Conan Gray"
+    album: "Superache (Bonus Videos Edition)"
+
+  - artist: "Conan Gray"
+    album: "Found Heaven"
+
+  - artist: "Conan Gray"
+    album: "Wishbone Deluxe"
+
+  - artist: "Conan Gray"
+    album: "Sunset Season"
 
   - artist: "Sushi Soucy"
     album: "Sushi Soup"
@@ -64,179 +151,5 @@ albums:
 
   - artist: "Sushi Soucy"
     album: "Deep Breaths"
-
-  - artist: "Pixies"
-    album: "Surfer Rosa (2007 Remaster)"
-
-  - artist: "Pixies"
-    album: "Bossanova"
-
-  - artist: "Pixies"
-    album: "Head Carrier"
-
-  - artist: "Pixies"
-    album: "Come On Pilgrim"
-
-  - artist: "Pink Floyd"
-    album: "The Dark Side of the Moon"
-
-  - artist: "Bo Burnham"
-    album: "INSIDE (DELUXE)"
-
-  - artist: "Bo Burnham"
-    album: "What."
-
-  - artist: "Bo Burnham"
-    album: "Words Words Words"
-
-  - artist: "Bo Burnham"
-    album: "Bo Burnham"
-
-  - artist: "Bo Burnham"
-    album: "Bo Fo Sho"
-
-  - artist: "Radiohead"
-    album: "In Rainbows"
-
-  - artist: "Radiohead"
-    album: "OK Computer OKNOTOK 1997 2017"
-
-  - artist: "Radiohead"
-    album: "The Bends"
-
-  - artist: "Radiohead"
-    album: "Kid A"
-
-
-  - artist: "The Flaming Lips"
-    album: "At War with the Mystics (Deluxe Version)"
-
-  - artist: "The Flaming Lips"
-    album: "Yoshimi Battles the Pink Robots (20th Anniversary Deluxe Edition)"
-
-  - artist: "The Flaming Lips"
-    album: "The Soft Bulletin (25th Anniversary)"
-
-  - artist: "The Flaming Lips"
-    album: "Transmissions from the Satellite Heart"
-
-  - artist: "Sushi Soucy"
-    album: "I Deserve to Bleed"
-
-  - artist: "Sushi Soucy"
-    album: "Deep Breaths"
-
-  - artist: "Sushi Soucy"
-    album: "Average"
-
-  - artist: "Sushi Soucy"
-    album: "Dear God"
-
-  - artist: "Sushi Soucy"
-    album: "A Simple Song"
-
-  - artist: "Sushi Soucy"
-    album: "Missing Hell"
-
-  - artist: "Sushi Soucy"
-    album: "Rock in God's Shoe"
-
-  - artist: "Sushi Soucy"
-    album: "Circumstancial Wallflower"
-
-  - artist: "Sushi Soucy"
-    album: "The Hard Way"
-
-  - artist: "Sushi Soucy"
-    album: "Almost Perfect"
-
-  - artist: "Sushi Soucy"
-    album: "Almost Perfect (Acoustic)"
-
-  - artist: "Sushi Soucy"
-    album: "Hey, You!.mov"
-
-
-  - artist: "Conan Gray"
-    album: "Kid Krow, Decomposed (5 Year Anniversary)"
-
-  - artist: "Conan Gray"
-    album: "Superache (Bonus Videos Edition)"
-
-  - artist: "Conan Gray"
-    album: "Found Heaven"
-
-  - artist: "Conan Gray"
-    album: "Wishbone Deluxe"
-
-  - artist: "Conan Gray"
-    album: "Sunset Season"
-
-
-  - artist: "Conan Gray"
-    album: "Grow"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  - artist: "Conan Gray"
-    album: "Bo Burnham"
-
-  - artist: "Bo Burnham"
-    album: "Bo Burnham"
-
-  - artist: "Bo Burnham"
-    album: "Words Words Words"
-
-  - artist: "Bo Burnham"
-    album: "what."
-
-  - artist: "Bo Burnham"
-    album: "Inside (The Songs)"
-
-  - artist: "Bo Burnham"
-    album: "THE INSIDE OUTTAKES"
-
-  - artist: "Bo Burnham"
-    album: "Bo fo Sho"
-
-
-
-
-  - artist: "The New Pornographers"
-    album: "Mass Romantic"
-
-  - artist: "The New Pornographers"
-    album: "Electric Version"
-
-  - artist: "The New Pornographers"
-    album: "Twin Cinema"
-
-  - artist: "The New Pornographers"
-    album: "Challengers"
-
-  - artist: "The New Pornographers"
-    album: "The Former Site Of"
 
 tracks:
