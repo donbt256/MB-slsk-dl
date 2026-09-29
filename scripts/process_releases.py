@@ -88,15 +88,15 @@ def compact_state(state):
     album_seen = set()
 
     for track in state.get("tracks", []):
-        musicbrainz = track.get("musicbrainz", {})
+        metadata = track.get("metadata", {})
         album_key = (
             str(
-                musicbrainz.get("album_artist")
-                or musicbrainz.get("artist")
+                metadata.get("album_artist")
+                or metadata.get("artist")
                 or ""
             ).casefold(),
             str(
-                musicbrainz.get("album")
+                metadata.get("album")
                 or ""
             ).casefold(),
         )
@@ -300,7 +300,7 @@ def local_file_exists(track):
 
 def track_id(track):
     return str(
-        track.get("musicbrainz", {}).get("id")
+        track.get("metadata", {}).get("id")
         or ""
     )
 
@@ -393,7 +393,7 @@ def main():
 
             if incomplete:
                 names = [
-                    track.get("musicbrainz", {}).get("title", "?")
+                    track.get("metadata", {}).get("title", "?")
                     for track in incomplete
                 ]
                 raise RuntimeError(
@@ -419,7 +419,7 @@ def main():
 
             if unpublished:
                 names = [
-                    track.get("musicbrainz", {}).get("title", "?")
+                    track.get("metadata", {}).get("title", "?")
                     for track in unpublished
                 ]
                 raise RuntimeError(
@@ -468,7 +468,7 @@ def main():
                 )
 
     print("", flush=True)
-    print("=== Updating musicbrainz playlists ===", flush=True)
+    print("=== Updating metadata playlists ===", flush=True)
 
     try:
         run_stage("scripts/playlists.py", os.environ.copy())
