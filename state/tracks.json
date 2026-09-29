@@ -280596,17 +280596,71 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "a9f61e053d940ebf",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Missing Hell (2023)\\01 - Missing Hell.m4a",
+              "size": 4855794,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "Missing Hell",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Missing Hell (2023)/01 - Missing Hell.m4a",
+          "filename": "01 - Missing Hell.m4a",
+          "size": 4855794
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Missing Hell/01 - Missing Hell.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "3a62eccb-1940-4675-9fd4-408085dd07d7",
+            "query": "Sushi Soucy Missing Hell",
+            "candidate_count": 2,
+            "timestamp": 1790709833
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Missing Hell"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "a9f61e053d940ebf",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Missing Hell (2023)\\01 - Missing Hell.m4a",
+              "size": 4855794,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "Missing Hell",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -281150,8 +281204,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 315538.7975927903,
-      "last_speed_timestamp": 1790709793
+      "last_speed": 544725.058554819,
+      "last_speed_timestamp": 1790709845
     },
     "howehouse": {
       "username": "howehouse",
