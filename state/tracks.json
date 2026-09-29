@@ -268842,17 +268842,2029 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "44ca68559321206d",
+              "username": "eloquence",
+              "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+              "size": 85066321,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Idle Town",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sunset Season/01 Idle Town.flac",
+          "filename": "01 Idle Town.flac",
+          "size": 85066321
+        },
+        "library": {
+          "repo": "music-library-006",
+          "path": "Conan Gray/Sunset Season/01 - Idle Town.flac"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "score": 93.48,
+            "status": "succeeded",
+            "timestamp": 1790708321
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "2069a0c7-3cf7-4683-807b-0aadc7d17dcf",
+            "query": "Conan Gray Sunset Season",
+            "candidate_count": 188,
+            "timestamp": 1790708298
+          }
+        ],
+        "release_candidates": [
+          {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "4f55814bfea6c24e",
+            "username": "akipuppy",
+            "folder": "musicA/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.35,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "537fc82dc1b20fa4",
+                  "username": "akipuppy",
+                  "filename": "musicA\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85781581,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "2d1453c48466a4f1",
+                  "username": "akipuppy",
+                  "filename": "musicA\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81766908,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d55164fb4aa51f7e",
+                  "username": "akipuppy",
+                  "filename": "musicA\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 75802065,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "0f410cf8b1647352",
+                  "username": "akipuppy",
+                  "filename": "musicA\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 87258723,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "b01a7ff1ac649900",
+                  "username": "akipuppy",
+                  "filename": "musicA\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 77170921,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1ed78125a3399629",
+            "username": "barbiebussy",
+            "folder": "Music/Conan Gray/Sunset Season - EP",
+            "file_count": 12,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.05,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "52d4f97b4960c9d6",
+                  "username": "barbiebussy",
+                  "filename": "Music\\Conan Gray\\Sunset Season - EP\\01 Idle Town.mp3",
+                  "size": 25475543,
+                  "score": 98.24,
+                  "extension": "",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "95cfa015766bc634",
+                  "username": "barbiebussy",
+                  "filename": "Music\\Conan Gray\\Sunset Season - EP\\02 Generation Why.mp3",
+                  "size": 24745169,
+                  "score": 98.24,
+                  "extension": "",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "39d7049f2addad29",
+                  "username": "barbiebussy",
+                  "filename": "Music\\Conan Gray\\Sunset Season - EP\\03 Crush Culture.mp3",
+                  "size": 24122408,
+                  "score": 98.24,
+                  "extension": "",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "93fadd1df264665f",
+                  "username": "barbiebussy",
+                  "filename": "Music\\Conan Gray\\Sunset Season - EP\\04 Greek God.mp3",
+                  "size": 25427477,
+                  "score": 88.24,
+                  "extension": "",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "adc9e49d59b795f8",
+                  "username": "barbiebussy",
+                  "filename": "Music\\Conan Gray\\Sunset Season - EP\\05 Lookalike.mp3",
+                  "size": 24792180,
+                  "score": 88.24,
+                  "extension": "",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "f9fc601d8d45b0ac",
+            "username": "kJmAKuc1ps4BnA4y",
+            "folder": "music/Conan Gray/Sunset Season (2018)",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 92.84,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "0ed213bfa2684f78",
+                  "username": "kJmAKuc1ps4BnA4y",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\01 Idle Town.flac",
+                  "size": 23763719,
+                  "score": 97.26,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "88085c507af51564",
+                  "username": "kJmAKuc1ps4BnA4y",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\02 Generation Why.flac",
+                  "size": 24464400,
+                  "score": 97.26,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a7c218a804257bad",
+                  "username": "kJmAKuc1ps4BnA4y",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\03 Crush Culture.flac",
+                  "size": 23436467,
+                  "score": 97.26,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "778d2abe3bcf363a",
+                  "username": "kJmAKuc1ps4BnA4y",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\04 Greek God.flac",
+                  "size": 25566483,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "f169f99c08cf9bdd",
+                  "username": "kJmAKuc1ps4BnA4y",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\05 Lookalike.flac",
+                  "size": 21389238,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "5d9a651b9a2cc660",
+            "username": "staticvisionary",
+            "folder": "Music/Conan Gray/[2018] Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 92.84,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8ca9456e5d03451f",
+                  "username": "staticvisionary",
+                  "filename": "Music\\Conan Gray\\[2018] Sunset Season\\01 Idle Town.mp3",
+                  "size": 8626663,
+                  "score": 97.26,
+                  "extension": "",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5aa3865ffa73fc60",
+                  "username": "staticvisionary",
+                  "filename": "Music\\Conan Gray\\[2018] Sunset Season\\02 Generation Why.mp3",
+                  "size": 8070777,
+                  "score": 97.26,
+                  "extension": "",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ff6492c36f0514b8",
+                  "username": "staticvisionary",
+                  "filename": "Music\\Conan Gray\\[2018] Sunset Season\\03 Crush Culture.mp3",
+                  "size": 7760676,
+                  "score": 97.26,
+                  "extension": "",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "51ab8c1b8b6d39d8",
+                  "username": "staticvisionary",
+                  "filename": "Music\\Conan Gray\\[2018] Sunset Season\\04 Greek God.mp3",
+                  "size": 8589047,
+                  "score": 87.26,
+                  "extension": "",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "f59d99aaf8ba8bbe",
+                  "username": "staticvisionary",
+                  "filename": "Music\\Conan Gray\\[2018] Sunset Season\\05 Lookalike.mp3",
+                  "size": 8080808,
+                  "score": 87.26,
+                  "extension": "",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "5b1079484a58f912",
+            "username": "masteridol",
+            "folder": "@@cvlui/Music/Ready/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 92.79,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8d2cac7ddcd482d3",
+                  "username": "masteridol",
+                  "filename": "@@cvlui\\Music\\Ready\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 83868069,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "bc86faad083f3d8d",
+                  "username": "masteridol",
+                  "filename": "@@cvlui\\Music\\Ready\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 79853396,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "b9360952c527168f",
+                  "username": "masteridol",
+                  "filename": "@@cvlui\\Music\\Ready\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 73888553,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "e8402db06c151a93",
+                  "username": "masteridol",
+                  "filename": "@@cvlui\\Music\\Ready\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 85345211,
+                  "score": 90.0,
+                  "extension": "",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "4d26eacf45032fad",
+                  "username": "masteridol",
+                  "filename": "@@cvlui\\Music\\Ready\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 75257409,
+                  "score": 90.0,
+                  "extension": "",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "302fd723fbac3657",
+            "username": "eth0_2",
+            "folder": "qobuz/Conan Gray/Sunset Season [n19l2n4bq29db]/FLAC (16bit-44.1kHz)",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 91.61,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "d4eb1c7a8ba1cbbb",
+                  "username": "eth0_2",
+                  "filename": "qobuz\\Conan Gray\\Sunset Season [n19l2n4bq29db]\\FLAC (16bit-44.1kHz)\\01 - Idle Town.flac",
+                  "size": 25968750,
+                  "score": 94.33,
+                  "extension": "",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "2bd970ed7df65c70",
+                  "username": "eth0_2",
+                  "filename": "qobuz\\Conan Gray\\Sunset Season [n19l2n4bq29db]\\FLAC (16bit-44.1kHz)\\02 - Generation Why.flac",
+                  "size": 26754918,
+                  "score": 94.33,
+                  "extension": "",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a2d6842699e81f9b",
+                  "username": "eth0_2",
+                  "filename": "qobuz\\Conan Gray\\Sunset Season [n19l2n4bq29db]\\FLAC (16bit-44.1kHz)\\03 - Crush Culture.flac",
+                  "size": 25703922,
+                  "score": 94.33,
+                  "extension": "",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "9937b1aecd379c48",
+                  "username": "eth0_2",
+                  "filename": "qobuz\\Conan Gray\\Sunset Season [n19l2n4bq29db]\\FLAC (16bit-44.1kHz)\\04 - Greek God.flac",
+                  "size": 27870712,
+                  "score": 84.33,
+                  "extension": "",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "9d246eff13e37196",
+                  "username": "eth0_2",
+                  "filename": "qobuz\\Conan Gray\\Sunset Season [n19l2n4bq29db]\\FLAC (16bit-44.1kHz)\\05 - Lookalike.flac",
+                  "size": 23708464,
+                  "score": 84.33,
+                  "extension": "",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "461ec0eb29694bcc",
+            "username": "milksop",
+            "folder": "shared/Music/Conan Gray/Conan Gray - Sunset Season (2018) [16B-44.1kHz]",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 91.25,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "3b28c5f8fa68a677",
+                  "username": "milksop",
+                  "filename": "shared\\Music\\Conan Gray\\Conan Gray - Sunset Season (2018) [16B-44.1kHz]\\01. Idle Town.flac",
+                  "size": 23184313,
+                  "score": 91.19,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "1ebf1434c29300a0",
+                  "username": "milksop",
+                  "filename": "shared\\Music\\Conan Gray\\Conan Gray - Sunset Season (2018) [16B-44.1kHz]\\02. Generation Why.flac",
+                  "size": 23971272,
+                  "score": 91.19,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "cd7ee3a4c00ff37b",
+                  "username": "milksop",
+                  "filename": "shared\\Music\\Conan Gray\\Conan Gray - Sunset Season (2018) [16B-44.1kHz]\\03. Crush Culture.flac",
+                  "size": 22919224,
+                  "score": 91.19,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "13e61379de3797a2",
+                  "username": "milksop",
+                  "filename": "shared\\Music\\Conan Gray\\Conan Gray - Sunset Season (2018) [16B-44.1kHz]\\04. Greek God.flac",
+                  "size": 25088177,
+                  "score": 81.19,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "24a6e9b0117eda73",
+                  "username": "milksop",
+                  "filename": "shared\\Music\\Conan Gray\\Conan Gray - Sunset Season (2018) [16B-44.1kHz]\\05. Lookalike.flac",
+                  "size": 20921767,
+                  "score": 81.19,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "9fe75eee0685013f",
+            "username": "Rumour",
+            "folder": "beets/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 89.01,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "458ece337ff5aa81",
+                  "username": "Rumour",
+                  "filename": "beets\\Conan Gray\\Sunset Season\\04 Idle Town.flac",
+                  "size": 84164487,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "8c7ca0cc153dc575",
+                  "username": "Rumour",
+                  "filename": "beets\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 80149814,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "175388fdcd036a2e",
+                  "username": "Rumour",
+                  "filename": "beets\\Conan Gray\\Sunset Season\\01 Crush Culture.flac",
+                  "size": 74184970,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "608e4d58e6fa2627",
+                  "username": "Rumour",
+                  "filename": "beets\\Conan Gray\\Sunset Season\\03 Greek God.flac",
+                  "size": 85641629,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "764b87ff2739c360",
+                  "username": "Rumour",
+                  "filename": "beets\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 75553827,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "a0ecfbc14925b9bc",
+            "username": "untimed0014",
+            "folder": "music/Conan Gray/ep/[2018] Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 88.29,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "c68531fa32bf91e1",
+                  "username": "untimed0014",
+                  "filename": "music\\Conan Gray\\ep\\[2018] Sunset Season\\04. Idle Town.flac",
+                  "size": 23413359,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "4ddfe6a654bdb958",
+                  "username": "untimed0014",
+                  "filename": "music\\Conan Gray\\ep\\[2018] Sunset Season\\02. Generation Why.flac",
+                  "size": 24116799,
+                  "score": 97.26,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "84cd407c2e598e73",
+                  "username": "untimed0014",
+                  "filename": "music\\Conan Gray\\ep\\[2018] Sunset Season\\01. Crush Culture.flac",
+                  "size": 23088050,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "25ae7a84dce6a357",
+                  "username": "untimed0014",
+                  "filename": "music\\Conan Gray\\ep\\[2018] Sunset Season\\03. Greek God.flac",
+                  "size": 25218516,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "d4bb9a8809d2076e",
+                  "username": "untimed0014",
+                  "filename": "music\\Conan Gray\\ep\\[2018] Sunset Season\\05. Lookalike.flac",
+                  "size": 21040655,
+                  "score": 87.26,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "cb1b8fbab5a7303a",
+            "username": "ElysiumPlanitia",
+            "folder": "Music/Conan Gray/Sunset Season (2018) [FLAC]",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 85.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ed6a98e62126890e",
+                  "username": "ElysiumPlanitia",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018) [FLAC]\\Idle Town.flac",
+                  "size": 23583273,
+                  "score": 85.28,
+                  "extension": "",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "8b847e4976e1408b",
+                  "username": "ElysiumPlanitia",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018) [FLAC]\\Generation Why.flac",
+                  "size": 24283555,
+                  "score": 85.28,
+                  "extension": "",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9f89eb47a5349f82",
+                  "username": "ElysiumPlanitia",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018) [FLAC]\\Crush Culture.flac",
+                  "size": 23256077,
+                  "score": 85.28,
+                  "extension": "",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "5fbd8e8e9ac8d695",
+                  "username": "ElysiumPlanitia",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018) [FLAC]\\Greek God.flac",
+                  "size": 25386053,
+                  "score": 85.28,
+                  "extension": "",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ee44e4659535da0f",
+                  "username": "ElysiumPlanitia",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018) [FLAC]\\Lookalike.flac",
+                  "size": 21209264,
+                  "score": 85.28,
+                  "extension": "",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "7c138cb0c10fcc58",
+            "username": "Grohl",
+            "folder": "Music/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 69.77,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "9dcdb3bd6b9f676f",
+                  "username": "Grohl",
+                  "filename": "Music\\Conan Gray\\Sunset Season\\01-01 Idle Town.flac",
+                  "size": 23578909,
+                  "score": 83.57,
+                  "extension": "",
+                  "candidate_title": "01 Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "93598993eaeffd94",
+                  "username": "Grohl",
+                  "filename": "Music\\Conan Gray\\Sunset Season\\01-02 Generation Why.flac",
+                  "size": 24278505,
+                  "score": 78.65,
+                  "extension": "",
+                  "candidate_title": "02 Generation Why",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "1dab30e8f1de4163",
+                  "username": "Grohl",
+                  "filename": "Music\\Conan Gray\\Sunset Season\\01-03 Crush Culture.flac",
+                  "size": 23252039,
+                  "score": 75.34,
+                  "extension": "",
+                  "candidate_title": "03 Crush Culture",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "67ccc578bfd8824d",
+                  "username": "Grohl",
+                  "filename": "Music\\Conan Gray\\Sunset Season\\01-04 Greek God.flac",
+                  "size": 25379888,
+                  "score": 83.57,
+                  "extension": "",
+                  "candidate_title": "04 Greek God",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "3865b6ca638ef773",
+                  "username": "Grohl",
+                  "filename": "Music\\Conan Gray\\Sunset Season\\01-05 Lookalike.flac",
+                  "size": 21207271,
+                  "score": 76.57,
+                  "extension": "",
+                  "candidate_title": "05 Lookalike",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "a0a26f08fa7bc85a",
+            "username": "MindEracer",
+            "folder": "music/Conan Gray/Sunset Season (2018) [EP] [CD] [FLAC 24bit]",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 68.15,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8ff2dc2417e2bccc",
+                  "username": "MindEracer",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018) [EP] [CD] [FLAC 24bit]\\01 - Idle Town [FLAC 24bit - 2909 kbps - 96kHz].flac",
+                  "size": 85835859,
+                  "score": 55.21,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town [FLAC 24bit - 2909 kbps - 96kHz]",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "06af5e1a7b4b7304",
+                  "username": "MindEracer",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018) [EP] [CD] [FLAC 24bit]\\02 - Generation Why [FLAC 24bit - 3025 kbps - 96kHz].flac",
+                  "size": 81572180,
+                  "score": 60.12,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why [FLAC 24bit - 3025 kbps - 96kHz]",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "0365534bdc378d30",
+                  "username": "MindEracer",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018) [EP] [CD] [FLAC 24bit]\\03 - Crush Culture [FLAC 24bit - 3059 kbps - 96kHz].flac",
+                  "size": 77229208,
+                  "score": 59.28,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture [FLAC 24bit - 3059 kbps - 96kHz]",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "5a4c374d5275f3b8",
+                  "username": "MindEracer",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018) [EP] [CD] [FLAC 24bit]\\04 - Greek God [FLAC 24bit - 2991 kbps - 96kHz].flac",
+                  "size": 87333241,
+                  "score": 45.21,
+                  "extension": "flac",
+                  "candidate_title": "Greek God [FLAC 24bit - 2991 kbps - 96kHz]",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "9ab508c4757a4d09",
+                  "username": "MindEracer",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018) [EP] [CD] [FLAC 24bit]\\05 - Lookalike [FLAC 24bit - 2852 kbps - 96kHz].flac",
+                  "size": 76791870,
+                  "score": 45.21,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike [FLAC 24bit - 2852 kbps - 96kHz]",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "2d8aaf932b87e11f",
+            "username": "r3dfir3f0x",
+            "folder": "Musica/Conan Gray/Sunset Season",
+            "file_count": 4,
+            "expected_tracks": 5,
+            "matched_tracks": 4,
+            "coverage": 0.8,
+            "score": 66.5,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "c20d865eb016c719",
+                  "username": "r3dfir3f0x",
+                  "filename": "Musica\\Conan Gray\\Sunset Season\\Conan Gray - Idle Town.mp3",
+                  "size": 3810305,
+                  "score": 90.0,
+                  "extension": "mp3",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "0281d9ca0626c188",
+                  "username": "r3dfir3f0x",
+                  "filename": "Musica\\Conan Gray\\Sunset Season\\Conan Gray - Generation Why.mp3",
+                  "size": 3518475,
+                  "score": 90.0,
+                  "extension": "mp3",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "70f600cc4e8be2b1",
+                  "username": "r3dfir3f0x",
+                  "filename": "Musica\\Conan Gray\\Sunset Season\\Conan Gray - Crush Culture.mp3",
+                  "size": 3269257,
+                  "score": 90.0,
+                  "extension": "mp3",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "5edfbdd0c43b635b",
+                  "username": "r3dfir3f0x",
+                  "filename": "Musica\\Conan Gray\\Sunset Season\\Conan Gray - Lookalike.mp3",
+                  "size": 3537281,
+                  "score": 40.0,
+                  "extension": "mp3",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "016312115356a953",
+            "username": "correcthorsebatterystaple",
+            "folder": "music/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 63.25,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "a3d2aeeeb7cba101",
+                  "username": "correcthorsebatterystaple",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_04_Idle Town.flac",
+                  "size": 23745221,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_04_Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "9db82a225747b966",
+                  "username": "correcthorsebatterystaple",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_02_Generation Why.flac",
+                  "size": 24444803,
+                  "score": 57.5,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_02_Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "7c4c120b70cf3208",
+                  "username": "correcthorsebatterystaple",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_01_Crush Culture.flac",
+                  "size": 23418351,
+                  "score": 56.67,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_01_Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "70abc5780e434508",
+                  "username": "correcthorsebatterystaple",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_03_Greek God.flac",
+                  "size": 25546200,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_03_Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "62e7cf35d337d1a7",
+                  "username": "correcthorsebatterystaple",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_05_Lookalike.flac",
+                  "size": 21373583,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_05_Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "a69c4181a18fe285",
+            "username": "plex-spire",
+            "folder": "music/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 63.25,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "550cc82629b7142b",
+                  "username": "plex-spire",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_01_Idle Town.flac",
+                  "size": 22262305,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_01_Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "a594ff7460148d0d",
+                  "username": "plex-spire",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_02_Generation Why.flac",
+                  "size": 24124595,
+                  "score": 57.5,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_02_Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "62f933d0606c4af4",
+                  "username": "plex-spire",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_03_Crush Culture.flac",
+                  "size": 22857627,
+                  "score": 56.67,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_03_Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "7fbaa38489a9f14a",
+                  "username": "plex-spire",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_04_Greek God.flac",
+                  "size": 24977305,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_04_Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "22eaed9d32b10811",
+                  "username": "plex-spire",
+                  "filename": "music\\Conan Gray\\Sunset Season\\Conan Gray_Sunset Season_05_Lookalike.flac",
+                  "size": 21125318,
+                  "score": 52.61,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_05_Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "00d98a39ccdd2a08",
+            "username": "aj-17495a",
+            "folder": "music/Conan Gray/Sunset Season (2018)",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 63.23,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "d278fe9d7136562f",
+                  "username": "aj-17495a",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 01 - Idle Town.flac",
+                  "size": 27139418,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 01 - Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "0a3a7b215e85c72c",
+                  "username": "aj-17495a",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 02 - Generation Why.flac",
+                  "size": 26620627,
+                  "score": 60.26,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 02 - Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "8e23ff287698177c",
+                  "username": "aj-17495a",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 03 - Crush Culture.flac",
+                  "size": 25602412,
+                  "score": 59.47,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 03 - Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ccfe6a5c8855c0c4",
+                  "username": "aj-17495a",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 04 - Greek God.flac",
+                  "size": 28130565,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 04 - Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "3ccaa9ffaa1bbe1d",
+                  "username": "aj-17495a",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 05 - Lookalike.flac",
+                  "size": 23651210,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 05 - Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "b771773bb60545c4",
+            "username": "Defiant",
+            "folder": "Music/Conan Gray/Sunset Season (2018)",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 63.23,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "6d6b35f8e6804c74",
+                  "username": "Defiant",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 01 - Idle Town.flac",
+                  "size": 27139418,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 01 - Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "d64e0212d51ad165",
+                  "username": "Defiant",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 02 - Generation Why.flac",
+                  "size": 26620627,
+                  "score": 60.26,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 02 - Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "c394e99139cd671a",
+                  "username": "Defiant",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 03 - Crush Culture.flac",
+                  "size": 25602412,
+                  "score": 59.47,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 03 - Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "e04abd0b7b62e13b",
+                  "username": "Defiant",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 04 - Greek God.flac",
+                  "size": 28130565,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 04 - Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "26e255917442997e",
+                  "username": "Defiant",
+                  "filename": "Music\\Conan Gray\\Sunset Season (2018)\\Conan Gray - Sunset Season - 05 - Lookalike.flac",
+                  "size": 23651210,
+                  "score": 55.4,
+                  "extension": "flac",
+                  "candidate_title": "Sunset Season - 05 - Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "ded2019d018a3575",
+            "username": "levelupgeekery-server",
+            "folder": "music/Conan Gray/Sunset Season (2018)",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 62.6,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "e2e77a57538354cb",
+                  "username": "levelupgeekery-server",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray_Sunset Season_0101_Idle Town.m4a",
+                  "size": 9855873,
+                  "score": 49.13,
+                  "extension": "m4a",
+                  "candidate_title": "Conan Gray_Sunset Season_0101_Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e79c4fffa0afe857",
+                  "username": "levelupgeekery-server",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray_Sunset Season_0102_Generation Why.m4a",
+                  "size": 9024755,
+                  "score": 53.98,
+                  "extension": "m4a",
+                  "candidate_title": "Conan Gray_Sunset Season_0102_Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "fa20cdac439b68e2",
+                  "username": "levelupgeekery-server",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray_Sunset Season_0103_Crush Culture.m4a",
+                  "size": 7036905,
+                  "score": 53.15,
+                  "extension": "m4a",
+                  "candidate_title": "Conan Gray_Sunset Season_0103_Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ea21abae69c73096",
+                  "username": "levelupgeekery-server",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray_Sunset Season_0104_Greek God.m4a",
+                  "size": 9735583,
+                  "score": 49.13,
+                  "extension": "m4a",
+                  "candidate_title": "Conan Gray_Sunset Season_0104_Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "c8a5aa429df09b13",
+                  "username": "levelupgeekery-server",
+                  "filename": "music\\Conan Gray\\Sunset Season (2018)\\Conan Gray_Sunset Season_0105_Lookalike.m4a",
+                  "size": 7153109,
+                  "score": 49.13,
+                  "extension": "m4a",
+                  "candidate_title": "Conan Gray_Sunset Season_0105_Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "4137de14bf54aa5f",
+            "username": "guineabear",
+            "folder": "music/Conan Gray",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 61.69,
+            "alternate_count": 0,
+            "decision": "reject",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "b88c8f35d700129f",
+                  "username": "guineabear",
+                  "filename": "music\\Conan Gray\\Conan Gray_Sunset Season_01_Idle Town.flac",
+                  "size": 27469528,
+                  "score": 39.39,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_01_Idle Town",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "831d94af522fae0a",
+                  "username": "guineabear",
+                  "filename": "music\\Conan Gray\\Conan Gray_Sunset Season_02_Generation Why.flac",
+                  "size": 26951255,
+                  "score": 44.28,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_02_Generation Why",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "bdf6da83b1d9fb05",
+                  "username": "guineabear",
+                  "filename": "music\\Conan Gray\\Conan Gray_Sunset Season_03_Crush Culture.flac",
+                  "size": 25934058,
+                  "score": 43.44,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_03_Crush Culture",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "9ab0ede7580c4e40",
+                  "username": "guineabear",
+                  "filename": "music\\Conan Gray\\Conan Gray_Sunset Season_04_Greek God.flac",
+                  "size": 28459685,
+                  "score": 39.39,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_04_Greek God",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "3ddccb89c6ebcaa7",
+                  "username": "guineabear",
+                  "filename": "music\\Conan Gray\\Conan Gray_Sunset Season_05_Lookalike.flac",
+                  "size": 23984805,
+                  "score": 39.39,
+                  "extension": "flac",
+                  "candidate_title": "Conan Gray_Sunset Season_05_Lookalike",
+                  "candidate_track_number": null,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        ],
+        "query": "Conan Gray Sunset Season"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "3ad0133f5f8f5d3d",
+          "release": {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -268890,17 +270902,164 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ad0463043d12d2ab",
+              "username": "eloquence",
+              "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+              "size": 81080890,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Generation Why",
+              "candidate_track_number": 2,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sunset Season/02 Generation Why.flac",
+          "filename": "02 Generation Why.flac",
+          "size": 81080890
+        },
+        "library": {
+          "repo": "music-library-006",
+          "path": "Conan Gray/Sunset Season/02 - Generation Why.flac"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "score": 93.48,
+            "status": "succeeded",
+            "timestamp": 1790708321
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "2069a0c7-3cf7-4683-807b-0aadc7d17dcf",
+            "query": "Conan Gray Sunset Season",
+            "candidate_count": 188,
+            "timestamp": 1790708298
+          }
+        ],
+        "release_candidates": [],
+        "query": "Conan Gray Sunset Season"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "3ad0133f5f8f5d3d",
+          "release": {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -268938,17 +271097,164 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "a87460decd22ad65",
+              "username": "eloquence",
+              "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+              "size": 76830235,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "Crush Culture",
+              "candidate_track_number": 3,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sunset Season/03 Crush Culture.flac",
+          "filename": "03 Crush Culture.flac",
+          "size": 76830235
+        },
+        "library": {
+          "repo": "music-library-006",
+          "path": "Conan Gray/Sunset Season/03 - Crush Culture.flac"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "score": 93.48,
+            "status": "succeeded",
+            "timestamp": 1790708321
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "2069a0c7-3cf7-4683-807b-0aadc7d17dcf",
+            "query": "Conan Gray Sunset Season",
+            "candidate_count": 188,
+            "timestamp": 1790708298
+          }
+        ],
+        "release_candidates": [],
+        "query": "Conan Gray Sunset Season"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "3ad0133f5f8f5d3d",
+          "release": {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -268986,17 +271292,164 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "362756d031b46777",
+              "username": "eloquence",
+              "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+              "size": 86745052,
+              "score": 90.0,
+              "extension": "flac",
+              "candidate_title": "Greek God",
+              "candidate_track_number": 4,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sunset Season/04 Greek God.flac",
+          "filename": "04 Greek God.flac",
+          "size": 86745052
+        },
+        "library": {
+          "repo": "music-library-006",
+          "path": "Conan Gray/Sunset Season/01 - Greek God.flac"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "score": 93.48,
+            "status": "succeeded",
+            "timestamp": 1790708321
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "2069a0c7-3cf7-4683-807b-0aadc7d17dcf",
+            "query": "Conan Gray Sunset Season",
+            "candidate_count": 188,
+            "timestamp": 1790708298
+          }
+        ],
+        "release_candidates": [],
+        "query": "Conan Gray Sunset Season"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "3ad0133f5f8f5d3d",
+          "release": {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -269034,17 +271487,164 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "5eaf2b8700c7cadd",
+              "username": "eloquence",
+              "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+              "size": 76243184,
+              "score": 90.0,
+              "extension": "flac",
+              "candidate_title": "Lookalike",
+              "candidate_track_number": 5,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sunset Season/05 Lookalike.flac",
+          "filename": "05 Lookalike.flac",
+          "size": 76243184
+        },
+        "library": {
+          "repo": "music-library-006",
+          "path": "Conan Gray/Sunset Season/02 - Lookalike.flac"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "score": 93.48,
+            "status": "succeeded",
+            "timestamp": 1790708321
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "2069a0c7-3cf7-4683-807b-0aadc7d17dcf",
+            "query": "Conan Gray Sunset Season",
+            "candidate_count": 188,
+            "timestamp": 1790708298
+          }
+        ],
+        "release_candidates": [],
+        "query": "Conan Gray Sunset Season"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "3ad0133f5f8f5d3d",
+          "release": {
+            "release_id": "3ad0133f5f8f5d3d",
+            "username": "eloquence",
+            "folder": "data/Conan Gray/Sunset Season",
+            "file_count": 5,
+            "expected_tracks": 5,
+            "matched_tracks": 5,
+            "coverage": 1.0,
+            "score": 93.48,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "72365e1a-6603-4794-aad2-9efa91474355",
+                "title": "Idle Town",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "44ca68559321206d",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\01 Idle Town.flac",
+                  "size": 85066321,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Idle Town",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "7ed83ce8-1dd2-47d9-8c52-f1f23b6a4781",
+                "title": "Generation Why",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ad0463043d12d2ab",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\02 Generation Why.flac",
+                  "size": 81080890,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Generation Why",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3a64ee4a-ea50-451b-9554-f53ab1669e84",
+                "title": "Crush Culture",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a87460decd22ad65",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\03 Crush Culture.flac",
+                  "size": 76830235,
+                  "score": 100.0,
+                  "extension": "flac",
+                  "candidate_title": "Crush Culture",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "f8355628-3600-4c39-b2b7-e8d36dbf4e6c",
+                "title": "Greek God",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "362756d031b46777",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\04 Greek God.flac",
+                  "size": 86745052,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Greek God",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "3ab2452f-336b-4b62-add7-b3ceea840201",
+                "title": "Lookalike",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "5eaf2b8700c7cadd",
+                  "username": "eloquence",
+                  "filename": "data\\Conan Gray\\Sunset Season\\05 Lookalike.flac",
+                  "size": 76243184,
+                  "score": 90.0,
+                  "extension": "flac",
+                  "candidate_title": "Lookalike",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -271644,8 +274244,8 @@
       "username": "eloquence",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 30743409.909557283,
-      "last_speed_timestamp": 1790708042
+      "last_speed": 28106851.120127734,
+      "last_speed_timestamp": 1790708321
     }
   }
 }
