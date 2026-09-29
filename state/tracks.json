@@ -280450,17 +280450,115 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "6595841bf8c3629d",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Rock in God's Shoe (2023)\\01 - Rock in God's Shoe.m4a",
+              "size": 6782164,
+              "score": 97.93,
+              "extension": "m4a",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Rock in God's Shoe (2023)/01 - Rock in God's Shoe.m4a",
+          "filename": "01 - Rock in God's Shoe.m4a",
+          "size": 6782164
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Rock in God’s Shoe/01 - Rock in God’s Shoe.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "8efa0f30-5312-4253-9749-21ddae617199",
+            "query": "Sushi Soucy Rock in God’s Shoe",
+            "candidate_count": 7,
+            "timestamp": 1790709766
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Rock in God’s Shoe"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "6595841bf8c3629d",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Rock in God's Shoe (2023)\\01 - Rock in God's Shoe.m4a",
+              "size": 6782164,
+              "score": 97.93,
+              "extension": "m4a",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "861529a9028b2eee",
+              "username": "Sapph",
+              "filename": "music\\Tracks\\Sushi Soucy\\[2023] Rock in God's Shoe - Single\\1. Rock in God's Shoe.mp3",
+              "size": 7493720,
+              "score": 95.75,
+              "extension": "mp3",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "2f01cf0256f244e2",
+              "username": "howehouse",
+              "filename": "music\\thesocialq\\Sushi Soucy\\Rock in God’s Shoe\\Rock in God's Shoe.mp3",
+              "size": 6661882,
+              "score": 90.0,
+              "extension": "mp3",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "530e7feee66f635f",
+              "username": "\"Parrot0252\"",
+              "filename": "music\\Emotionally Bearable Songs\\Sushi Soucy - Rock in God's Shoe.opus",
+              "size": 2778444,
+              "score": 68.64,
+              "extension": "opus",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "06477b3e4c141cbc",
+              "username": "\"Parrot0252\"",
+              "filename": "music\\Sushi Soucy - Rock in God's Shoe.opus",
+              "size": 2778444,
+              "score": 65.48,
+              "extension": "opus",
+              "candidate_title": "Rock in God's Shoe",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -281052,8 +281150,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 360189.5517134309,
-      "last_speed_timestamp": 1790709732
+      "last_speed": 315538.7975927903,
+      "last_speed_timestamp": 1790709793
     },
     "howehouse": {
       "username": "howehouse",
