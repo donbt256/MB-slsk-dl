@@ -1,0 +1,367 @@
+import re
+import time
+from urllib.parse import quote
+
+import requests
+
+
+MUSICBRAINZ_API_URL = "https://musicbrainz.org/ws/2"
+MUSICBRAINZ_USER_AGENT = (
+    "MB-slsk-dl/1.0 "
+    "(https://github.com/donbt256/MB-slsk-dl)"
+)
+REQUEST_INTERVAL_SECONDS = 1.05
+
+
+class MusicBrainzClient:
+    def __init__(self):
+        self._next_request_at = 0.0
+
+    def _request(self, endpoint, params=None):
+        wait = self._next_request_at - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+
+        response = requests.get(
+            f"{MUSICBRAINZ_API_URL}{endpoint}",
+            params=params,
+            headers={
+                "User-Agent": MUSICBRAINZ_USER_AGENT,
+                "Accept": "application/json",
+            },
+            timeout=30,
+        )
+        self._next_request_at = time.monotonic() + REQUEST_INTERVAL_SECONDS
+
+        if response.status_code == 503:
+            time.sleep(2)
+            response.raise_for_status()
+
+        response.raise_for_status()
+        return response.json()
+
+    @staticmethod
+    def parse_url(url):
+        match = re.search(
+            r"musicbrainz\.org/(release|release-group)/"
+            r"([0-9a-fA-F-]{36})",
+            url,
+        )
+        if not match:
+            raise ValueError(f"Unsupported MusicBrainz URL: {url}")
+        return match.group(1), match.group(2)
+
+    @staticmethod
+    def _artist_credit(credits):
+        names = []
+        for credit in credits or []:
+            artist = credit.get("artist", {})
+            name = credit.get("name") or artist.get("name")
+            if name:
+                names.append(name)
+            join = credit.get("joinphrase", "")
+            if join:
+                names.append(join)
+        return "".join(names).strip()
+
+    @staticmethod
+    def _track_number(value):
+        match = re.search(r"\d+", str(value or ""))
+        return int(match.group()) if match else None
+
+    def get_release(self, release_id):
+        release = self._request(
+            f"/release/{release_id}",
+            params={
+                "inc": "artist-credits+media+recordings+isrcs",
+                "fmt": "json",
+            },
+        )
+        return self.normalize_release(release)
+
+    def normalize_release(self, release):
+        release_id = release["id"]
+        album = release.get("title")
+        album_artists = self._artist_credit(
+            release.get("artist-credit", [])
+        )
+        release_date = release.get("date")
+        media = release.get("media", [])
+        total_tracks = sum(
+            len(medium.get("tracks", []))
+            for medium in media
+        )
+
+        tracks = []
+        for medium in media:
+            disc_number = medium.get("position")
+            for track in medium.get("tracks", []):
+                recording = track.get("recording", {})
+                recording_artists = self._artist_credit(
+                    track.get("artist-credit")
+                    or recording.get("artist-credit")
+                    or release.get("artist-credit", [])
+                )
+                artist = recording_artists or album_artists
+                title = track.get("title") or recording.get("title")
+                isrcs = (
+                    recording.get("isrcs")
+                    or [
+                        item.get("id")
+                        for item in recording.get("isrc-list", [])
+                        if item.get("id")
+                    ]
+                )
+
+                tracks.append(
+                    {
+                        "id": track.get("id")
+                        or recording.get("id")
+                        or f"{release_id}:{medium.get('position')}:{track.get('position')}",
+                        "url": f"https://musicbrainz.org/release/{release_id}",
+                        "artist": artist,
+                        "artists": [
+                            credit.get("name")
+                            or credit.get("artist", {}).get("name")
+                            for credit in (
+                                track.get("artist-credit")
+                                or recording.get("artist-credit")
+                                or release.get("artist-credit", [])
+                            )
+                            if (
+                                credit.get("name")
+                                or credit.get("artist", {}).get("name")
+                            )
+                        ],
+                        "album": album,
+                        "album_artist": album_artists,
+                        "album_artists": [
+                            credit.get("name")
+                            or credit.get("artist", {}).get("name")
+                            for credit in release.get("artist-credit", [])
+                            if (
+                                credit.get("name")
+                                or credit.get("artist", {}).get("name")
+                            )
+                        ],
+                        "title": title,
+                        "track_number": self._track_number(
+                            track.get("number")
+                        ),
+                        "disc_number": disc_number,
+                        "total_tracks": total_tracks,
+                        "duration_ms": (
+                            track.get("length")
+                            or recording.get("length")
+                        ),
+                        "release_date": release_date,
+                        "release_date_precision": (
+                            "day" if release_date and len(release_date) == 10
+                            else "month" if release_date and len(release_date) == 7
+                            else "year" if release_date
+                            else None
+                        ),
+                        "isrc": isrcs[0] if isrcs else None,
+                        "album_art": {
+                            "url": (
+                                f"https://coverartarchive.org/release/"
+                                f"{release_id}/front-500"
+                            ),
+                            "width": 500,
+                            "height": 500,
+                        },
+                        "musicbrainz_release_id": release_id,
+                        "musicbrainz_recording_id": recording.get("id"),
+                    }
+                )
+
+        return {
+            "release": {
+                "id": release_id,
+                "url": f"https://musicbrainz.org/release/{release_id}",
+                "name": album,
+                "artist": album_artists,
+                "release_date": release_date,
+                "status": release.get("status"),
+                "country": release.get("country"),
+                "release_group": (
+                    release.get("release-group", {}).get("id")
+                ),
+            },
+            "tracks": tracks,
+        }
+
+    def search_release(self, artist, album):
+        query = f'artist:"{artist}" AND release:"{album}"'
+        data = self._request(
+            "/release",
+            params={
+                "query": query,
+                "limit": 25,
+                "fmt": "json",
+            },
+        )
+        results = data.get("releases", [])
+        if not results:
+            raise ValueError(
+                f"MusicBrainz could not find a release for "
+                f"{artist} - {album}."
+            )
+
+        artist_norm = artist.casefold().strip()
+        album_norm = album.casefold().strip()
+
+        def score(item):
+            item_artist = self._artist_credit(
+                item.get("artist-credit", [])
+            ).casefold().strip()
+            item_title = item.get("title", "").casefold().strip()
+            release_group = item.get("release-group", {})
+            primary_type = str(
+                release_group.get("primary-type", "")
+            ).casefold()
+            status = str(item.get("status", "")).casefold()
+
+            value = 0
+            if item_artist == artist_norm:
+                value += 100
+            if item_title == album_norm:
+                value += 100
+            if status == "official":
+                value += 20
+            if primary_type in {"album", "ep", "single"}:
+                value += 10
+            return value
+
+        best = max(results, key=score)
+        print(
+            f"  MusicBrainz match: "
+            f"{self._artist_credit(best.get('artist-credit', []))} - "
+            f"{best.get('title')} "
+            f"({best.get('id')})",
+            flush=True,
+        )
+        return self.get_release(best["id"])
+
+    def get_release_group(self, release_group_id):
+        data = self._request(
+            "/release",
+            params={
+                "release-group": release_group_id,
+                "status": "official",
+                "limit": 100,
+                "fmt": "json",
+            },
+        )
+        releases = data.get("releases", [])
+        if not releases:
+            raise ValueError(
+                f"MusicBrainz release group {release_group_id} "
+                "has no official releases."
+            )
+
+        # Prefer a digital release, then a worldwide release, then the
+        # first official release returned by MusicBrainz.
+        def score(item):
+            value = 0
+            if str(item.get("country", "")).upper() == "XW":
+                value += 20
+            for medium in item.get("media", []):
+                if str(medium.get("format", "")).casefold() == "digital media":
+                    value += 10
+            return value
+
+        best = max(releases, key=score)
+        return self.get_release(best["id"])
+
+
+def resolve_urls(urls, cache=None):
+    client = MusicBrainzClient()
+    tracks = {}
+    track_sources = {}
+    releases = []
+    cache = cache if isinstance(cache, dict) else {}
+    cache.setdefault("releases", {})
+    cache.setdefault("release_groups", {})
+    cache.setdefault("searches", {})
+
+    for raw_url in urls:
+        value = raw_url.strip()
+        if not value or value.startswith("#"):
+            continue
+
+        kind = None
+        entity_id = None
+        if "musicbrainz.org/" in value:
+            kind, entity_id = client.parse_url(value.split("?", 1)[0])
+            print(
+                f"Resolving MusicBrainz {kind}: {entity_id}",
+                flush=True,
+            )
+        else:
+            if " - " not in value:
+                raise ValueError(
+                    "Input must be a MusicBrainz release URL, "
+                    "release-group URL, or 'Artist - Album': "
+                    f"{value}"
+                )
+            artist, album = value.split(" - ", 1)
+            cache_key = f"{artist.strip()}\x1f{album.strip()}"
+            cached = cache["searches"].get(cache_key)
+            if cached:
+                print(
+                    f"  Using cached MusicBrainz search: {artist} - {album}",
+                    flush=True,
+                )
+                resolved = cached
+            else:
+                resolved = client.search_release(
+                    artist.strip(),
+                    album.strip(),
+                )
+                cache["searches"][cache_key] = resolved
+            release = resolved["release"]
+            entity_id = release["id"]
+            kind = "release"
+        
+        if kind == "release":
+            cached = cache["releases"].get(entity_id)
+            if cached:
+                resolved = cached
+                print("  Using cached MusicBrainz release.", flush=True)
+            else:
+                resolved = client.get_release(entity_id)
+                cache["releases"][entity_id] = resolved
+        elif kind == "release-group":
+            cached = cache["release_groups"].get(entity_id)
+            if cached:
+                resolved = cached
+                print("  Using cached MusicBrainz release group.", flush=True)
+            else:
+                resolved = client.get_release_group(entity_id)
+                cache["release_groups"][entity_id] = resolved
+                cache["releases"][resolved["release"]["id"]] = resolved
+        else:
+            raise ValueError(f"Unsupported MusicBrainz type: {kind}")
+
+        release = resolved["release"]
+        release_id = release["id"]
+        if not any(item.get("id") == release_id for item in releases):
+            releases.append(release)
+
+        for track in resolved["tracks"]:
+            track_id = track["id"]
+            tracks[track_id] = track
+            entry = track_sources.setdefault(
+                track_id,
+                {"release_ids": [], "track_ids": []},
+            )
+            if release_id not in entry["release_ids"]:
+                entry["release_ids"].append(release_id)
+
+    return {
+        "tracks": list(tracks.values()),
+        "track_sources": track_sources,
+        "releases": releases,
+        "cache": cache,
+    }
