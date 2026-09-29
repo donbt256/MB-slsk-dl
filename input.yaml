@@ -1,0 +1,10 @@
+# Download complete albums here.
+albums:
+  - artist: "Mother Mother"
+    album: "O My Heart"
+
+# Download individual tracks here.
+tracks:
+  - artist: "Radiohead"
+    album: "OK Computer"
+    title: "Paranoid Android"
