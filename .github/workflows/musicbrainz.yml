@@ -1,0 +1,166 @@
+name: MusicBrainz Music Acquisition
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: mb-slsk-dl
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout MB-slsk-dl
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Resolve MusicBrainz releases
+        run: |
+          python scripts/main.py
+
+      - name: Start slskd
+        env:
+          SOULSEEK_USERNAME: ${{ secrets.SOULSEEK_USERNAME }}
+          SOULSEEK_PASSWORD: ${{ secrets.SOULSEEK_PASSWORD }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/slskd"
+          mkdir -p "$RUNNER_TEMP/music-downloads"
+          mkdir -p "$RUNNER_TEMP/music-downloads-incomplete"
+
+          docker run \
+            --detach \
+            --name slskd \
+            --publish 127.0.0.1:5030:5030 \
+            --publish 127.0.0.1:50300:50300 \
+            --env "SLSKD_SLSK_USERNAME=$SOULSEEK_USERNAME" \
+            --env "SLSKD_SLSK_PASSWORD=$SOULSEEK_PASSWORD" \
+            --env "SLSKD_NO_AUTH=true" \
+            --env "SLSKD_REMOTE_CONFIGURATION=false" \
+            --env "SLSKD_DOWNLOAD_SLOTS=8" \
+            --env "SLSKD_DOWNLOADS_DIR=/downloads" \
+            --env "SLSKD_INCOMPLETE_DIR=/incomplete" \
+            --volume "$RUNNER_TEMP/slskd:/app" \
+            --volume "$RUNNER_TEMP/music-downloads:/downloads" \
+            --volume "$RUNNER_TEMP/music-downloads-incomplete:/incomplete" \
+            slskd/slskd:latest
+
+      - name: Wait for slskd
+        run: |
+          echo "Waiting for slskd HTTP API..."
+
+          for i in {1..60}; do
+            if curl --silent --fail \
+              http://127.0.0.1:5030/api/v0/application \
+              >/dev/null 2>&1; then
+              echo "slskd HTTP API is ready."
+              break
+            fi
+
+            if [ "$i" -eq 60 ]; then
+              echo "slskd failed to become ready."
+              docker logs slskd
+              exit 1
+            fi
+
+            sleep 2
+          done
+
+          echo "Waiting for Soulseek connection..."
+
+          for i in {1..90}; do
+            if docker logs slskd 2>&1 | grep -qi \
+              "logged in to the Soulseek server"; then
+              echo "slskd is logged into Soulseek."
+              break
+            fi
+
+            if [ "$i" -eq 90 ]; then
+              echo "slskd did not log into Soulseek."
+              docker logs slskd
+              exit 1
+            fi
+
+            sleep 2
+          done
+
+      - name: Process releases independently
+        env:
+          SLSKD_URL: http://127.0.0.1:5030
+          SLSKD_SEARCH_TIMEOUT_MS: "12000"
+          SLSKD_SEARCH_WAIT_SECONDS: "20"
+          SLSKD_RESPONSE_LIMIT: "100"
+          SLSKD_FILE_LIMIT: "10000"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MATCH_MODEL: gpt-5-nano
+          OPENAI_MAX_CANDIDATES: "15"
+          SOULSEEK_DOWNLOAD_DIR: ${{ runner.temp }}/music-downloads
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+        run: |
+          python scripts/process_releases.py
+
+      - name: Diagnostic state summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("state/tracks.json")
+
+          if not path.exists():
+              print("tracks.json does not exist.")
+              raise SystemExit(0)
+
+          data = json.loads(path.read_text())
+          tracks = data.get("tracks", [])
+          statuses = {}
+
+          for track in tracks:
+              metadata = track.get("metadata", {})
+              acquisition = track.get("acquisition", {})
+              status = acquisition.get("status", "unknown")
+              statuses[status] = statuses.get(status, 0) + 1
+
+              print()
+              print(
+                  f"{metadata.get('artist', '?')} - "
+                  f"{metadata.get('title', '?')}"
+              )
+              print(f"Status: {status}")
+
+              library = acquisition.get("library")
+              if library:
+                  print(f"Library: {library.get('repo')}")
+                  print(f"Library path: {library.get('path')}")
+
+          print()
+          print("=== Status summary ===")
+          for status, count in sorted(statuses.items()):
+              print(f"{status}: {count}")
+          PY
+
+      - name: Show slskd logs on failure
+        if: failure()
+        run: |
+          docker logs slskd || true
+
+      - name: Stop slskd
+        if: always()
+        run: |
+          docker rm --force slskd || true
