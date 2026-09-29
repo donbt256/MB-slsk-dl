@@ -566,26 +566,15 @@ def process_album_group(client, tracks, index, total):
         for track in tracks:
             data = metadata(track)
             track_id = data.get("id")
-
             candidate = matches_by_track.get(track_id)
 
             if candidate is None:
-                track.setdefault(
-                    "acquisition",
-                    {},
-                )["status"] = "unmatched"
+                track.setdefault("acquisition", {})["status"] = "unmatched"
                 continue
 
-            set_acquisition_match(
-                track,
-                candidate,
-                "matched",
-            )
+            set_acquisition_match(track, candidate, "matched")
 
-            track.setdefault(
-                "matching",
-                {},
-            )["deterministic"] = {
+            track.setdefault("matching", {})["deterministic"] = {
                 "version": MATCHER_VERSION,
                 "mode": "album",
                 "decision": "accept",
@@ -593,58 +582,22 @@ def process_album_group(client, tracks, index, total):
                 "release": compact_release(best),
             }
 
-    elif decision == "llm":
-        print("  Decision: LLM screening")
-
-        for index, track in enumerate(tracks):
-            track.setdefault(
-                "matching",
-                {},
-            )["deterministic"] = {
-                "version": MATCHER_VERSION,
-                "mode": "album",
-                "decision": "llm",
-                "release_id": best["release_id"],
-                "candidates": (
-                    [
-                        compact_release(release)
-                        for release in releases[:15]
-                    ]
-                    if index == 0
-                    else []
-                ),
-            }
-
-            track.setdefault(
-                "acquisition",
-                {},
-            )["status"] = "llm_screening"
-
     else:
         print("  Decision: reject")
 
         for index, track in enumerate(tracks):
-            track.setdefault(
-                "matching",
-                {},
-            )["deterministic"] = {
+            track.setdefault("matching", {})["deterministic"] = {
                 "version": MATCHER_VERSION,
                 "mode": "album",
                 "decision": "reject",
+                "release_id": best["release_id"],
                 "candidates": (
-                    [
-                        compact_release(release)
-                        for release in releases[:15]
-                    ]
+                    [compact_release(release) for release in releases[:15]]
                     if index == 0
                     else []
                 ),
             }
-
-            track.setdefault(
-                "acquisition",
-                {},
-            )["status"] = "unmatched"
+            track.setdefault("acquisition", {})["status"] = "unmatched"
 
     return True
 
@@ -750,37 +703,11 @@ def process_individual_track(
             f"(score={best['score']})"
         )
 
-        set_acquisition_match(
-            track,
-            best,
-            "matched",
-        )
-
-    elif decision == "llm":
-        print(
-            f"  LLM screening: "
-            f"{len(scored[:20])} candidate(s)"
-        )
-
-        for candidate in scored[:5]:
-            print(
-                f"    {candidate['filename']} "
-                f"from {candidate['username']} "
-                f"(score={candidate['score']})"
-            )
-
-        track.setdefault(
-            "acquisition",
-            {},
-        )["status"] = "llm_screening"
+        set_acquisition_match(track, best, "matched")
 
     else:
-        print("  No viable candidates.")
-
-        track.setdefault(
-            "acquisition",
-            {},
-        )["status"] = "unmatched"
+        print("  No deterministic match met the acceptance criteria.")
+        track.setdefault("acquisition", {})["status"] = "unmatched"
 
     return True
 
