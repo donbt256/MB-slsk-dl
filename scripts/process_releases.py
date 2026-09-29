@@ -267,6 +267,10 @@ def save_checkpoint(label):
         print(f"No state changes to checkpoint: {label}", flush=True)
 
 
+class FatalStageError(RuntimeError):
+    pass
+
+
 def run_stage(script, env):
     command = [sys.executable, script]
 
@@ -279,6 +283,12 @@ def run_stage(script, env):
     )
 
     if result.returncode != 0:
+        if script == "scripts/llm_matcher.py" and result.returncode == 78:
+            raise FatalStageError(
+                "OpenAI authentication failed. The OPENAI_API_KEY GitHub secret "
+                "must be replaced before LLM matching can continue."
+            )
+
         raise RuntimeError(
             f"{script} failed with exit code {result.returncode}"
         )
@@ -433,6 +443,21 @@ def main():
                 f"Release complete: {label}",
                 flush=True,
             )
+
+        except FatalStageError as exc:
+            failed = True
+            print(
+                f"FATAL: {exc}",
+                file=sys.stderr,
+                flush=True,
+            )
+            print(
+                "Stopping release processing so the remaining releases do not "
+                "burn runner time with an invalid OpenAI credential.",
+                file=sys.stderr,
+                flush=True,
+            )
+            break
 
         except Exception as exc:
             failed = True
