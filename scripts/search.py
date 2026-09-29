@@ -1,0 +1,901 @@
+import json
+import os
+import re
+import sys
+import time
+from pathlib import Path
+
+from matcher import (
+    MATCHER_VERSION,
+    classify_candidates,
+    rank_candidates,
+    rank_releases,
+    parent_path,
+    release_id,
+    has_audio_extension,
+)
+from soulseek import SoulseekClient, flatten_responses
+from release import release_key
+
+
+RELEASE_FILTER = os.environ.get("RELEASE_KEY")
+
+
+STATE_PATH = Path("state/tracks.json")
+
+SEARCH_TIMEOUT_MS = int(
+    os.environ.get("SLSKD_SEARCH_TIMEOUT_MS", "12000")
+)
+
+SEARCH_WAIT_SECONDS = int(
+    os.environ.get("SLSKD_SEARCH_WAIT_SECONDS", "20")
+)
+
+RESPONSE_LIMIT = int(
+    os.environ.get("SLSKD_RESPONSE_LIMIT", "100")
+)
+
+FILE_LIMIT = int(
+    os.environ.get("SLSKD_FILE_LIMIT", "10000")
+)
+
+
+def load_state():
+    if not STATE_PATH.exists():
+        raise SystemExit(f"Missing {STATE_PATH}")
+
+    with STATE_PATH.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def save_state(state):
+    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    temporary = STATE_PATH.with_suffix(".tmp")
+
+    with temporary.open("w", encoding="utf-8") as handle:
+        json.dump(
+            state,
+            handle,
+            indent=2,
+            ensure_ascii=False,
+        )
+        handle.write("\n")
+
+    temporary.replace(STATE_PATH)
+
+
+def metadata(track):
+    return track.get("metadata", track)
+
+
+def track_key(track):
+    data = metadata(track)
+
+    return data.get("id") or (
+        f"{data.get('artist', '')}\x1f"
+        f"{data.get('album', '')}\x1f"
+        f"{data.get('title', '')}"
+    )
+
+
+def acquisition_status(track):
+    return track.setdefault(
+        "acquisition",
+        {},
+    ).get("status", "pending")
+
+
+def should_skip_track(track):
+    status = acquisition_status(track)
+
+    return status in {
+        "downloaded",
+        "ready_to_publish",
+        "published",
+    }
+
+
+def album_key(track):
+    data = metadata(track)
+
+    artist = str(
+        data.get("album_artist")
+        or data.get("artist")
+        or ""
+    ).strip()
+
+    album = str(
+        data.get("album")
+        or ""
+    ).strip()
+
+    if not artist or not album:
+        return None
+
+    return (
+        artist.casefold(),
+        album.casefold(),
+    )
+
+
+def build_album_groups(tracks):
+    groups = {}
+
+    for track in tracks:
+        if should_skip_track(track):
+            continue
+
+        key = album_key(track)
+
+        if key is None:
+            continue
+
+        if key not in groups:
+            groups[key] = []
+
+        groups[key].append(track)
+
+    return groups
+
+
+def search_one(client, query):
+    # Soulseek/slskd can occasionally return an empty result snapshot while
+    # the peer responses are still being resolved. Retry empty searches
+    # before treating the release as genuinely unmatched.
+    for attempt in range(1, 4):
+        search_id = client.search(
+            query,
+            timeout_ms=SEARCH_TIMEOUT_MS,
+            file_limit=FILE_LIMIT,
+            response_limit=RESPONSE_LIMIT,
+        )
+
+        data = client.wait_for_search(
+            search_id,
+            timeout_seconds=SEARCH_WAIT_SECONDS,
+        )
+
+        if flatten_responses(data):
+            if attempt > 1:
+                print(
+                    f"  Search retry {attempt} produced results."
+                )
+            return search_id, data
+
+        if attempt < 3:
+            print(
+                f"  Search returned no candidates; "
+                f"retrying ({attempt + 1}/3)..."
+            )
+            time.sleep(1)
+
+    # Do not delete completed searches immediately. slskd can still be
+    # finalizing/persisting a search in its background worker, and deleting
+    # it here can race that finalization.
+    return search_id, data
+
+
+def ensure_search_state(track):
+    return track.setdefault(
+        "search",
+        {
+            "mode": None,
+            "queries": [],
+            "candidates": [],
+            "release_candidates": [],
+        },
+    )
+
+
+
+
+def compact_candidate(candidate):
+    if not isinstance(candidate, dict):
+        return candidate
+
+    keys = (
+        "candidate_id",
+        "username",
+        "filename",
+        "size",
+        "score",
+        "extension",
+        "candidate_title",
+        "candidate_track_number",
+        "alternate_terms",
+    )
+
+    return {
+        key: candidate[key]
+        for key in keys
+        if key in candidate
+    }
+
+
+def compact_release(release):
+    if not isinstance(release, dict):
+        return release
+
+    compacted = {
+        key: release[key]
+        for key in (
+            "release_id",
+            "username",
+            "folder",
+            "file_count",
+            "expected_tracks",
+            "matched_tracks",
+            "coverage",
+            "score",
+            "alternate_count",
+            "decision",
+        )
+        if key in release
+    }
+
+    compacted["matches"] = [
+        {
+            "track_id": item.get("track_id"),
+            "title": item.get("title"),
+            "track_number": item.get("track_number"),
+            "candidate": compact_candidate(
+                item.get("candidate", {})
+            ),
+        }
+        for item in release.get("matches", [])
+        if isinstance(item, dict)
+    ]
+
+    return compacted
+
+
+def recover_durable_release(tracks):
+    """
+    Recover a previously matched complete release when a fresh Soulseek
+    search transiently returns zero results.
+
+    This is deliberately conservative: every requested track must retain
+    a candidate, and all candidates must come from the same Soulseek user
+    and remote folder.
+    """
+    grouped = {}
+
+    for track in tracks:
+        candidate = (
+            track.get("acquisition", {})
+            .get("match", {})
+            .get("candidates", [])
+        )
+
+        if not isinstance(candidate, list) or not candidate:
+            return None
+
+        candidate = candidate[0]
+
+        username = str(candidate.get("username") or "")
+        filename = str(candidate.get("filename") or "")
+        folder = parent_path(filename)
+
+        if not username or not folder or not has_audio_extension(filename):
+            return None
+
+        key = (username, folder)
+        grouped.setdefault(key, []).append(
+            (track, candidate)
+        )
+
+    complete = [
+        items
+        for items in grouped.values()
+        if len(items) == len(tracks)
+    ]
+
+    if not complete:
+        return None
+
+    items = complete[0]
+    first = metadata(items[0][0])
+
+    matches = [
+        {
+            "track_id": metadata(track).get("id"),
+            "title": metadata(track).get("title"),
+            "track_number": metadata(track).get("track_number"),
+            "candidate": compact_candidate(candidate),
+        }
+        for track, candidate in items
+    ]
+
+    score = sum(
+        float(candidate.get("score") or 0)
+        for _, candidate in items
+    ) / len(items)
+
+    return {
+        "release_id": release_id(
+            items[0][1].get("username"),
+            parent_path(items[0][1].get("filename", "")),
+        ),
+        "username": items[0][1].get("username"),
+        "folder": parent_path(items[0][1].get("filename", "")),
+        "file_count": len(items),
+        "expected_tracks": len(tracks),
+        "matched_tracks": len(items),
+        "coverage": 1.0,
+        "exact_titles": 0,
+        "exact_track_numbers": 0,
+        "average_track_score": round(score, 2),
+        "album_similarity": 0.0,
+        "artist_similarity": 0.0,
+        "alternate_count": 0,
+        "score": round(score, 2),
+        "decision": "accept",
+        "matches": matches,
+    }
+
+
+def set_acquisition_match(
+    track,
+    candidate,
+    status="matched",
+):
+    acquisition = track.setdefault(
+        "acquisition",
+        {},
+    )
+
+    acquisition["status"] = status
+
+    acquisition["match"] = {
+        "candidates": [compact_candidate(candidate)],
+    }
+
+
+def process_album_group(client, tracks, index, total):
+    first = metadata(tracks[0])
+
+    artist = first.get(
+        "album_artist"
+    ) or first.get(
+        "artist",
+        "",
+    )
+
+    album = first.get("album", "")
+
+    query = f"{artist} {album}".strip()
+
+    print()
+    print(
+        f"Album [{index}/{total}]: "
+        f"{artist} - {album}"
+    )
+    print(
+        f"  Tracks in request: {len(tracks)}"
+    )
+    print(
+        f"  Search: {query}"
+    )
+
+    search_state = ensure_search_state(tracks[0])
+
+    search_state["mode"] = "album"
+    search_state["query"] = query
+
+    search_id, data = search_one(
+        client,
+        query,
+    )
+
+    raw_candidates = flatten_responses(data)
+
+    print(
+        f"  Search ID: {search_id}"
+    )
+    print(
+        f"  Raw candidates: {len(raw_candidates)}"
+    )
+
+    # Album metadata often contains edition labels such as
+    # "(2007 Remaster)" or "(Deluxe)". Soulseek shares frequently
+    # omit those labels. If the exact metadata album query returns
+    # nothing, retry once with parenthesized edition labels removed.
+    simplified_album = re.sub(
+        r"\s*\([^)]*\)",
+        "",
+        album,
+    ).strip()
+    fallback_query = f"{artist} {simplified_album}".strip()
+
+    if not raw_candidates and fallback_query.casefold() != query.casefold():
+        print(
+            f"  Exact album search returned no results; "
+            f"retrying: {fallback_query}"
+        )
+        fallback_search_id, fallback_data = search_one(
+            client,
+            fallback_query,
+        )
+        fallback_candidates = flatten_responses(fallback_data)
+
+        print(
+            f"  Fallback search ID: {fallback_search_id}"
+        )
+        print(
+            f"  Fallback raw candidates: {len(fallback_candidates)}"
+        )
+
+        if fallback_candidates:
+            search_id = fallback_search_id
+            raw_candidates = fallback_candidates
+            query = fallback_query
+
+    for track in tracks:
+        state = ensure_search_state(track)
+
+        state["mode"] = "album"
+        state["query"] = query
+        state["queries"] = state.get(
+            "queries",
+            [],
+        )
+
+        state["queries"].append(
+            {
+                "search_id": search_id,
+                "query": query,
+                "candidate_count": len(raw_candidates),
+                "timestamp": int(time.time()),
+            }
+        )
+
+        # Do not persist the raw Soulseek result set. It can contain
+        # thousands of redundant file records and can make state/tracks.json
+        # enormous. The ranked release list below contains everything needed
+        # for download/retry.
+        state.pop("candidates", None)
+        state["release_candidates"] = []
+
+    if not raw_candidates:
+        durable = recover_durable_release(tracks)
+
+        if durable is not None:
+            print(
+                "  Fresh search returned no candidates; "
+                "reusing the previously matched complete release."
+            )
+
+            compacted = compact_release(durable)
+
+            for track, match in zip(
+                tracks,
+                durable["matches"],
+            ):
+                set_acquisition_match(
+                    track,
+                    match["candidate"],
+                    "matched",
+                )
+
+                track.setdefault(
+                    "matching",
+                    {},
+                )["deterministic"] = {
+                    "version": MATCHER_VERSION,
+                    "mode": "album",
+                    "decision": "accept",
+                    "release_id": durable["release_id"],
+                    "release": compacted,
+                }
+
+                state = ensure_search_state(track)
+                state["release_candidates"] = (
+                    [compacted]
+                    if track is tracks[0]
+                    else []
+                )
+
+            return True
+
+        for track in tracks:
+            track.setdefault(
+                "acquisition",
+                {},
+            )["status"] = "unmatched"
+
+        print("  No candidates found.")
+        return False
+
+    releases = rank_releases(
+        tracks,
+        raw_candidates,
+    )
+
+    compacted_releases = [
+        compact_release(release)
+        for release in releases[:20]
+    ]
+
+    for index, track in enumerate(tracks):
+        state = ensure_search_state(track)
+        if index == 0:
+            state["release_candidates"] = compacted_releases
+        else:
+            state["release_candidates"] = []
+
+    if not releases:
+        for track in tracks:
+            track.setdefault(
+                "acquisition",
+                {},
+            )["status"] = "unmatched"
+
+        print("  No viable releases.")
+        return False
+
+    best = releases[0]
+
+    print(
+        f"  Release candidates: {len(releases)}"
+    )
+    print(
+        f"  Best release: "
+        f"{best['folder']} "
+        f"from {best['username']}"
+    )
+    print(
+        f"  Matched: "
+        f"{best['matched_tracks']}/"
+        f"{best['expected_tracks']} tracks"
+    )
+    print(
+        f"  Score: {best['score']}"
+    )
+
+    decision = best["decision"]
+
+    if decision == "accept":
+        print("  Decision: accept")
+
+        matches_by_track = {
+            match.get("track_id"): match["candidate"]
+            for match in best.get("matches", [])
+        }
+
+        for track in tracks:
+            data = metadata(track)
+            track_id = data.get("id")
+
+            candidate = matches_by_track.get(track_id)
+
+            if candidate is None:
+                track.setdefault(
+                    "acquisition",
+                    {},
+                )["status"] = "unmatched"
+                continue
+
+            set_acquisition_match(
+                track,
+                candidate,
+                "matched",
+            )
+
+            track.setdefault(
+                "matching",
+                {},
+            )["deterministic"] = {
+                "version": MATCHER_VERSION,
+                "mode": "album",
+                "decision": "accept",
+                "release_id": best["release_id"],
+                "release": compact_release(best),
+            }
+
+    elif decision == "llm":
+        print("  Decision: LLM screening")
+
+        for index, track in enumerate(tracks):
+            track.setdefault(
+                "matching",
+                {},
+            )["deterministic"] = {
+                "version": MATCHER_VERSION,
+                "mode": "album",
+                "decision": "llm",
+                "release_id": best["release_id"],
+                "candidates": (
+                    [
+                        compact_release(release)
+                        for release in releases[:15]
+                    ]
+                    if index == 0
+                    else []
+                ),
+            }
+
+            track.setdefault(
+                "acquisition",
+                {},
+            )["status"] = "llm_screening"
+
+    else:
+        print("  Decision: reject")
+
+        for index, track in enumerate(tracks):
+            track.setdefault(
+                "matching",
+                {},
+            )["deterministic"] = {
+                "version": MATCHER_VERSION,
+                "mode": "album",
+                "decision": "reject",
+                "candidates": (
+                    [
+                        compact_release(release)
+                        for release in releases[:15]
+                    ]
+                    if index == 0
+                    else []
+                ),
+            }
+
+            track.setdefault(
+                "acquisition",
+                {},
+            )["status"] = "unmatched"
+
+    return True
+
+
+def process_individual_track(
+    client,
+    track,
+    index,
+    total,
+):
+    data = metadata(track)
+
+    artist = data.get("artist", "")
+    title = data.get("title", "")
+
+    query = f"{artist} {title}".strip()
+
+    print()
+    print(
+        f"Track [{index}/{total}]: "
+        f"{artist} - {title}"
+    )
+    print(
+        f"  Search: {query}"
+    )
+
+    search_state = ensure_search_state(track)
+
+    search_state["mode"] = "track"
+    search_state["query"] = query
+
+    search_id, result = search_one(
+        client,
+        query,
+    )
+
+    raw_candidates = flatten_responses(result)
+
+    print(
+        f"  Search ID: {search_id}"
+    )
+    print(
+        f"  Raw candidates: {len(raw_candidates)}"
+    )
+
+    search_state["queries"] = search_state.get(
+        "queries",
+        [],
+    )
+
+    search_state["queries"].append(
+        {
+            "search_id": search_id,
+            "query": query,
+            "candidate_count": len(raw_candidates),
+            "timestamp": int(time.time()),
+        }
+    )
+
+    search_state.pop("candidates", None)
+    search_state["release_candidates"] = []
+
+    if not raw_candidates:
+        track.setdefault(
+            "acquisition",
+            {},
+        )["status"] = "unmatched"
+
+        print("  No candidates found.")
+        return False
+
+    scored = rank_candidates(
+        track,
+        raw_candidates,
+    )
+
+    classification = classify_candidates(
+        scored
+    )
+
+    track.setdefault(
+        "matching",
+        {},
+    )["deterministic"] = {
+        "version": MATCHER_VERSION,
+        "mode": "track",
+        "decision": classification["decision"],
+        "candidates": [
+            compact_candidate(candidate)
+            for candidate in scored[:15]
+        ],
+    }
+
+    decision = classification["decision"]
+
+    if decision == "accept":
+        best = scored[0]
+
+        print(
+            f"  Best: "
+            f"{best['filename']} "
+            f"from {best['username']} "
+            f"(score={best['score']})"
+        )
+
+        set_acquisition_match(
+            track,
+            best,
+            "matched",
+        )
+
+    elif decision == "llm":
+        print(
+            f"  LLM screening: "
+            f"{len(scored[:20])} candidate(s)"
+        )
+
+        for candidate in scored[:5]:
+            print(
+                f"    {candidate['filename']} "
+                f"from {candidate['username']} "
+                f"(score={candidate['score']})"
+            )
+
+        track.setdefault(
+            "acquisition",
+            {},
+        )["status"] = "llm_screening"
+
+    else:
+        print("  No viable candidates.")
+
+        track.setdefault(
+            "acquisition",
+            {},
+        )["status"] = "unmatched"
+
+    return True
+
+
+def main():
+    state = load_state()
+
+    tracks = state.get("tracks", [])
+
+    if RELEASE_FILTER:
+        tracks = [track for track in tracks if release_key(track) == RELEASE_FILTER]
+
+    print(f"Loaded {len(tracks)} tracks for this release.")
+
+    if not tracks:
+        return
+
+    base_url = os.environ.get(
+        "SLSKD_URL",
+        "http://127.0.0.1:5030",
+    )
+
+    api_key = os.environ.get(
+        "SLSKD_API_KEY"
+    )
+
+    client = SoulseekClient(
+        base_url=base_url,
+        api_key=api_key,
+    )
+
+    album_groups = build_album_groups(
+        tracks
+    )
+
+    # Only use album-level searching when at least
+    # two tracks from that album are present.
+    album_groups = {
+        key: group
+        for key, group in album_groups.items()
+        if len(group) >= 2
+    }
+
+    album_track_ids = {
+        track_key(track)
+        for group in album_groups.values()
+        for track in group
+    }
+
+    pending_individual = [
+        track
+        for track in tracks
+        if (
+            not should_skip_track(track)
+            and track_key(track)
+            not in album_track_ids
+        )
+    ]
+
+    album_total = len(album_groups)
+
+    for index, group in enumerate(
+        album_groups.values(),
+        start=1,
+    ):
+        process_album_group(
+            client,
+            group,
+            index,
+            album_total,
+        )
+
+        save_state(state)
+
+    print()
+    print(
+        f"Album searches completed: "
+        f"{album_total}"
+    )
+
+    individual_total = len(pending_individual)
+
+    for index, track in enumerate(
+        pending_individual,
+        start=1,
+    ):
+        process_individual_track(
+            client,
+            track,
+            index,
+            individual_total,
+        )
+
+        save_state(state)
+
+    print()
+    print(
+        f"Individual track searches completed: "
+        f"{individual_total}"
+    )
+
+    save_state(state)
+
+    print()
+    print(
+        "Search stage complete."
+    )
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(
+            "\nInterrupted.",
+            file=sys.stderr,
+        )
+        raise
