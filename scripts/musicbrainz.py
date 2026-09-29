@@ -10,7 +10,7 @@ MUSICBRAINZ_USER_AGENT = (
     "MB-slsk-dl/1.0 "
     "(https://github.com/donbt256/MB-slsk-dl)"
 )
-REQUEST_INTERVAL_SECONDS = 1.05
+REQUEST_INTERVAL_SECONDS = 1.5
 
 
 class MusicBrainzClient:
