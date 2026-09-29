@@ -1127,6 +1127,24 @@ def release_download(
         ):
             track, candidate = pending.pop(0)
 
+            candidate_username = candidate.get("username")
+
+            if is_user_blacklisted(
+                state,
+                candidate_username,
+            ):
+                log(
+                    f"  Skipping newly blacklisted user: "
+                    f"{candidate_username}"
+                )
+                failed.add(
+                    transfer_key(
+                        candidate_username,
+                        candidate.get("filename"),
+                    )
+                )
+                continue
+
             queued = queue_release(
                 client,
                 [(track, candidate)],
@@ -1298,8 +1316,23 @@ def release_download(
                 if blacklisted:
                     log(
                         f"    User {username_now} is now blacklisted; "
-                        "no further files will be queued from this user."
+                        "cancelling its remaining active transfers."
                     )
+
+                    for active_key, active_transfer in list(
+                        transfers_seen.items()
+                    ):
+                        if (
+                            active_key[0]
+                            == normalize_username(username_now)
+                            and active_key not in completed
+                            and active_key not in failed
+                        ):
+                            cancel_transfer(
+                                client,
+                                active_transfer,
+                            )
+                            failed.add(active_key)
 
                 log(f"    Downloaded: {path}")
 
