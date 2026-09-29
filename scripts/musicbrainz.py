@@ -18,27 +18,65 @@ class MusicBrainzClient:
         self._next_request_at = 0.0
 
     def _request(self, endpoint, params=None):
-        wait = self._next_request_at - time.monotonic()
-        if wait > 0:
-            time.sleep(wait)
+        max_attempts = 5
 
-        response = requests.get(
-            f"{MUSICBRAINZ_API_URL}{endpoint}",
-            params=params,
-            headers={
-                "User-Agent": MUSICBRAINZ_USER_AGENT,
-                "Accept": "application/json",
-            },
-            timeout=30,
-        )
-        self._next_request_at = time.monotonic() + REQUEST_INTERVAL_SECONDS
+        for attempt in range(1, max_attempts + 1):
+            wait = self._next_request_at - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
 
-        if response.status_code == 503:
-            time.sleep(2)
+            try:
+                response = requests.get(
+                    f"{MUSICBRAINZ_API_URL}{endpoint}",
+                    params=params,
+                    headers={
+                        "User-Agent": MUSICBRAINZ_USER_AGENT,
+                        "Accept": "application/json",
+                    },
+                    timeout=30,
+                )
+            except requests.RequestException:
+                if attempt == max_attempts:
+                    raise
+
+                delay = min(2 ** (attempt - 1), 16)
+                print(
+                    f"  MusicBrainz request failed; retrying in {delay}s "
+                    f"(attempt {attempt + 1}/{max_attempts})",
+                    flush=True,
+                )
+                self._next_request_at = time.monotonic() + delay
+                continue
+
+            self._next_request_at = (
+                time.monotonic() + REQUEST_INTERVAL_SECONDS
+            )
+
+            if response.status_code in {429, 500, 502, 503, 504}:
+                if attempt == max_attempts:
+                    response.raise_for_status()
+
+                retry_after = response.headers.get("Retry-After")
+                try:
+                    delay = max(1, int(retry_after)) if retry_after else 2 ** (attempt - 1)
+                except ValueError:
+                    delay = 2 ** (attempt - 1)
+
+                delay = min(delay, 30)
+
+                print(
+                    f"  MusicBrainz returned HTTP {response.status_code}; "
+                    f"retrying in {delay}s "
+                    f"(attempt {attempt + 1}/{max_attempts})",
+                    flush=True,
+                )
+                self._next_request_at = time.monotonic() + delay
+                continue
+
             response.raise_for_status()
+            return response.json()
 
-        response.raise_for_status()
-        return response.json()
+        raise RuntimeError("MusicBrainz request retry loop exhausted.")
 
     @staticmethod
     def parse_url(url):
