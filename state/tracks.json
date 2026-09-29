@@ -280185,7 +280185,7 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "unmatched",
         "attempts": 0,
         "match": null,
         "file": null,
@@ -280195,7 +280195,20 @@
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "f787d97a-c12d-4a26-86b0-a9097f9a7bd8",
+            "query": "Sushi Soucy Almost Perfect",
+            "candidate_count": 0,
+            "timestamp": 1790709598
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Almost Perfect"
+      }
     },
     {
       "metadata": {
@@ -280233,17 +280246,71 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "09cffa53072c5521",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\The Hard Way (2024)\\01 - The Hard Way.m4a",
+              "size": 7347036,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "The Hard Way",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/The Hard Way (2024)/01 - The Hard Way.m4a",
+          "filename": "01 - The Hard Way.m4a",
+          "size": 7347036
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/The Hard Way/01 - The Hard Way.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "e49f73ce-1c53-4ecc-991e-10a81e5fca4e",
+            "query": "Sushi Soucy The Hard Way",
+            "candidate_count": 2,
+            "timestamp": 1790709616
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy The Hard Way"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "09cffa53072c5521",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\The Hard Way (2024)\\01 - The Hard Way.m4a",
+              "size": 7347036,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "The Hard Way",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -280931,8 +280998,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 574499.5321708437,
-      "last_speed_timestamp": 1790709187
+      "last_speed": 247310.20085320558,
+      "last_speed_timestamp": 1790709655
     },
     "howehouse": {
       "username": "howehouse",
