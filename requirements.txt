@@ -1,1 +1,3 @@
-requests\nopenai\n
+requests
+openai
+PyYAML
