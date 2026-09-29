@@ -280348,17 +280348,71 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "d660479fd48352ad",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Circumstancial Wallflower (2023)\\01 - Circumstancial Wallflower.m4a",
+              "size": 12230129,
+              "score": 98.45,
+              "extension": "m4a",
+              "candidate_title": "Circumstancial Wallflower",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Circumstancial Wallflower (2023)/01 - Circumstancial Wallflower.m4a",
+          "filename": "01 - Circumstancial Wallflower.m4a",
+          "size": 12230129
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Circumstancial Wallflower/01 - Circumstancial Wallflower.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "9e94f3f8-6022-44c3-a978-459a68099a30",
+            "query": "Sushi Soucy Circumstancial Wallflower",
+            "candidate_count": 2,
+            "timestamp": 1790709690
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Circumstancial Wallflower"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "d660479fd48352ad",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Circumstancial Wallflower (2023)\\01 - Circumstancial Wallflower.m4a",
+              "size": 12230129,
+              "score": 98.45,
+              "extension": "m4a",
+              "candidate_title": "Circumstancial Wallflower",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -280998,8 +281052,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 247310.20085320558,
-      "last_speed_timestamp": 1790709655
+      "last_speed": 360189.5517134309,
+      "last_speed_timestamp": 1790709732
     },
     "howehouse": {
       "username": "howehouse",
