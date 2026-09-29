@@ -279868,7 +279868,7 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "unmatched",
         "attempts": 0,
         "match": null,
         "file": null,
@@ -279878,7 +279878,20 @@
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "5b2d8871-33ec-47ea-934a-1063a67dd882",
+            "query": "Sushi Soucy feat August Greenwood Nalah Palmer Ella Villani Hey You mov",
+            "candidate_count": 0,
+            "timestamp": 1790709516
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy feat. August Greenwood, Nalah Palmer & Ella Villani Hey, You!.mov"
+      }
     },
     {
       "metadata": {
@@ -279916,17 +279929,225 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "a14fb6ccc733ad69",
+              "username": "howehouse",
+              "filename": "music\\thesocialq\\Sushi Soucy\\I Deserve to Bleed\\01 I Deserve to Bleed.mp3",
+              "size": 4241531,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/I Deserve to Bleed/01 I Deserve to Bleed.mp3",
+          "filename": "01 I Deserve to Bleed.mp3",
+          "size": 4241531
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/I Deserve to Bleed/01 - I Deserve to Bleed.mp3"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "7b53b82e-2762-4d8d-a5ca-75c2d22fe972",
+            "query": "Sushi Soucy I Deserve to Bleed",
+            "candidate_count": 19,
+            "timestamp": 1790709533
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy I Deserve to Bleed"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "a14fb6ccc733ad69",
+              "username": "howehouse",
+              "filename": "music\\thesocialq\\Sushi Soucy\\I Deserve to Bleed\\01 I Deserve to Bleed.mp3",
+              "size": 4241531,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "5a7f91ae6caaa475",
+              "username": "Hazelnut9030",
+              "filename": "music\\mp3s\\Sushi Soucy\\I Deserve to Bleed\\1. I Deserve to Bleed.mp3",
+              "size": 2780146,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "6bb6aa6204aa187c",
+              "username": "gerard_way_estrogen",
+              "filename": "music\\Sushi Soucy\\I Deserve to Bleed\\01 I Deserve to Bleed.flac",
+              "size": 7428351,
+              "score": 100.0,
+              "extension": "flac",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "ba8c93bfa3e303a4",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\I Deserve to Bleed (2020)\\01 - I Deserve to Bleed.m4a",
+              "size": 4587679,
+              "score": 97.93,
+              "extension": "m4a",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "1f56953d6e672fb3",
+              "username": "Sapph",
+              "filename": "music\\Tracks\\Sushi Soucy\\[2020] I Deserve to Bleed - Single\\1. I Deserve to Bleed.mp3",
+              "size": 7985949,
+              "score": 95.75,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "5687f324ca5e8376",
+              "username": "Forcebender",
+              "filename": "music\\Custom-1Ad186e0\\Sushi Soucy\\I Deserve to Bleed\\I Deserve to Bleed.flac",
+              "size": 8145598,
+              "score": 90.0,
+              "extension": "flac",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "c0984236c8a7095a",
+              "username": "Forcebender",
+              "filename": "music\\Custom-1Ad186e0\\Sushi Soucy\\I Deserve to Bleed\\I Deserve to Bleed.mp3",
+              "size": 1665344,
+              "score": 90.0,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "22c8be60ece475e5",
+              "username": "girlwithabasketoffruit",
+              "filename": "music\\Sushi Soucy\\(2020) I Deserve to Bleed\\01.01 I Deserve to Bleed.opus",
+              "size": 2511766,
+              "score": 84.47,
+              "extension": "opus",
+              "candidate_title": "01 I Deserve to Bleed",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "af06e992f7946aa4",
+              "username": "petom0",
+              "filename": "music2\\Sushi Soucy\\I Deserve to Bleed\\I Deserve to Bleed - Sushi Soucy.flac",
+              "size": 8145598,
+              "score": 68.75,
+              "extension": "flac",
+              "candidate_title": "I Deserve to Bleed - Sushi Soucy",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "f05709d556c8b8cb",
+              "username": "\"Parrot0252\"",
+              "filename": "music\\Emotionally Bearable Songs\\Sushi Soucy - I Deserve to Bleed.opus",
+              "size": 1824564,
+              "score": 68.64,
+              "extension": "opus",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "264ff00e5bf4053d",
+              "username": "angxl",
+              "filename": "music\\Aurora\\Likes\\Sushi Soucy - I Deserve to Bleed.flac",
+              "size": 7747026,
+              "score": 68.43,
+              "extension": "flac",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "718bfef3e7b5a4d7",
+              "username": "angxl",
+              "filename": "music\\Rose\\Likes\\Sushi Soucy - I Deserve to Bleed.flac",
+              "size": 7419684,
+              "score": 68.43,
+              "extension": "flac",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "fea345f627dbb9a8",
+              "username": "Redele",
+              "filename": "music\\Tracks\\Sushi Soucy - I Deserve to Bleed.mp3",
+              "size": 3381439,
+              "score": 65.48,
+              "extension": "mp3",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "39d56e0b304a41ea",
+              "username": "\"Parrot0252\"",
+              "filename": "music\\Sushi Soucy - I Deserve to Bleed.opus",
+              "size": 1824564,
+              "score": 65.48,
+              "extension": "opus",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "61ed360b9bbfd0b1",
+              "username": "Neflex",
+              "filename": "Music Hoard Likes\\Sushi Soucy - I Deserve to Bleed.mp3",
+              "size": 2325902,
+              "score": 65.0,
+              "extension": "",
+              "candidate_title": "I Deserve to Bleed",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -280717,8 +280938,8 @@
       "username": "howehouse",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 1750848.721784711,
-      "last_speed_timestamp": 1790709414
+      "last_speed": 4424328.318540132,
+      "last_speed_timestamp": 1790709541
     }
   }
 }
