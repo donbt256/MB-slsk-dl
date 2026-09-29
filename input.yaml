@@ -1,10 +1,8 @@
-# Download complete albums here.
 albums:
   - artist: "Mother Mother"
     album: "O My Heart"
 
-# Download individual tracks here.
+  - artist: "Mother Mother"
+    album: "Inside (Deluxe)"
+
 tracks:
-  - artist: "Radiohead"
-    album: "OK Computer"
-    title: "Paranoid Android"
