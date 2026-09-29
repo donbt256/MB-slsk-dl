@@ -231015,17 +231015,2381 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "8e8db7d96497408a",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+              "size": 6842192,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "Bo' fo' Sho'",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/01 Bo' fo' Sho'.mp3",
+          "filename": "01 Bo' fo' Sho'.mp3",
+          "size": 6842192
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/01 - Bo' fo' Sho'.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [
+          {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "d43d2cc7cc993938",
+            "username": "GOAT",
+            "folder": "Music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "579239be3e3fc815",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.m4a",
+                  "size": 6816937,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "77714c7f3c33d14a",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.m4a",
+                  "size": 6748813,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "36742245cb07b2f0",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).m4a",
+                  "size": 6481093,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "494c709dd7623267",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.m4a",
+                  "size": 8513681,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "99acd367c24c8aa9",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.m4a",
+                  "size": 6513754,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "4c246b44d9c414ea",
+                  "username": "GOAT",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family....m4a",
+                  "size": 9491259,
+                  "score": 100.0,
+                  "extension": "m4a",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "24af9c1a3f1f1f91",
+            "username": "Labrador1479",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "d7b51fdf3f2deddc",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6848311,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "06d5b5dc5bec38dc",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6780315,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "45c384088d68d96f",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6517818,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "defbfe9b808e0f77",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8557385,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "d2a6fbf934b1ea50",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6574276,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "6cd41005f35dae69",
+                  "username": "Labrador1479",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family....mp3",
+                  "size": 9542673,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "67d19030ba4ac375",
+            "username": "jamesspidercat",
+            "folder": "@@prykk/Music/Bo Burnham/Bo Fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.27,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f27c8df3b1f016bb",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\01 Bo' Fo' Sho'.mp3",
+                  "size": 6810339,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "bcf560fecf24e042",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6742410,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "2640aa8d4a52e722",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6475995,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "228b888a699e0aa3",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\04 3_14 Apple Pi.mp3",
+                  "size": 8499941,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "3_14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "6cd8dc4e462e4eec",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\05 Sunday School.mp3",
+                  "size": 6507320,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "4dbed20ac3212917",
+                  "username": "jamesspidercat",
+                  "filename": "@@prykk\\Music\\Bo Burnham\\Bo Fo Sho\\06 My Whole Family___.mp3",
+                  "size": 9472751,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "My Whole Family___",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "62054e710c3a0201",
+            "username": "mccloven272727",
+            "folder": "music/Bo Burnham/Bo Fo Sho - EP",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.2,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8fa60e231fb77ab7",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\01 Bo' Fo' Sho'.m4a",
+                  "size": 6013108,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "42050abd398e838f",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\02 H-O-A-R.m4a",
+                  "size": 5889727,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "aa05f9c181d1d5f9",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\03 High School Party (Girl).m4a",
+                  "size": 5690699,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "4ae47b124575bf0f",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\04 3.14 Apple Pi.m4a",
+                  "size": 7434918,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "07c13bf17cf8f92c",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\05 Sunday School.m4a",
+                  "size": 5755624,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "92a3ead9e0f8dc3f",
+                  "username": "mccloven272727",
+                  "filename": "music\\Bo Burnham\\Bo Fo Sho - EP\\06 My Whole Family....m4a",
+                  "size": 8145938,
+                  "score": 97.57,
+                  "extension": "m4a",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "59c6a11342c6165f",
+            "username": "rpotter6298",
+            "folder": "Music/Bo Burnham/Bo Fo-Sho EP",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.2,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "63c50b1b64c52cc0",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\01 Bo' Fo' Sho'.mp3",
+                  "size": 6813637,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "142d6fc19967c1d4",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\02 H-O-A-R.mp3",
+                  "size": 6745709,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "411d688745f8a275",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\03 High School Party (Girl).mp3",
+                  "size": 6483474,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "b80c6ba75951c89c",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\04 3.14 Apple Pi.mp3",
+                  "size": 8521003,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "8237ea04de95ca88",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\05 Sunday School.mp3",
+                  "size": 6539876,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "b0c6da635cfc7ab3",
+                  "username": "rpotter6298",
+                  "filename": "Music\\Bo Burnham\\Bo Fo-Sho EP\\06 My Whole Family....mp3",
+                  "size": 9505307,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "c22b9cdeb8c2678a",
+            "username": "Gandalf-III",
+            "folder": "@@wnhjx/Old Music/Bo Burnham/Bo Fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.07,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "6a36bb6b0eef6d0e",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\01 Bo' Fo' Sho'.mp3",
+                  "size": 6813637,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "853947d799b8f2da",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6745709,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "1c2e85cbddebf502",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6483474,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "e4037557ff9a6fff",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8521003,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "f562432ade7261b4",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\05 Sunday School.mp3",
+                  "size": 6539876,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "b686e5917082be38",
+                  "username": "Gandalf-III",
+                  "filename": "@@wnhjx\\Old Music\\Bo Burnham\\Bo Fo Sho\\06 My Whole Family....mp3",
+                  "size": 9505307,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "e3159bcffe64e78f",
+            "username": "Stumpy1120",
+            "folder": "Music/Bo Burnham/Bo Fo Sho (2008)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "4ac33a67b35cf28e",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\01 Bo' Fo' Sho'.flac",
+                  "size": 17360797,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "3ef5d9b4bc27387b",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\02 H-O-A-R.flac",
+                  "size": 14568655,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a448c86244167807",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\03 High School Party (Girl).flac",
+                  "size": 13312517,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "41f6fd5a7300ff77",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\04 3.14 Apple Pi.flac",
+                  "size": 20631876,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "106b3cc04c7267eb",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\05 Sunday School.flac",
+                  "size": 13354467,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "6fac6a7b5d8218c1",
+                  "username": "Stumpy1120",
+                  "filename": "Music\\Bo Burnham\\Bo Fo Sho (2008)\\06 My Whole Family....flac",
+                  "size": 19846262,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "82bc14b7b2ddd709",
+            "username": "BadHabit101",
+            "folder": "Music/Bo Burnham/Bo fo Sho (2008)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "012d3c78ea198960",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\01 - Bo' fo' Sho'.m4a",
+                  "size": 5948947,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "9fa3868cf32308ba",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\02 - H-O-A-R.m4a",
+                  "size": 5829990,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "4a30cc59b71a8b9f",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\03 - High School Party (Girl).m4a",
+                  "size": 5639176,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "442adb1a1630033b",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\04 - 3.14 Apple Pi.m4a",
+                  "size": 7322249,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "b4afc2fc9f544b42",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\05 - Sunday School.m4a",
+                  "size": 5706038,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "a059ea75918f201c",
+                  "username": "BadHabit101",
+                  "filename": "Music\\Bo Burnham\\Bo fo Sho (2008)\\06 - My Whole Family....m4a",
+                  "size": 7974227,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "c01605e03444bd3f",
+            "username": "probin45",
+            "folder": "Music/Bo Burnham/[2008] - Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "aa5263665a5e8abf",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\01 Bo' fo' Sho'.opus",
+                  "size": 2874042,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "7e82ad2b55e4431c",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\02 H-O-A-R.opus",
+                  "size": 3184546,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "282c2f6cc70c3f74",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\03 High School Party (Girl).opus",
+                  "size": 3059536,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "6464405e807a51b3",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\04 3.14 Apple Pi.opus",
+                  "size": 3700986,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "2efe24e9561b951c",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\05 Sunday School.opus",
+                  "size": 2614508,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "98938337b9fb5102",
+                  "username": "probin45",
+                  "filename": "Music\\Bo Burnham\\[2008] - Bo fo Sho\\06 My Whole Family....opus",
+                  "size": 4474483,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "4d3bc47c2a73a70f",
+            "username": "tundora",
+            "folder": "Music/Bo Burnham/[2008] Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ab272067594a30fc",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\01 - Bo' fo' Sho'.flac",
+                  "size": 17299522,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "12fa7b74bbfca974",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\02 - H-O-A-R.flac",
+                  "size": 14375018,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "7a001666ec87b2cb",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\03 - High School Party (Girl).flac",
+                  "size": 13034133,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "869a74043f46a40d",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\04 - 3.14 Apple Pi.flac",
+                  "size": 20528945,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "199e2441b7caa490",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\05 - Sunday School.flac",
+                  "size": 13075331,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "7e621d49820fed2a",
+                  "username": "tundora",
+                  "filename": "Music\\Bo Burnham\\[2008] Bo fo Sho\\06 - My Whole Family.flac",
+                  "size": 19385315,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "My Whole Family",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "432098a3a4f4d6f4",
+            "username": "tommyfargs",
+            "folder": "music/Bo Burnham/Bo fo Sho (2008)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "5becacbcabb6b5e0",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\01 - Bo' fo' Sho'.m4a",
+                  "size": 5793014,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "dc6e8ac9b0e18386",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\02 - H-O-A-R.m4a",
+                  "size": 5674367,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "7e867f110517f8f7",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\03 - High School Party (Girl).m4a",
+                  "size": 5484736,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "f6be112862a7a437",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\04 - 3.14 Apple Pi.m4a",
+                  "size": 7158656,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1d10739dfb196ed3",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\05 - Sunday School.m4a",
+                  "size": 5551433,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "2ed4e862e4da5dbc",
+                  "username": "tommyfargs",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho (2008)\\06 - My Whole Family....m4a",
+                  "size": 7806241,
+                  "score": 96.3,
+                  "extension": "m4a",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "f297189bae377756",
+            "username": "BloodyPolarBear",
+            "folder": "Music/-=Comedy=-/Bo Burnham/Bo Fo-Sho EP",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.83,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "41393e8cfcff8530",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\01 Bo' Fo' Sho'.mp3",
+                  "size": 6813637,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "464df9770f70a693",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\02 H-O-A-R.mp3",
+                  "size": 6745709,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "21107ef12f5b89e7",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\03 High School Party (Girl).mp3",
+                  "size": 6483474,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "7f0b9bb305a27d36",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\04 3.14 Apple Pi.mp3",
+                  "size": 8521003,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "3b12716696217f87",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\05 Sunday School.mp3",
+                  "size": 6539876,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "82099a9922971b21",
+                  "username": "BloodyPolarBear",
+                  "filename": "Music\\-=Comedy=-\\Bo Burnham\\Bo Fo-Sho EP\\06 My Whole Family....mp3",
+                  "size": 9505307,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "0070b4a843163e3b",
+            "username": "jmkirchoff",
+            "folder": "Master/~ B ~/Burnham, Bo/[2008] Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.7,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "5f3b07773b7e2295",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\01 Bo' fo' Sho'.flac",
+                  "size": 16929411,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "6da710d0266a6afa",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\02 H-O-A-R.flac",
+                  "size": 13976966,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "08fd9560e856c882",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\03 High School Party (Girl).flac",
+                  "size": 12617053,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "90437d1a59d9486a",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\04 3.14 Apple Pi.flac",
+                  "size": 20028012,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "3dca584cc74c0cf2",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\05 Sunday School.flac",
+                  "size": 12594742,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "e514a8276ff61fa9",
+                  "username": "jmkirchoff",
+                  "filename": "Master\\~ B ~\\Burnham, Bo\\[2008] Bo fo Sho\\06 My Whole Family....flac",
+                  "size": 19015577,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "eccd030e9661b1a0",
+            "username": "oblama",
+            "folder": "shared/B/Bo Burnham/EP/(2008) Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "48f1119d9cf8a623",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\01 - Bo' fo' Sho'.flac",
+                  "size": 17029206,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e9e53084549e7e7d",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\02 - H-O-A-R.flac",
+                  "size": 14079707,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "7d05653bd2c8c3f4",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\03 - High School Party (Girl).flac",
+                  "size": 12721144,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "f6e0fc63ba009976",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\04 - 3.14 Apple Pi.flac",
+                  "size": 20143446,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "06047582052b7800",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\05 - Sunday School.flac",
+                  "size": 12698863,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f684e0a0e5486a11",
+                  "username": "oblama",
+                  "filename": "shared\\B\\Bo Burnham\\EP\\(2008) Bo fo Sho\\06 - My Whole Family....flac",
+                  "size": 19132023,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "6f94aedc8fe1758d",
+            "username": "shinyspinnywhale",
+            "folder": "Music/Bo Burnham/(2008) - Bo Fo-Sho [EP]",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.64,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "15ad61e744580bdb",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\01. Bo' Fo' Sho'.mp3",
+                  "size": 6840744,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "cfd6bc34de5a60d9",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\02. H-O-A-R.mp3",
+                  "size": 6772816,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "f146223e17d751ff",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\03. High School Party (Girl).mp3",
+                  "size": 6510581,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "1d9f252b2e02c47f",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\04. 3.14 Apple Pi.mp3",
+                  "size": 8548110,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "e184c1d81216ec7d",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\05. Sunday School.mp3",
+                  "size": 6566981,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "d29c75b0baf13be5",
+                  "username": "shinyspinnywhale",
+                  "filename": "Music\\Bo Burnham\\(2008) - Bo Fo-Sho [EP]\\06. My Whole Family....mp3",
+                  "size": 9532414,
+                  "score": 94.77,
+                  "extension": "",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "e0dbb3f9b991e76b",
+            "username": "bkzland",
+            "folder": "music/library/Bo Burnham/EP/Bo fo Sho (2008)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.46,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "a34afaf6ef1c5030",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\01 - Bo Burnham - Bo' fo' Sho'.flac",
+                  "size": 16911095,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "a10e8189deda22e7",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\02 - Bo Burnham - H-O-A-R.flac",
+                  "size": 13958647,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "9bee15bded056ab1",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\03 - Bo Burnham - High School Party (Girl).flac",
+                  "size": 12598725,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "66ca7efcac09fdb6",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\04 - Bo Burnham - 3.14 Apple Pi.flac",
+                  "size": 20028450,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "7c1d6bc8109782e9",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\05 - Bo Burnham - Sunday School.flac",
+                  "size": 12576422,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "307b8477c015e67f",
+                  "username": "bkzland",
+                  "filename": "music\\library\\Bo Burnham\\EP\\Bo fo Sho (2008)\\06 - Bo Burnham - My Whole Family.flac",
+                  "size": 19016015,
+                  "score": 96.3,
+                  "extension": "",
+                  "candidate_title": "My Whole Family",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1f61b100258c8e49",
+            "username": "drubber",
+            "folder": "Music/albums/other/Bo Burnham/Bo fo Sho (2008)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.39,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "0b8a73978bb1068f",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\01 - Bo' fo' Sho'.flac",
+                  "size": 17043962,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "6343614a001b2fd3",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\02 - H-O-A-R.flac",
+                  "size": 13650903,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "8479ba9af015730a",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\03 - High School Party (Girl).flac",
+                  "size": 12366451,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "bd459a8d91cbf9fb",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\04 - 3.14 Apple Pi.flac",
+                  "size": 20187597,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "e3b4f7de5ef8e929",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\05 - Sunday School.flac",
+                  "size": 12736866,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3b649ec6c45a1dab",
+                  "username": "drubber",
+                  "filename": "Music\\albums\\other\\Bo Burnham\\Bo fo Sho (2008)\\06 - My Whole Family..flac",
+                  "size": 18541664,
+                  "score": 96.3,
+                  "extension": "flac",
+                  "candidate_title": "My Whole Family.",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "8bb4237c17df4df4",
+            "username": "pixelmelt",
+            "folder": "shared/deezer/Bo Burnham/Bo Burnham - Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.3,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "fe55b85c90058c0e",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\01 - Bo' Fo' Sho.flac",
+                  "size": 17009121,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "Bo' Fo' Sho",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "4131476d84e50c13",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\02 - H-O-a-R.flac",
+                  "size": 14056673,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "H-O-a-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "8b012b000798aab2",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\03 - High School Party (Girl).flac",
+                  "size": 12696751,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "8cec8ba73cf63104",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\04 - 3.14 Apple Pi.flac",
+                  "size": 20126476,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "b1e707af0c4415d8",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\05 - Sunday School.flac",
+                  "size": 12674448,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "cf2e3324abcc53f2",
+                  "username": "pixelmelt",
+                  "filename": "shared\\deezer\\Bo Burnham\\Bo Burnham - Bo fo Sho\\06 - My Whole Family….flac",
+                  "size": 19114041,
+                  "score": 95.75,
+                  "extension": "",
+                  "candidate_title": "My Whole Family…",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "c8095af81bf6741e",
+            "username": "harthan2",
+            "folder": "Music/Bo Burnham/(2008) Bo fo Sho [EP] [FLAC]",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 96.23,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "912b570ae75a8111",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\01. Bo' fo' Sho'.flac",
+                  "size": 17877674,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "2524dd23e06c1da3",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\02. H-O-A-R.flac",
+                  "size": 14747283,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "3433263182913667",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\03. High School Party (Girl).flac",
+                  "size": 13462091,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "f6c4a936a04aed78",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\04. 3.14 Apple Pi.flac",
+                  "size": 21152753,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "6bf3a221a460f5cc",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\05. Sunday School.flac",
+                  "size": 13858628,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "e25ae5992542254a",
+                  "username": "harthan2",
+                  "filename": "Music\\Bo Burnham\\(2008) Bo fo Sho [EP] [FLAC]\\06. My Whole Family....flac",
+                  "size": 19599200,
+                  "score": 92.87,
+                  "extension": "flac",
+                  "candidate_title": "My Whole Family...",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        ],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -231063,17 +233427,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "e2133e8d7c7cd440",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+              "size": 6772904,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "H-O-A-R",
+              "candidate_track_number": 2,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/02 H-O-A-R.mp3",
+          "filename": "02 H-O-A-R.mp3",
+          "size": 6772904
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/02 - H-O-A-R.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -231111,17 +233638,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ffb2369d6b2e8ed2",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+              "size": 6511242,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "High School Party (Girl)",
+              "candidate_track_number": 3,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/03 High School Party (Girl).mp3",
+          "filename": "03 High School Party (Girl).mp3",
+          "size": 6511242
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/03 - High School Party (Girl).mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -231159,17 +233849,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "985f8c6f6ff04028",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+              "size": 8551557,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "3.14 Apple Pi",
+              "candidate_track_number": 4,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/04 3.14 Apple Pi.mp3",
+          "filename": "04 3.14 Apple Pi.mp3",
+          "size": 8551557
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/04 - 3.14 Apple Pi.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -231207,17 +234060,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "1b43c1cae55385e7",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+              "size": 6566951,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "Sunday School",
+              "candidate_track_number": 5,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/05 Sunday School.mp3",
+          "filename": "05 Sunday School.mp3",
+          "size": 6566951
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/05 - Sunday School.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -231255,17 +234271,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ad23c1d1e788af72",
+              "username": "MiamiWise",
+              "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+              "size": 9535908,
+              "score": 100.0,
+              "extension": "mp3",
+              "candidate_title": "My Whole Family.._",
+              "candidate_track_number": 6,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Bo fo Sho/06 My Whole Family.._.mp3",
+          "filename": "06 My Whole Family.._.mp3",
+          "size": 9535908
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Bo Burnham/Bo fo Sho/06 - My Whole Family....mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "score": 97.65,
+            "status": "succeeded",
+            "timestamp": 1790707080
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "457735ec-2cd2-4e6f-8209-bfe2da687046",
+            "query": "Bo Burnham Bo fo Sho",
+            "candidate_count": 546,
+            "timestamp": 1790707062
+          }
+        ],
+        "release_candidates": [],
+        "query": "Bo Burnham Bo fo Sho"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "f5267fc6e8a22778",
+          "release": {
+            "release_id": "f5267fc6e8a22778",
+            "username": "MiamiWise",
+            "folder": "music/Bo Burnham/Bo fo Sho",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.65,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "6d0db557-5a0c-4fa8-99bd-a705729bc413",
+                "title": "Bo' fo' Sho'",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "8e8db7d96497408a",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\01 Bo' fo' Sho'.mp3",
+                  "size": 6842192,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Bo' fo' Sho'",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "4e4a47a3-c5b3-4928-8aa6-bf6df2c58baf",
+                "title": "H-O-A-R",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e2133e8d7c7cd440",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\02 H-O-A-R.mp3",
+                  "size": 6772904,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "H-O-A-R",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8be7b714-b4cd-4fa7-a9dd-d4134f05f579",
+                "title": "High School Party (Girl)",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ffb2369d6b2e8ed2",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\03 High School Party (Girl).mp3",
+                  "size": 6511242,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "High School Party (Girl)",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "eba75466-24c2-410b-b020-81d3d8a8913e",
+                "title": "3.14 Apple Pi",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "985f8c6f6ff04028",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\04 3.14 Apple Pi.mp3",
+                  "size": 8551557,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "3.14 Apple Pi",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2c6e97f9-41e3-43d0-8af5-e03423344ed1",
+                "title": "Sunday School",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1b43c1cae55385e7",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\05 Sunday School.mp3",
+                  "size": 6566951,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Sunday School",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "11397602-8e25-41b7-9eca-ed6c47cb3dd0",
+                "title": "My Whole Family...",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ad23c1d1e788af72",
+                  "username": "MiamiWise",
+                  "filename": "music\\Bo Burnham\\Bo fo Sho\\06 My Whole Family.._.mp3",
+                  "size": 9535908,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "My Whole Family.._",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -236815,6 +239994,13 @@
       "blacklisted": false,
       "last_speed": 20268739.822278235,
       "last_speed_timestamp": 1790706878
+    },
+    "miamiwise": {
+      "username": "MiamiWise",
+      "slow_transfers": 0,
+      "blacklisted": false,
+      "last_speed": 12271193.943613218,
+      "last_speed_timestamp": 1790707080
     }
   }
 }
