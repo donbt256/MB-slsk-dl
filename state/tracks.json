@@ -280698,17 +280698,71 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "5ad139b8b2429ede",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Dear God (2022)\\01 - Dear God.m4a",
+              "size": 12682776,
+              "score": 95.95,
+              "extension": "m4a",
+              "candidate_title": "Dear God",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Dear God (2022)/01 - Dear God.m4a",
+          "filename": "01 - Dear God.m4a",
+          "size": 12682776
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Dear God/01 - Dear God.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "e250977a-36b8-406b-907b-b1b5e2744a57",
+            "query": "Sushi Soucy Dear God",
+            "candidate_count": 2,
+            "timestamp": 1790709879
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Dear God"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "5ad139b8b2429ede",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Dear God (2022)\\01 - Dear God.m4a",
+              "size": 12682776,
+              "score": 95.95,
+              "extension": "m4a",
+              "candidate_title": "Dear God",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     },
     {
       "metadata": {
@@ -281204,8 +281258,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 544725.058554819,
-      "last_speed_timestamp": 1790709845
+      "last_speed": 326315.09525120095,
+      "last_speed_timestamp": 1790709925
     },
     "howehouse": {
       "username": "howehouse",
