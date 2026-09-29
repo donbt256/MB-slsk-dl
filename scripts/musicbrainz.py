@@ -247,14 +247,14 @@ class MusicBrainzClient:
         # search for its release group.
         if not results:
             base_album = re.sub(
-                r"\\s*\\([^)]*\\)\\s*$",
+                r"\s*\([^)]*\)\s*$",
                 "",
                 album,
             ).strip()
 
             base_album = re.sub(
-                r"\\s+[-–—]\\s+(?:deluxe|expanded|anniversary|remaster|"
-                r"remastered|special|edition)\\b.*$",
+                r"\s+[-–—]\s+(?:deluxe|expanded|anniversary|remaster|"
+                r"remastered|special|edition)\b.*$",
                 "",
                 base_album,
                 flags=re.IGNORECASE,
