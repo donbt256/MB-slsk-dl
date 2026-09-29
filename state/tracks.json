@@ -281070,17 +281070,291 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ac4c6caca5c2bedf",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+              "size": 1295233,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "Glass Half Something",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/01 - Glass Half Something.mp3",
+          "filename": "01 - Glass Half Something.mp3",
+          "size": 1295233
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/01 - Glass Half Something.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [
+          {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        ],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281118,17 +281392,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "ecca95e69148393f",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+              "size": 1298619,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "I Don't Wanna Kill You",
+              "candidate_track_number": 2,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/02 - I Don't Wanna Kill You.mp3",
+          "filename": "02 - I Don't Wanna Kill You.mp3",
+          "size": 1298619
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/02 - I Don’t Wanna Kill You.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281166,17 +281603,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "d9df3984254702a3",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+              "size": 949866,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "Love Is Gross",
+              "candidate_track_number": 3,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/03 - Love Is Gross.mp3",
+          "filename": "03 - Love Is Gross.mp3",
+          "size": 949866
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/03 - Love Is Gross.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281214,17 +281814,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "c70f1a91ca1b707b",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+              "size": 619744,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "Make a Deal",
+              "candidate_track_number": 4,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/04 - Make a Deal.mp3",
+          "filename": "04 - Make a Deal.mp3",
+          "size": 619744
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/04 - Make a Deal.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281262,17 +282025,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "90e0d5c627d1947b",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+              "size": 1071211,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "Now I Have You",
+              "candidate_track_number": 5,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/05 - Now I Have You.mp3",
+          "filename": "05 - Now I Have You.mp3",
+          "size": 1071211
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/05 - Now I Have You.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281310,17 +282236,180 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "122189ba22fb1ccc",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+              "size": 1067100,
+              "score": 98.11,
+              "extension": "mp3",
+              "candidate_title": "Credits",
+              "candidate_track_number": 6,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Sidekick of 2 Supers (2019)/06 - Credits.mp3",
+          "filename": "06 - Credits.mp3",
+          "size": 1067100
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Sidekick of 2 Supers/06 - Credits.mp3"
+        },
+        "download_attempts": [
+          {
+            "attempt": 1,
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "score": 97.53,
+            "status": "succeeded",
+            "timestamp": 1790710126
+          }
+        ]
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "93fcdfea-2059-4d26-b3b5-2ee7b3dc8105",
+            "query": "Sushi Soucy Sidekick of 2 Supers",
+            "candidate_count": 12,
+            "timestamp": 1790710089
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Sidekick of 2 Supers"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "572742b2e0a79104",
+          "release": {
+            "release_id": "572742b2e0a79104",
+            "username": "pogmommy",
+            "folder": "Music/Sushi Soucy/Sidekick of 2 Supers (2019)",
+            "file_count": 6,
+            "expected_tracks": 6,
+            "matched_tracks": 6,
+            "coverage": 1.0,
+            "score": 97.53,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "5a2f98ee-b615-4b1a-a126-62f94bd47a43",
+                "title": "Glass Half Something",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "ac4c6caca5c2bedf",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\01 - Glass Half Something.mp3",
+                  "size": 1295233,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Glass Half Something",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ad38199d-2d91-4738-b4d8-020667b2e63b",
+                "title": "I Don’t Wanna Kill You",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ecca95e69148393f",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\02 - I Don't Wanna Kill You.mp3",
+                  "size": 1298619,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "I Don't Wanna Kill You",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "678299c2-d62e-4c13-b810-c14427136416",
+                "title": "Love Is Gross",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "d9df3984254702a3",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\03 - Love Is Gross.mp3",
+                  "size": 949866,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Love Is Gross",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ecb290f6-d1eb-4d12-b789-6321159a02ff",
+                "title": "Make a Deal",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c70f1a91ca1b707b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\04 - Make a Deal.mp3",
+                  "size": 619744,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Make a Deal",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "0bd219bc-2ef6-45a7-aae2-88487f27a016",
+                "title": "Now I Have You",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "90e0d5c627d1947b",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\05 - Now I Have You.mp3",
+                  "size": 1071211,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Now I Have You",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "736d696a-262c-4558-9b24-380e5c3b88ef",
+                "title": "Credits",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "122189ba22fb1ccc",
+                  "username": "pogmommy",
+                  "filename": "Music\\Sushi Soucy\\Sidekick of 2 Supers (2019)\\06 - Credits.mp3",
+                  "size": 1067100,
+                  "score": 98.11,
+                  "extension": "mp3",
+                  "candidate_title": "Credits",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -281432,8 +282521,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 208927.50002219388,
-      "last_speed_timestamp": 1790710055
+      "last_speed": 279525.0750835628,
+      "last_speed_timestamp": 1790710126
     },
     "howehouse": {
       "username": "howehouse",
