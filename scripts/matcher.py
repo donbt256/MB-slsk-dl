@@ -5,7 +5,7 @@ from difflib import SequenceMatcher
 from pathlib import PurePosixPath, PureWindowsPath
 
 
-MATCHER_VERSION = 6
+MATCHER_VERSION = 7
 
 
 MAX_LIBRARY_FILE_BYTES = 100 * 1024 * 1024
@@ -366,18 +366,14 @@ def score_candidate(track, candidate):
         min(100.0, score),
     )
 
-    if (
-        title_exact
-        and artist_path_similarity >= 0.75
-    ):
-        if not unexpected_alternates:
-            decision = "accept"
-        else:
-            decision = "llm"
-    elif score >= 75.0:
+    # Deterministic matching has no fallback model. Alternate-version terms
+    # are hard exclusions unless they are explicitly present in the target.
+    if unexpected_alternates:
+        decision = "reject"
+    elif title_exact and artist_path_similarity >= 0.75:
         decision = "accept"
-    elif score >= 25.0:
-        decision = "llm"
+    elif score >= 78.0 and title_similarity >= 0.80:
+        decision = "accept"
     else:
         decision = "reject"
 
@@ -669,17 +665,21 @@ def score_release(album_tracks, release):
         min(100.0, score),
     )
 
+    exact_title_ratio = (
+        exact_titles / expected
+        if expected
+        else 0.0
+    )
+
+    # Album acceptance requires a complete, internally consistent tracklist.
     if (
         matched == expected
-        and coverage >= 0.90
-        and score >= 80.0
+        and coverage == 1.0
+        and alternate_count == 0
+        and exact_title_ratio >= 0.90
+        and score >= 70.0
     ):
         decision = "accept"
-    elif (
-        coverage >= 0.50
-        and score >= 35.0
-    ):
-        decision = "llm"
     else:
         decision = "reject"
 
@@ -759,29 +759,9 @@ def classify_candidates(scored):
             "candidates": [],
         }
 
-    accepted = [
-        candidate
-        for candidate in scored
-        if candidate.get("decision")
-        == "accept"
-    ]
-
-    ambiguous = [
-        candidate
-        for candidate in scored
-        if candidate.get("decision")
-        == "llm"
-    ]
-
-    if accepted:
+    if scored[0].get("decision") == "accept":
         return {
             "decision": "accept",
-            "candidates": scored,
-        }
-
-    if ambiguous:
-        return {
-            "decision": "llm",
             "candidates": scored,
         }
 
