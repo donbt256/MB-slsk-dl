@@ -292,16 +292,33 @@ class MusicBrainzClient:
                     return value
 
                 if groups:
-                    best_group = max(groups, key=group_score)
-                    resolved = self.get_release_group(best_group["id"])
-                    print(
-                        f"  MusicBrainz release-group match: "
-                        f"{self._artist_credit(best_group.get('artist-credit', []))} - "
-                        f"{best_group.get('title')} "
-                        f"({best_group['id']})",
-                        flush=True,
+                    groups = sorted(
+                        groups,
+                        key=group_score,
+                        reverse=True,
                     )
-                    return resolved
+
+                    for group in groups:
+                        try:
+                            resolved = self.get_release_group(group["id"])
+                        except ValueError as exc:
+                            if "has no official releases" not in str(exc):
+                                raise
+                            print(
+                                f"  Skipping MusicBrainz release group "
+                                f"{group['id']}: no official releases.",
+                                flush=True,
+                            )
+                            continue
+
+                        print(
+                            f"  MusicBrainz release-group match: "
+                            f"{self._artist_credit(group.get('artist-credit', []))} - "
+                            f"{group.get('title')} "
+                            f"({group['id']})",
+                            flush=True,
+                        )
+                        return resolved
 
         if not results:
             base_album = re.sub(
@@ -344,16 +361,33 @@ class MusicBrainzClient:
                     return value
 
                 if groups:
-                    best_group = max(groups, key=group_score)
-                    resolved = self.get_release_group(best_group["id"])
-                    print(
-                        f"  MusicBrainz release-group match: "
-                        f"{self._artist_credit(best_group.get('artist-credit', []))} - "
-                        f"{best_group.get('title')} "
-                        f"({best_group['id']})",
-                        flush=True,
+                    groups = sorted(
+                        groups,
+                        key=group_score,
+                        reverse=True,
                     )
-                    return resolved
+
+                    for group in groups:
+                        try:
+                            resolved = self.get_release_group(group["id"])
+                        except ValueError as exc:
+                            if "has no official releases" not in str(exc):
+                                raise
+                            print(
+                                f"  Skipping MusicBrainz release group "
+                                f"{group['id']}: no official releases.",
+                                flush=True,
+                            )
+                            continue
+
+                        print(
+                            f"  MusicBrainz release-group match: "
+                            f"{self._artist_credit(group.get('artist-credit', []))} - "
+                            f"{group.get('title')} "
+                            f"({group['id']})",
+                            flush=True,
+                        )
+                        return resolved
 
         if not results:
             raise ValueError(
