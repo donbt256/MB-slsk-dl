@@ -119,6 +119,28 @@ def album_key(track):
     )
 
 
+def release_year(track):
+    """Return a four-digit release year from MusicBrainz-derived metadata."""
+    data = metadata(track)
+
+    for key in (
+        "release_year",
+        "year",
+        "release_date",
+        "date",
+        "original_release_date",
+    ):
+        value = data.get(key)
+        if value is None:
+            continue
+
+        match = re.search(r"\\b(19\\d{2}|20\\d{2})\\b", str(value))
+        if match:
+            return match.group(1)
+
+    return None
+
+
 def build_album_groups(tracks):
     groups = {}
 
@@ -404,12 +426,42 @@ def process_album_group(client, tracks, index, total):
         f"  Raw candidates: {len(raw_candidates)}"
     )
 
+    # Some Soulseek search terms can be filtered server-side. If the
+    # artist+album query returns nothing, first retry using only the album
+    # title and its MusicBrainz-derived release year. This deliberately
+    # avoids sending the artist name again.
+    year = release_year(tracks[0])
+    year_query = f"{album} {year}".strip() if year else ""
+
+    if not raw_candidates and year_query and year_query.casefold() != query.casefold():
+        print(
+            f"  Artist+album search returned no results; "
+            f"retrying album+year: {year_query}"
+        )
+        year_search_id, year_data = search_one(
+            client,
+            year_query,
+        )
+        year_candidates = flatten_responses(year_data)
+
+        print(
+            f"  Album+year search ID: {year_search_id}"
+        )
+        print(
+            f"  Album+year raw candidates: {len(year_candidates)}"
+        )
+
+        if year_candidates:
+            search_id = year_search_id
+            raw_candidates = year_candidates
+            query = year_query
+
     # Album metadata often contains edition labels such as
     # "(2007 Remaster)" or "(Deluxe)". Soulseek shares frequently
     # omit those labels. If the exact metadata album query returns
     # nothing, retry once with parenthesized edition labels removed.
     simplified_album = re.sub(
-        r"\s*\([^)]*\)",
+        r"\\s*\\([^)]*\\)",
         "",
         album,
     ).strip()
