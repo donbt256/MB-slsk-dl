@@ -262,13 +262,20 @@ def recover_durable_release(tracks):
     grouped = {}
 
     for track in tracks:
-        candidate = (
-            track.get("acquisition", {})
-            .get("match", {})
-            .get("candidates", [])
-        )
+        acquisition = track.get("acquisition", {})
+        if not isinstance(acquisition, dict):
+            return None
+
+        match = acquisition.get("match")
+        if not isinstance(match, dict):
+            return None
+
+        candidate = match.get("candidates", [])
 
         if not isinstance(candidate, list) or not candidate:
+            return None
+
+        if not isinstance(candidate[0], dict):
             return None
 
         candidate = candidate[0]
