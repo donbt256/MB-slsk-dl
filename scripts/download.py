@@ -27,6 +27,11 @@ TIMEOUT_SECONDS = 60 * 60
 
 ZERO_SPEED_SECONDS = 30
 
+# A user is considered consistently slow after this many completed
+# transfers whose observed transfer speed stays at or below the threshold.
+SLOW_USER_SPEED_BYTES = 100 * 1024
+SLOW_USER_STRIKES = 3
+
 FAILURE_STATES = (
     "rejected",
     "timedout",
@@ -80,6 +85,74 @@ def save_state(state):
         handle.write("\n")
 
     temporary.replace(STATE_FILE)
+
+
+def normalize_username(username):
+    return str(username or "").strip().casefold()
+
+
+def slow_user_state(state):
+    users = state.setdefault("slow_users", {})
+    if not isinstance(users, dict):
+        state["slow_users"] = {}
+        users = state["slow_users"]
+    return users
+
+
+def is_user_blacklisted(state, username):
+    key = normalize_username(username)
+    if not key:
+        return False
+
+    entry = slow_user_state(state).get(key)
+    return isinstance(entry, dict) and entry.get("blacklisted") is True
+
+
+def record_user_speed(state, username, speed):
+    """Record one completed transfer and blacklist persistently slow users."""
+    key = normalize_username(username)
+    if not key:
+        return False
+
+    try:
+        speed = float(speed or 0)
+    except (TypeError, ValueError):
+        return False
+
+    users = slow_user_state(state)
+    entry = users.setdefault(
+        key,
+        {
+            "username": str(username),
+            "slow_transfers": 0,
+            "blacklisted": False,
+        },
+    )
+
+    if entry.get("blacklisted") is True:
+        return True
+
+    entry["last_speed"] = speed
+    entry["last_speed_timestamp"] = int(time.time())
+
+    if speed <= SLOW_USER_SPEED_BYTES:
+        entry["slow_transfers"] = int(
+            entry.get("slow_transfers", 0)
+        ) + 1
+    else:
+        entry["slow_transfers"] = 0
+
+    if entry["slow_transfers"] >= SLOW_USER_STRIKES:
+        entry["blacklisted"] = True
+        log(
+            f"  Blacklisting Soulseek user {username}: "
+            f"{entry['slow_transfers']} consecutive completed "
+            f"transfers at or below "
+            f"{format_speed(SLOW_USER_SPEED_BYTES)}."
+        )
+        return True
+
+    return False
 
 
 def transfer_key(username, filename):
@@ -1215,6 +1288,19 @@ def release_download(
                 }
 
                 completed.add(key)
+
+                blacklisted = record_user_speed(
+                    state,
+                    username_now,
+                    speed,
+                )
+
+                if blacklisted:
+                    log(
+                        f"    User {username_now} is now blacklisted; "
+                        "no further files will be queued from this user."
+                    )
+
                 log(f"    Downloaded: {path}")
 
             elif any(
@@ -1375,6 +1461,14 @@ def process_album(
     attempt_number = 0
 
     for release in releases:
+        release_username = release.get("username")
+
+        if is_user_blacklisted(state, release_username):
+            log(
+                f"  Skipping blacklisted user: {release_username}"
+            )
+            continue
+
         release_id = release.get(
             "release_id"
         )
@@ -1453,7 +1547,23 @@ def process_individual_track(
     ):
         return False
 
-    candidate = candidates[0]
+    candidate = next(
+        (
+            item
+            for item in candidates
+            if isinstance(item, dict)
+            and not is_user_blacklisted(
+                state,
+                item.get("username"),
+            )
+        ),
+        None,
+    )
+
+    if candidate is None:
+        acquisition["status"] = "download_failed"
+        acquisition["download_error"] = "All matched users are blacklisted for slow transfers."
+        return False
 
     username = candidate.get(
         "username"
@@ -1682,6 +1792,12 @@ def process_individual_track(
                 "filename": path.name,
                 "size": actual_size,
             }
+
+            record_user_speed(
+                state,
+                username,
+                speed,
+            )
 
             save_state(state)
 
