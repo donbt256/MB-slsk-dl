@@ -927,8 +927,19 @@ class GitHubClient:
         staging = path / ".mb-slsk-upload"
         paths = []
 
+        additions = []
         for entry in entries:
             relative = Path(entry["path"])
+
+            # A null blob SHA is the existing publisher's deletion marker.
+            # Use the local Git index so cleanup operations remain atomic.
+            if entry.get("sha") is None:
+                self._run_git(
+                    ["rm", "--cached", "--ignore-unmatch", "--", entry["path"]],
+                    cwd=path,
+                )
+                continue
+
             target = path / relative
             target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -938,9 +949,10 @@ class GitHubClient:
                     f"Missing staged Git object for {entry['path']}"
                 )
             shutil.copyfile(source, target)
-            paths.append(entry["path"])
+            additions.append(entry["path"])
 
-        self._run_git(["add", "--", *paths], cwd=path)
+        if additions:
+            self._run_git(["add", "--", *additions], cwd=path)
 
         status = self._run_git(
             ["status", "--porcelain"],
