@@ -1,19 +1,14 @@
 import json
 from pathlib import Path
 
-from musicbrainz import resolve_urls
+from input_parser import parse_input_file
+from musicbrainz import resolve_requests
 
 
 ROOT = Path(__file__).resolve().parent.parent
-URLS_FILE = ROOT / "urls.txt"
+INPUT_FILE = ROOT / "input.yaml"
 STATE_DIR = ROOT / "state"
 TRACKS_FILE = STATE_DIR / "tracks.json"
-
-
-def load_urls():
-    if not URLS_FILE.exists():
-        raise FileNotFoundError(f"Missing {URLS_FILE}")
-    return URLS_FILE.read_text(encoding="utf-8").splitlines()
 
 
 def load_existing_state():
@@ -70,8 +65,7 @@ def build_track_state(metadata, existing=None, sources=None):
 
 
 def main():
-    urls = load_urls()
-    print(f"Found {len(urls)} input lines.")
+    requests = parse_input_file(INPUT_FILE)
 
     existing_tracks = load_existing_state()
     existing_state = (
@@ -84,8 +78,8 @@ def main():
         {},
     )
 
-    resolved = resolve_urls(
-        urls,
+    resolved = resolve_requests(
+        requests,
         cache=musicbrainz_cache,
     )
 
