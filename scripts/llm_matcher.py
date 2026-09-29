@@ -1,8 +1,9 @@
 import json
 import os
+import sys
 from pathlib import Path
 
-from openai import OpenAI
+from openai import AuthenticationError, OpenAI
 from release import release_key
 
 
@@ -702,11 +703,22 @@ def main():
                 f"{len(releases)}"
             )
 
-            result = call_llm_for_album(
-                client,
-                group,
-                releases,
-            )
+            try:
+                result = call_llm_for_album(
+                    client,
+                    group,
+                    releases,
+                )
+            except AuthenticationError as exc:
+                print(
+                    "OPENAI_API_KEY is invalid or has been invalidated. "
+                    "Create a new OpenAI API key and replace the "
+                    "GitHub Actions OPENAI_API_KEY secret.",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                print(f"  OpenAI authentication error: {exc}", file=sys.stderr, flush=True)
+                raise SystemExit(78)
 
             print(
                 f"  Decision: "
@@ -736,11 +748,22 @@ def main():
                 [],
             )
 
-            result = call_llm_for_track(
-                client,
-                track,
-                candidates,
-            )
+            try:
+                result = call_llm_for_track(
+                    client,
+                    track,
+                    candidates,
+                )
+            except AuthenticationError as exc:
+                print(
+                    "OPENAI_API_KEY is invalid or has been invalidated. "
+                    "Create a new OpenAI API key and replace the "
+                    "GitHub Actions OPENAI_API_KEY secret.",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                print(f"  OpenAI authentication error: {exc}", file=sys.stderr, flush=True)
+                raise SystemExit(78)
 
             data = metadata(track)
 
