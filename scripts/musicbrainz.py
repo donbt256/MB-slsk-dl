@@ -241,10 +241,68 @@ class MusicBrainzClient:
         )
         results = data.get("releases", [])
 
-        # Streaming services often append edition labels such as
-        # "(Deluxe)" to an album title, while MusicBrainz may store the
-        # underlying release group under the base album title. If an exact
-        # release search fails, fall back to the release-group search.
+        # Streaming services often append edition labels that MusicBrainz
+        # does not use in the release-group title. If the exact release
+        # search fails, progressively normalize the requested title and
+        # search for its release group.
+        if not results:
+            base_album = re.sub(
+                r"\\s*\\([^)]*\\)\\s*$",
+                "",
+                album,
+            ).strip()
+
+            base_album = re.sub(
+                r"\\s+[-–—]\\s+(?:deluxe|expanded|anniversary|remaster|"
+                r"remastered|special|edition)\\b.*$",
+                "",
+                base_album,
+                flags=re.IGNORECASE,
+            ).strip()
+
+            if base_album and base_album.casefold() != album.casefold():
+                group_data = self._request(
+                    "/release-group",
+                    params={
+                        "query": (
+                            f'artist:"{artist}" AND '
+                            f'releasegroup:"{base_album}"'
+                        ),
+                        "limit": 25,
+                        "fmt": "json",
+                    },
+                )
+                groups = group_data.get("release-groups", [])
+
+                artist_norm = artist.casefold().strip()
+                base_norm = base_album.casefold().strip()
+
+                def group_score(item):
+                    item_artist = self._artist_credit(
+                        item.get("artist-credit", [])
+                    ).casefold().strip()
+                    item_title = item.get("title", "").casefold().strip()
+                    value = 0
+                    if item_artist == artist_norm:
+                        value += 100
+                    if item_title == base_norm:
+                        value += 100
+                    if str(item.get("primary-type", "")).casefold() == "album":
+                        value += 10
+                    return value
+
+                if groups:
+                    best_group = max(groups, key=group_score)
+                    resolved = self.get_release_group(best_group["id"])
+                    print(
+                        f"  MusicBrainz release-group match: "
+                        f"{self._artist_credit(best_group.get('artist-credit', []))} - "
+                        f"{best_group.get('title')} "
+                        f"({best_group['id']})",
+                        flush=True,
+                    )
+                    return resolved
+
         if not results:
             base_album = re.sub(
                 r"\s*\((?:deluxe|expanded|anniversary|remaster|remastered)"
