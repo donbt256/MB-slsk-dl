@@ -134,7 +134,7 @@ def release_year(track):
         if value is None:
             continue
 
-        match = re.search(r"\\b(19\\d{2}|20\\d{2})\\b", str(value))
+        match = re.search(r"\b(19\d{2}|20\d{2})\b", str(value))
         if match:
             return match.group(1)
 
@@ -461,7 +461,7 @@ def process_album_group(client, tracks, index, total):
     # omit those labels. If the exact metadata album query returns
     # nothing, retry once with parenthesized edition labels removed.
     simplified_album = re.sub(
-        r"\\s*\\([^)]*\\)",
+        r"\s*\([^)]*\)",
         "",
         album,
     ).strip()
