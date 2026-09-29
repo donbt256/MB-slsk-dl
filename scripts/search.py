@@ -141,6 +141,17 @@ def release_year(track):
     return None
 
 
+def normalize_search_query(query):
+    """
+    Produce a Soulseek-friendly version of a query by treating punctuation
+    as separators. Keep the original query as the first attempt because
+    punctuation can occasionally be meaningful.
+    """
+    normalized = re.sub(r"[^\w\s]+", " ", query, flags=re.UNICODE)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    return normalized
+
+
 def build_album_groups(tracks):
     groups = {}
 
@@ -183,7 +194,7 @@ def search_one(client, query):
                 print(
                     f"  Search retry {attempt} produced results."
                 )
-            return search_id, data
+            return search_id, data, query
 
         if attempt < 3:
             print(
@@ -192,10 +203,45 @@ def search_one(client, query):
             )
             time.sleep(1)
 
+    normalized = normalize_search_query(query)
+
+    if normalized and normalized.casefold() != query.casefold():
+        print(
+            f"  Search returned no candidates; "
+            f"retrying with punctuation normalized: {normalized}"
+        )
+
+        for attempt in range(1, 4):
+            search_id = client.search(
+                normalized,
+                timeout_ms=SEARCH_TIMEOUT_MS,
+                file_limit=FILE_LIMIT,
+                response_limit=RESPONSE_LIMIT,
+            )
+
+            data = client.wait_for_search(
+                search_id,
+                timeout_seconds=SEARCH_WAIT_SECONDS,
+            )
+
+            if flatten_responses(data):
+                if attempt > 1:
+                    print(
+                        f"  Normalized search retry {attempt} produced results."
+                    )
+                return search_id, data, normalized
+
+            if attempt < 3:
+                print(
+                    f"  Normalized search returned no candidates; "
+                    f"retrying ({attempt + 1}/3)..."
+                )
+                time.sleep(1)
+
     # Do not delete completed searches immediately. slskd can still be
     # finalizing/persisting a search in its background worker, and deleting
     # it here can race that finalization.
-    return search_id, data
+    return search_id, data, normalized if normalized else query
 
 
 def ensure_search_state(track):
@@ -208,8 +254,6 @@ def ensure_search_state(track):
             "release_candidates": [],
         },
     )
-
-
 
 
 def compact_candidate(candidate):
@@ -324,7 +368,6 @@ def recover_durable_release(tracks):
         return None
 
     items = complete[0]
-    first = metadata(items[0][0])
 
     matches = [
         {
@@ -412,7 +455,7 @@ def process_album_group(client, tracks, index, total):
     search_state["mode"] = "album"
     search_state["query"] = query
 
-    search_id, data = search_one(
+    search_id, data, effective_query = search_one(
         client,
         query,
     )
@@ -426,6 +469,13 @@ def process_album_group(client, tracks, index, total):
         f"  Raw candidates: {len(raw_candidates)}"
     )
 
+    if effective_query != query:
+        print(
+            f"  Effective search query: {effective_query}"
+        )
+
+    query = effective_query
+
     # Some Soulseek search terms can be filtered server-side. If the
     # artist+album query returns nothing, first retry using only the album
     # title and its MusicBrainz-derived release year. This deliberately
@@ -438,7 +488,7 @@ def process_album_group(client, tracks, index, total):
             f"  Artist+album search returned no results; "
             f"retrying album+year: {year_query}"
         )
-        year_search_id, year_data = search_one(
+        year_search_id, year_data, year_effective_query = search_one(
             client,
             year_query,
         )
@@ -454,7 +504,7 @@ def process_album_group(client, tracks, index, total):
         if year_candidates:
             search_id = year_search_id
             raw_candidates = year_candidates
-            query = year_query
+            query = year_effective_query
 
     # Album metadata often contains edition labels such as
     # "(2007 Remaster)" or "(Deluxe)". Soulseek shares frequently
@@ -472,7 +522,7 @@ def process_album_group(client, tracks, index, total):
             f"  Exact album search returned no results; "
             f"retrying: {fallback_query}"
         )
-        fallback_search_id, fallback_data = search_one(
+        fallback_search_id, fallback_data, fallback_effective_query = search_one(
             client,
             fallback_query,
         )
@@ -488,7 +538,7 @@ def process_album_group(client, tracks, index, total):
         if fallback_candidates:
             search_id = fallback_search_id
             raw_candidates = fallback_candidates
-            query = fallback_query
+            query = fallback_effective_query
 
     for track in tracks:
         state = ensure_search_state(track)
@@ -509,10 +559,6 @@ def process_album_group(client, tracks, index, total):
             }
         )
 
-        # Do not persist the raw Soulseek result set. It can contain
-        # thousands of redundant file records and can make state/tracks.json
-        # enormous. The ranked release list below contains everything needed
-        # for download/retry.
         state.pop("candidates", None)
         state["release_candidates"] = []
 
@@ -688,7 +734,7 @@ def process_individual_track(
     search_state["mode"] = "track"
     search_state["query"] = query
 
-    search_id, result = search_one(
+    search_id, result, effective_query = search_one(
         client,
         query,
     )
@@ -701,6 +747,13 @@ def process_individual_track(
     print(
         f"  Raw candidates: {len(raw_candidates)}"
     )
+
+    if effective_query != query:
+        print(
+            f"  Effective search query: {effective_query}"
+        )
+
+    query = effective_query
 
     search_state["queries"] = search_state.get(
         "queries",
@@ -802,8 +855,6 @@ def main():
         tracks
     )
 
-    # Only use album-level searching when at least
-    # two tracks from that album are present.
     album_groups = {
         key: group
         for key, group in album_groups.items()
