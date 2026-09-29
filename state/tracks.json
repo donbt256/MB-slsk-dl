@@ -282447,17 +282447,82 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "pending",
+        "status": "published",
         "attempts": 0,
-        "match": null,
-        "file": null,
-        "library": null
+        "match": {
+          "candidates": [
+            {
+              "candidate_id": "c1a951af497cadbb",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Deep Breaths (2020)\\01 - Deep Breaths.m4a",
+              "size": 6223751,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "Deep Breaths",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            }
+          ]
+        },
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Deep Breaths (2020)/01 - Deep Breaths.m4a",
+          "filename": "01 - Deep Breaths.m4a",
+          "size": 6223751
+        },
+        "library": {
+          "repo": "music-library-002",
+          "path": "Sushi Soucy/Deep Breaths/01 - Deep Breaths.m4a"
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "track",
+        "queries": [
+          {
+            "search_id": "0d9b7158-7bb8-467b-ab6f-9b9357c29b6f",
+            "query": "Sushi Soucy Deep Breaths",
+            "candidate_count": 4,
+            "timestamp": 1790710164
+          }
+        ],
+        "release_candidates": [],
+        "query": "Sushi Soucy Deep Breaths"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "track",
+          "decision": "accept",
+          "candidates": [
+            {
+              "candidate_id": "c1a951af497cadbb",
+              "username": "pogmommy",
+              "filename": "Music\\Sushi Soucy\\Deep Breaths (2020)\\01 - Deep Breaths.m4a",
+              "size": 6223751,
+              "score": 97.07,
+              "extension": "m4a",
+              "candidate_title": "Deep Breaths",
+              "candidate_track_number": 1,
+              "alternate_terms": []
+            },
+            {
+              "candidate_id": "77093ad8a9842910",
+              "username": "TechWitch",
+              "filename": "Shared\\Sushi Soucy\\Deep Breaths {mbid:1d9eeb58-6085-49b4-a339-d94bfc2b03b8} {Single}\\Sushi Soucy_Deep Breaths_01_Deep Breaths.flac",
+              "size": 12096972,
+              "score": 44.36,
+              "extension": "flac",
+              "candidate_title": "Sushi Soucy_Deep Breaths_01_Deep Breaths",
+              "candidate_track_number": null,
+              "alternate_terms": []
+            }
+          ]
+        }
+      }
     }
   ],
   "slow_users": {
@@ -282521,8 +282586,8 @@
       "username": "pogmommy",
       "slow_transfers": 0,
       "blacklisted": false,
-      "last_speed": 279525.0750835628,
-      "last_speed_timestamp": 1790710126
+      "last_speed": 1910990.5790597592,
+      "last_speed_timestamp": 1790710178
     },
     "howehouse": {
       "username": "howehouse",
