@@ -1,0 +1,12 @@
+# Input can be a MusicBrainz release URL:
+# https://musicbrainz.org/release/<release-mbid>
+#
+# Or a MusicBrainz release-group URL:
+# https://musicbrainz.org/release-group/<release-group-mbid>
+#
+# Or simply:
+# Artist - Album
+#
+# Examples:
+# Pixies - Surfer Rosa
+# Wilco - Yankee Hotel Foxtrot
