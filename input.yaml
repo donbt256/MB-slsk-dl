@@ -107,4 +107,53 @@ albums:
   - artist: "Radiohead"
     album: "Kid A"
 
+
+  - artist: "The Flaming Lips"
+    album: "At War with the Mystics (Deluxe Version)"
+
+  - artist: "The Flaming Lips"
+    album: "Yoshimi Battles the Pink Robots (20th Anniversary Deluxe Edition)"
+
+  - artist: "The Flaming Lips"
+    album: "The Soft Bulletin (25th Anniversary)"
+
+  - artist: "The Flaming Lips"
+    album: "Transmissions from the Satellite Heart"
+
+  - artist: "Sushi Soucy"
+    album: "I Deserve to Bleed"
+
+  - artist: "Sushi Soucy"
+    album: "Deep Breaths"
+
+  - artist: "Sushi Soucy"
+    album: "Average"
+
+  - artist: "Sushi Soucy"
+    album: "Dear God"
+
+  - artist: "Sushi Soucy"
+    album: "A Simple Song"
+
+  - artist: "Sushi Soucy"
+    album: "Missing Hell"
+
+  - artist: "Sushi Soucy"
+    album: "Rock in God's Shoe"
+
+  - artist: "Sushi Soucy"
+    album: "Circumstancial Wallflower"
+
+  - artist: "Sushi Soucy"
+    album: "The Hard Way"
+
+  - artist: "Sushi Soucy"
+    album: "Almost Perfect"
+
+  - artist: "Sushi Soucy"
+    album: "Almost Perfect (Acoustic)"
+
+  - artist: "Sushi Soucy"
+    album: "Hey, You!.mov"
+
 tracks:
