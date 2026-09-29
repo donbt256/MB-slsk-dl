@@ -126,6 +126,17 @@ def main():
     print(f"Preserved state for {preserved} existing tracks.")
     print(f"Created state for {new} new tracks.")
     print(f"Resolved {len(resolved['releases'])} release(s).")
+
+    unresolved = resolved.get("unresolved", [])
+    if unresolved:
+        print()
+        print(f"Unresolved album request(s): {len(unresolved)}")
+        for item in unresolved:
+            print(
+                f"  {item['artist']} - {item['album']}: "
+                f"{item['error']}"
+            )
+
     print(f"Wrote {TRACKS_FILE}")
 
 
