@@ -497,6 +497,7 @@ def resolve_requests(requests, cache=None):
         "tracks": {},
         "track_sources": {},
         "releases": [],
+        "unresolved": [],
         "cache": cache,
     }
 
@@ -530,7 +531,23 @@ def resolve_requests(requests, cache=None):
             f"Resolving album: {request.artist} - {request.album}",
             flush=True,
         )
-        resolved = resolve_album(request.artist, request.album)
+        try:
+            resolved = resolve_album(request.artist, request.album)
+        except ValueError as exc:
+            print(
+                f"  MusicBrainz could not resolve this request; "
+                f"skipping: {exc}",
+                flush=True,
+            )
+            result["unresolved"].append(
+                {
+                    "artist": request.artist,
+                    "album": request.album,
+                    "error": str(exc),
+                }
+            )
+            continue
+
         _merge_resolved(result, resolved)
 
     for request in track_requests:
@@ -566,6 +583,7 @@ def resolve_requests(requests, cache=None):
         "tracks": list(result["tracks"].values()),
         "track_sources": result["track_sources"],
         "releases": result["releases"],
+        "unresolved": result["unresolved"],
         "cache": result["cache"],
     }
 
