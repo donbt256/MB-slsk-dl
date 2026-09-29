@@ -275,6 +275,114 @@ class MusicBrainzClient:
         return self.get_release(best["id"])
 
 
+def _merge_resolved(target, resolved, requested_track_ids=None):
+    release = resolved["release"]
+    release_id = release["id"]
+
+    if not any(item.get("id") == release_id for item in target["releases"]):
+        target["releases"].append(release)
+
+    allowed = set(requested_track_ids) if requested_track_ids is not None else None
+
+    for track in resolved["tracks"]:
+        track_id = track["id"]
+        if allowed is not None and track_id not in allowed:
+            continue
+
+        target["tracks"][track_id] = track
+        entry = target["track_sources"].setdefault(
+            track_id,
+            {"release_ids": [], "track_ids": []},
+        )
+        if release_id not in entry["release_ids"]:
+            entry["release_ids"].append(release_id)
+
+
+def resolve_requests(requests, cache=None):
+    client = MusicBrainzClient()
+
+    cache = cache if isinstance(cache, dict) else {}
+    cache.setdefault("releases", {})
+    cache.setdefault("release_groups", {})
+    cache.setdefault("searches", {})
+
+    result = {
+        "tracks": {},
+        "track_sources": {},
+        "releases": [],
+        "cache": cache,
+    }
+
+    album_requests = requests.albums
+    track_requests = requests.tracks
+
+    print(
+        f"Found {len(album_requests)} album request(s) and "
+        f"{len(track_requests)} track request(s).",
+        flush=True,
+    )
+
+    def resolve_album(artist, album):
+        cache_key = f"{artist}\x1f{album}"
+        cached = cache["searches"].get(cache_key)
+
+        if cached:
+            print(
+                f"  Using cached MusicBrainz search: "
+                f"{artist} - {album}",
+                flush=True,
+            )
+            return cached
+
+        resolved = client.search_release(artist, album)
+        cache["searches"][cache_key] = resolved
+        return resolved
+
+    for request in album_requests:
+        print(
+            f"Resolving album: {request.artist} - {request.album}",
+            flush=True,
+        )
+        resolved = resolve_album(request.artist, request.album)
+        _merge_resolved(result, resolved)
+
+    for request in track_requests:
+        print(
+            f"Resolving track: "
+            f"{request.artist} - {request.album} - {request.title}",
+            flush=True,
+        )
+        resolved = resolve_album(request.artist, request.album)
+
+        title_norm = request.title.casefold().strip()
+        matching_ids = {
+            track["id"]
+            for track in resolved["tracks"]
+            if str(track.get("title") or "").casefold().strip()
+            == title_norm
+        }
+
+        if not matching_ids:
+            raise ValueError(
+                f"MusicBrainz found the album "
+                f"{request.artist} - {request.album}, but no track "
+                f"named {request.title!r}."
+            )
+
+        _merge_resolved(
+            result,
+            resolved,
+            requested_track_ids=matching_ids,
+        )
+
+    return {
+        "tracks": list(result["tracks"].values()),
+        "track_sources": result["track_sources"],
+        "releases": result["releases"],
+        "cache": result["cache"],
+    }
+
+
 def resolve_urls(urls, cache=None):
     client = MusicBrainzClient()
     tracks = {}
@@ -323,7 +431,7 @@ def resolve_urls(urls, cache=None):
             release = resolved["release"]
             entity_id = release["id"]
             kind = "release"
-        
+
         if kind == "release":
             cached = cache["releases"].get(entity_id)
             if cached:
