@@ -30,29 +30,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Validate OpenAI API key
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          python - <<'PY'
-          import os
-          from openai import AuthenticationError, OpenAI
-
-          key = os.environ.get("OPENAI_API_KEY")
-          if not key:
-              raise SystemExit("OPENAI_API_KEY GitHub secret is not set.")
-
-          try:
-              client = OpenAI(api_key=key)
-              client.models.list()
-          except AuthenticationError as exc:
-              print("OPENAI_API_KEY is invalid or has been invalidated.", flush=True)
-              print("Create a new OpenAI API key and replace the OPENAI_API_KEY GitHub secret.", flush=True)
-              raise SystemExit(1) from exc
-
-          print("OpenAI API key is valid.", flush=True)
-          PY
-
       - name: Resolve MusicBrainz releases
         run: |
           python scripts/main.py
@@ -129,9 +106,6 @@ jobs:
           SLSKD_SEARCH_WAIT_SECONDS: "20"
           SLSKD_RESPONSE_LIMIT: "100"
           SLSKD_FILE_LIMIT: "10000"
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MATCH_MODEL: gpt-5-nano
-          OPENAI_MAX_CANDIDATES: "15"
           SOULSEEK_DOWNLOAD_DIR: ${{ runner.temp }}/music-downloads
           GIT_PAT: ${{ secrets.GIT_PAT }}
         run: |
