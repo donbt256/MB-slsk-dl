@@ -209,8 +209,8 @@ class MusicBrainzClient:
         # release search fails, fall back to the release-group search.
         if not results:
             base_album = re.sub(
-                r"\\s*\\((?:deluxe|expanded|anniversary|remaster|remastered)"
-                r"(?:[^)]*)\\)\\s*$",
+                r"\s*\((?:deluxe|expanded|anniversary|remaster|remastered)"
+                r"(?:[^)]*)\)\s*$",
                 "",
                 album,
                 flags=re.IGNORECASE,
