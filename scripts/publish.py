@@ -12,6 +12,8 @@ RELEASE_FILTER = os.environ.get("RELEASE_KEY")
 from urllib.parse import quote
 
 import requests
+import shutil
+import subprocess
 
 
 STATE_FILE = Path("state/tracks.json")
@@ -820,71 +822,170 @@ class GitHubClient:
 
         raise RuntimeError("GitHub Git-data write failed.")
 
+    def _git_env(self):
+        token = os.environ.get("GIT_PAT")
+        if not token:
+            raise RuntimeError("GIT_PAT is required for Git push.")
+
+        encoded = base64.b64encode(
+            f"x-access-token:{token}".encode("utf-8")
+        ).decode("ascii")
+        env = os.environ.copy()
+        env["GIT_CONFIG_COUNT"] = "1"
+        env["GIT_CONFIG_KEY_0"] = "http.extraheader"
+        env["GIT_CONFIG_VALUE_0"] = f"AUTHORIZATION: basic {encoded}"
+        return env
+
+    def _run_git(self, args, cwd=None):
+        result = subprocess.run(
+            ["git", *args],
+            cwd=cwd,
+            env=self._git_env(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or result.stdout).decode(
+                "utf-8", errors="replace"
+            ).strip()
+            raise RuntimeError(
+                f"git {' '.join(args)} failed with exit code "
+                f"{result.returncode}: {detail}"
+            )
+        return result.stdout
+
+    def _local_repo(self, repo):
+        if not hasattr(self, "_local_repos"):
+            self._local_repos = {}
+
+        existing = self._local_repos.get(repo)
+        if existing:
+            return existing
+
+        cache_root = Path(
+            os.environ.get(
+                "GITHUB_LOCAL_REPO_CACHE",
+                "/tmp/mb-slsk-library-repos",
+            )
+        )
+        cache_root.mkdir(parents=True, exist_ok=True)
+        path = cache_root / repo
+        remote = f"https://github.com/{self.owner}/{repo}.git"
+
+        if not (path / ".git").is_dir():
+            if path.exists():
+                shutil.rmtree(path)
+            self._run_git(
+                [
+                    "clone",
+                    "--filter=blob:none",
+                    "--no-checkout",
+                    remote,
+                    str(path),
+                ]
+            )
+        else:
+            self._run_git(["fetch", "origin"], cwd=path)
+
+        self._local_repos[repo] = path
+        return path
+
     def create_blob(self, repo, content):
-        repo_path = (
-            f"/repos/"
-            f"{quote(self.owner, safe='')}/"
-            f"{quote(repo, safe='')}"
-        )
-        data = self._write_request(
-            "POST",
-            f"{repo_path}/git/blobs",
-            json={
-                "content": base64.b64encode(content).decode("ascii"),
-                "encoding": "base64",
-            },
-        )
-        sha = data.get("sha")
-        if not sha:
-            raise RuntimeError("GitHub did not return a blob SHA.")
+        # Keep the existing publish_item interface, but create the Git blob
+        # locally. GitHub's REST /git/blobs endpoint rejects sufficiently
+        # large request bodies even when the individual file is below GitHub's
+        # 100 MiB Git blob limit. Normal Git transport handles these files.
+        path = self._local_repo(repo)
+        staging = path / ".mb-slsk-upload"
+        staging.mkdir(parents=True, exist_ok=True)
+
+        temporary = staging / f"payload-{time.time_ns()}"
+        temporary.write_bytes(content)
+        try:
+            sha = self._run_git(
+                ["hash-object", "-w", str(temporary)],
+                cwd=path,
+            ).decode("ascii").strip()
+        finally:
+            temporary.unlink(missing_ok=True)
+
+        retained = staging / sha
+        if not retained.exists():
+            retained.write_bytes(content)
         return sha
 
+
     def create_tree_commit(self, repo, branch, entries, message):
-        repo_path = (
-            f"/repos/"
-            f"{quote(self.owner, safe='')}/"
-            f"{quote(repo, safe='')}"
-        )
-        parent_sha = self.get_branch_head(repo, branch)
-        parent_commit = self.request(
-            "GET",
-            f"{repo_path}/git/commits/{parent_sha}",
-        )
-        base_tree = parent_commit["tree"]["sha"]
+        path = self._local_repo(repo)
 
-        tree = self._write_request(
-            "POST",
-            f"{repo_path}/git/trees",
-            json={
-                "base_tree": base_tree,
-                "tree": entries,
-            },
+        # Refresh the remote tracking branch and reconstruct the index from
+        # it without checking out the existing audio blobs.
+        self._run_git(["fetch", "origin", branch], cwd=path)
+        self._run_git(["read-tree", f"origin/{branch}"], cwd=path)
+
+        staging = path / ".mb-slsk-upload"
+        paths = []
+
+        for entry in entries:
+            relative = Path(entry["path"])
+            target = path / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+
+            source = staging / entry["sha"]
+            if not source.is_file():
+                raise RuntimeError(
+                    f"Missing staged Git object for {entry['path']}"
+                )
+            shutil.copyfile(source, target)
+            paths.append(entry["path"])
+
+        self._run_git(["add", "--", *paths], cwd=path)
+
+        status = self._run_git(
+            ["status", "--porcelain"],
+            cwd=path,
+        ).decode("utf-8", errors="replace").strip()
+        if not status:
+            return self._run_git(
+                ["rev-parse", f"origin/{branch}"],
+                cwd=path,
+            ).decode("ascii").strip()
+
+        self._run_git(
+            [
+                "-c", "user.name=MB-slsk-dl",
+                "-c", "user.email=actions@users.noreply.github.com",
+                "commit", "-m", message,
+            ],
+            cwd=path,
         )
 
-        commit = self._write_request(
-            "POST",
-            f"{repo_path}/git/commits",
-            json={
-                "message": message,
-                "tree": tree["sha"],
-                "parents": [parent_sha],
-            },
-        )
+        try:
+            self._run_git(
+                ["push", "origin", f"HEAD:{branch}"],
+                cwd=path,
+            )
+        except RuntimeError as exc:
+            message_text = str(exc)
+            if "non-fast-forward" not in message_text and "rejected" not in message_text:
+                raise
 
-        commit_sha = commit.get("sha")
-        if not commit_sha:
-            raise RuntimeError("GitHub did not return a commit SHA.")
+            self._run_git(["fetch", "origin", branch], cwd=path)
+            self._run_git(["rebase", f"origin/{branch}"], cwd=path)
+            self._run_git(
+                ["push", "origin", f"HEAD:{branch}"],
+                cwd=path,
+            )
 
-        # Retry the ref update independently. If GitHub accepted the commit
-        # but the ref request timed out, we must retry the same commit rather
-        # than create another commit.
-        self._write_request(
-            "PATCH",
-            f"{repo_path}/git/refs/heads/{quote(branch, safe='')}",
-            json={"sha": commit_sha},
-        )
+        # The staged copies are no longer needed after the push.
+        for entry in entries:
+            (staging / entry["sha"]).unlink(missing_ok=True)
 
-        return commit_sha
+        return self._run_git(
+            ["rev-parse", "HEAD"],
+            cwd=path,
+        ).decode("ascii").strip()
 
     def put_file(
         self,
