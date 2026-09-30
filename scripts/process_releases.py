@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 from release import group_releases
-from config import string
+from config import integer, string
 
 
 STATE_PATH = Path(string("paths.state_file", default="state/tracks.json"))
@@ -232,7 +232,8 @@ def save_checkpoint(label):
         )
 
         pushed = False
-        for attempt in range(1, 4):
+        max_attempts = integer("github.checkpoint_push_max_attempts", "GITHUB_CHECKPOINT_PUSH_MAX_ATTEMPTS", 3)
+        for attempt in range(1, max_attempts + 1):
             result = subprocess.run(
                 ["git", "push", "origin", "HEAD:main"],
             )
@@ -241,7 +242,7 @@ def save_checkpoint(label):
                 break
 
             print(
-                f"Checkpoint push rejected (attempt {attempt}/3); "
+                f"Checkpoint push rejected (attempt {attempt}/{max_attempts}); 
                 "rebasing onto the current remote main...",
                 flush=True,
             )
@@ -260,7 +261,7 @@ def save_checkpoint(label):
 
         if not pushed:
             raise RuntimeError(
-                f"Could not push checkpoint after 3 attempts: {label}"
+                f"Could not push checkpoint after {max_attempts} attempts: {label}"
             )
 
         print(f"Checkpoint pushed: {label}", flush=True)
