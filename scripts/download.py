@@ -353,7 +353,7 @@ def release_candidate_key(release):
     )
 
 
-def release_matches(release, tracks):
+def release_matches(release, tracks, state=None):
     """
     Convert a ranked release's match list into:
 
@@ -412,10 +412,13 @@ def release_matches(release, tracks):
         if not username or not filename:
             continue
 
-        if is_transfer_blacklisted(
-            state,
-            username,
-            filename,
+        if (
+            state is not None
+            and is_transfer_blacklisted(
+                state,
+                username,
+                filename,
+            )
         ):
             continue
 
@@ -994,6 +997,7 @@ def set_release_match(
     matches = release_matches(
         release,
         tracks,
+        state,
     )
 
     by_track_id = {
@@ -1165,7 +1169,11 @@ def release_download(
         f"{release.get('expected_tracks')}"
     )
 
-    matches = release_matches(release, tracks)
+    matches = release_matches(
+        release,
+        tracks,
+        state,
+    )
 
     if len(matches) != len(tracks):
         log(
