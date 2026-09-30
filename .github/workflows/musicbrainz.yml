@@ -34,6 +34,12 @@ jobs:
         run: |
           python scripts/main.py
 
+      - name: Remove queued albums
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+        run: |
+          python scripts/remove_albums.py
+
       - name: Start slskd
         env:
           SOULSEEK_USERNAME: ${{ secrets.SOULSEEK_USERNAME }}
