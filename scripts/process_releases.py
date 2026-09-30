@@ -5,9 +5,10 @@ import sys
 from pathlib import Path
 
 from release import group_releases
+from config import string
 
 
-STATE_PATH = Path("state/tracks.json")
+STATE_PATH = Path(string("paths.state_file", default="state/tracks.json"))
 
 SUCCESS_STATUSES = {
     "downloaded",
