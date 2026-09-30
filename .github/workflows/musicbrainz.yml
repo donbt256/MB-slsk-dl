@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout MB-slsk-dl
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -131,6 +131,8 @@ jobs:
           for track in tracks:
               metadata = track.get("metadata", {})
               acquisition = track.get("acquisition", {})
+              if not isinstance(acquisition, dict):
+                  acquisition = {}
               status = acquisition.get("status", "unknown")
               statuses[status] = statuses.get(status, 0) + 1
 
