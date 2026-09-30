@@ -49853,24 +49853,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "9e5f9272b98f444f",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
-              "size": 5657970,
+              "candidate_id": "f2d37c07f37546b7",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+              "size": 6964543,
               "score": 100.0,
-              "extension": "mp3",
+              "extension": "",
               "candidate_title": "Caribou",
               "candidate_track_number": 1,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/01 - Caribou.m4a"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -49880,14 +49883,3032 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/01 Caribou.m4a",
+          "filename": "01 Caribou.m4a",
+          "size": 6964543
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [
+          {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "76944f73b9137d3f",
+            "username": "474r4x14",
+            "folder": "Music/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "81985d4c8ab41613",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 4003748,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "0256452d1894e070",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 2922647,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "b9a1812bc836b260",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 2138099,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "6485583d01333b77",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 3113501,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "6fcf95bc02c68014",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 2804929,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "6942511180fdd122",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\06 Nimrod’s Son.mp3",
+                  "size": 2859255,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Nimrod’s Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "cc6245006dbeee1d",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\07 I’ve Been Tired.mp3",
+                  "size": 3726866,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "I’ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "e3572ad320143e69",
+                  "username": "474r4x14",
+                  "filename": "Music\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 3256177,
+                  "score": 100.0,
+                  "extension": "mp3",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1ec1c8a603079da0",
+            "username": "RobJob",
+            "folder": "@@qjjcr/Music/Pixies/Come on Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "909a83d352bb0b28",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\01 Caribou.mp3",
+                  "size": 4802560,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e5b456c3c27f766a",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\02 Vamos.mp3",
+                  "size": 4298752,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "13ab0dd3c1ee97c1",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 2564096,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "36d377b808111e99",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 3731456,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9403b68ca4d38492",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 3356672,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "d72dba5a028fc795",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 3426304,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "bb6e36dbbd0d5913",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 4472832,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "e9692582c7a688a2",
+                  "username": "RobJob",
+                  "filename": "@@qjjcr\\Music\\Pixies\\Come on Pilgrim\\08 Levitate Me.mp3",
+                  "size": 3878912,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "0994a958bd31487f",
+            "username": "rozhestvensky",
+            "folder": "@@jqzqy/Music/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "82dba8b1ec7d40d1",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 8035644,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "1a45e0a4194ff52c",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 7197632,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "c76da577caa3d4f2",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 4304330,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "50bb329033ef361b",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 6255144,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "81dc6d1a4138ecc7",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 5633442,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "ea681320cb156e7e",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 5742103,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "131a5444391f8c4c",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 7481865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "5a7cd04d9da42e83",
+                  "username": "rozhestvensky",
+                  "filename": "@@jqzqy\\Music\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 6540404,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "6f9a985a3908718e",
+            "username": "quimler",
+            "folder": "@@puclh/MUSIC/Pixies/Come on Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "7f656c3259e4083d",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\01 Caribou.mp3",
+                  "size": 5315785,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "b2423749042c7e62",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\02 Vamos.mp3",
+                  "size": 4796319,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "1a7b696a773d3ce2",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 3130802,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "f1d4f9e7d066f812",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\04 Ed is Dead.mp3",
+                  "size": 4247860,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "5c3af0e898bd0142",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 3784300,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "952bfe53a4c2744f",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 3992679,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "79dea3194610eedd",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5093289,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "e0fe7149ceae8c6c",
+                  "username": "quimler",
+                  "filename": "@@puclh\\MUSIC\\Pixies\\Come on Pilgrim\\08 Levitate Me.mp3",
+                  "size": 4186280,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "7e5975e5901e980e",
+            "username": "chickadeedeedee",
+            "folder": "@@rmrry/Music/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "6a4287c18ef2a8a0",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 5129834,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "292c97539e8044c2",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 4559355,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "932fc1c59f94f8a3",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 2927101,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "c56458a33f663fc6",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 3981011,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "71f9e85b12bcd7bc",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 3642892,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "1f470f2a8b685af5",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\06 Nimrod’s Son.mp3",
+                  "size": 3788923,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod’s Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "9418cdc9be1458fc",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\07 I’ve Been Tired.mp3",
+                  "size": 4756726,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I’ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "bc9deb96313e2fe1",
+                  "username": "chickadeedeedee",
+                  "filename": "@@rmrry\\Music\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 3903733,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1fe2e1cc571842fc",
+            "username": "IvorTheUberDriver",
+            "folder": "@@atwpp/Lossy/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "4c12a61731ed3f27",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 8323530,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "d5a7c5a24ff91d62",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\02 Vamos.m4a",
+                  "size": 7147114,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "b8212af50073860f",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.m4a",
+                  "size": 4396730,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "436a8f236025c91a",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 6339648,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "e0298a5dd2b58bb7",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 5599995,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "9b61ecc88283e8ad",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.m4a",
+                  "size": 5946606,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a5d11f340ac44abe",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\07 I've Been Tired.m4a",
+                  "size": 7537740,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "5f66cd97bda87e4e",
+                  "username": "IvorTheUberDriver",
+                  "filename": "@@atwpp\\Lossy\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 6388128,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "99818e7c61fd43f1",
+            "username": "WyndLink",
+            "folder": "@@dezip/Music/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "c7c21ea9d614d4a7",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6404028,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "c31a427f7340a17a",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\02 Vamos.m4a",
+                  "size": 5755087,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "64317b9605ca2f1b",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.m4a",
+                  "size": 3366421,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "8f31e7e93e87a0e4",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 4922001,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "c6d35ac24fb35c89",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4432958,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "6336844d1a77e638",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.m4a",
+                  "size": 4563633,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "c66963ac7a837c9d",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\07 I'Ve Been Tired.m4a",
+                  "size": 5961529,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I'Ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "06e45fdea5c45024",
+                  "username": "WyndLink",
+                  "filename": "@@dezip\\Music\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5137666,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1fd86a2e62bd55db",
+            "username": "j3b1d1ho0",
+            "folder": "@@fsijo/Music/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.44,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "dd4a937aeff56475",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 7784729,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "b79f205d84966b66",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 6945673,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "2ea8e3813cb3cf18",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 4053415,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "3e3f1246db9a7c11",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 6004229,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "c6938147ba1b3dc5",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 5382527,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "4c1ebda4de57aea6",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 5491188,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "8280caa0396346f4",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 7229906,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "c9bcb31a5254cf2e",
+                  "username": "j3b1d1ho0",
+                  "filename": "@@fsijo\\Music\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 6288445,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "1806860d2818d3db",
+            "username": "cheeseandbears",
+            "folder": "@@naahb/Music/P/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.34,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "31fd9df61f311451",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 8136817,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "76b4509c104d41ee",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 7298805,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "babce75ab7303cd8",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 4405503,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "daa092ffe121aae1",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 6356317,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "aaea5591a61c4021",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 5734615,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "e9647ee155ee0304",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 5843276,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "138c33672862ce1f",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 7583038,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "c8d1eb214958cd9a",
+                  "username": "cheeseandbears",
+                  "filename": "@@naahb\\Music\\P\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 6641577,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "46855564db910e78",
+            "username": "WyndLink",
+            "folder": "@@qkmbe/CD Rips/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.34,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "058f0a9294d08f95",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\01. Caribou.flac",
+                  "size": 20970755,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "25548fbd0c4a05de",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\02. Vamos.flac",
+                  "size": 19614127,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "a58997d626d6bc35",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\03. Isla de Encanta.flac",
+                  "size": 11801316,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "2272c758034b162f",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\04. Ed Is Dead.flac",
+                  "size": 16883577,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "bf7b1f1904e75f42",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\05. The Holiday Song.flac",
+                  "size": 15965533,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "eb710565ad00ad92",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\06. Nimrod’s Son.flac",
+                  "size": 15468699,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod’s Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "4dddaf22298b125e",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\07. I’ve Been Tired.flac",
+                  "size": 19871830,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I’ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "30198a6789f7b9b0",
+                  "username": "WyndLink",
+                  "filename": "@@qkmbe\\CD Rips\\Pixies\\Come On Pilgrim\\08. Levitate Me.flac",
+                  "size": 17602541,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "d92d770d779a0272",
+            "username": "Goatnapper",
+            "folder": "@@uikth/MusicBee/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.29,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f5f14eb20c3bfd39",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 7660629,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "405292dbff56b6f0",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\02 Vamos.m4a",
+                  "size": 6772320,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "892353786312f6b1",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.m4a",
+                  "size": 3984637,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "f6b6ee8bda927879",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5873685,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "24bc49365da200ac",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 5260678,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "f353be5f34506c22",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.m4a",
+                  "size": 5341943,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "43f7e48036ac79d6",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\07 I've Been Tired.m4a",
+                  "size": 7050714,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "e23d7c0bdcaf917e",
+                  "username": "Goatnapper",
+                  "filename": "@@uikth\\MusicBee\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5995897,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "57182a156579f9e4",
+            "username": "MoreThanDrew",
+            "folder": "@@rtkif/Downloads/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.24,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "7197a48b809079fe",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 6133772,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "fe4200f7ddd5ca20",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5452288,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "8c9056f52fc42b01",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 3182243,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "2eb3c46cd31554d6",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 4648495,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "6b43f1fd5d2f581b",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 4311949,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "cf6a0bf876a5a3c1",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4439554,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "1a11bc2c051fdd23",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5688582,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "5bca05e67f4a4b16",
+                  "username": "MoreThanDrew",
+                  "filename": "@@rtkif\\Downloads\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 4759223,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "3a5109dd1181a95a",
+            "username": "N+3",
+            "folder": "Albums/Pixies/1987 - Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.19,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "4218c3005a35b856",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\01 - Caribou.mp3",
+                  "size": 4303294,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "34ba9e6a75f9a352",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\02 - Vamos.mp3",
+                  "size": 3115006,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "f4b3c530857c2df1",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\03 - Isla De Encanta.mp3",
+                  "size": 2000268,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "97a4caa92af4e43d",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\04 - Ed Is Dead.mp3",
+                  "size": 3280291,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "744a46b124aeefac",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\05 - The Holiday Song.mp3",
+                  "size": 2790316,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "d85a71288dd70d46",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\06 - Nimrod's Son.mp3",
+                  "size": 2931351,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "46701d7fd60399a2",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\07 - I've Been Tired.mp3",
+                  "size": 3711665,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "00934e0195ecb165",
+                  "username": "N+3",
+                  "filename": "Albums\\Pixies\\1987 - Come On Pilgrim\\08 - Levitate Me.mp3",
+                  "size": 3202069,
+                  "score": 97.57,
+                  "extension": "mp3",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "f00350276ea97c96",
+            "username": "musicmacnamara",
+            "folder": "@@hnttf/music stuff/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.16,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "670f8de1aafe0cd8",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\1. Caribou.mp3",
+                  "size": 7898409,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "6e645d690fcad510",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\2. Vamos.mp3",
+                  "size": 8088743,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "e426b11038e60e8c",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\3. Isla de Encanta.mp3",
+                  "size": 4163352,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "6484f204bccc3bfb",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\4. Ed Is Dead.mp3",
+                  "size": 6116124,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "773e6f280d5bb4a0",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\5. The Holiday Song.mp3",
+                  "size": 5493800,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "5f92307f3ccad32b",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\6. Nimrod’s Son.mp3",
+                  "size": 5602549,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod’s Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "75a58aa0613bc5fc",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\7. I’ve Been Tired.mp3",
+                  "size": 7344070,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I’ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "f0f3d152b4d60af7",
+                  "username": "musicmacnamara",
+                  "filename": "@@hnttf\\music stuff\\Pixies\\Come On Pilgrim\\8. Levitate Me.mp3",
+                  "size": 6401668,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "7b44aed729cd6491",
+            "username": "Taube",
+            "folder": "@@tqhoi/Music/Pixies/Come on Pilgrim [EP]",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.13,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "a74484457267e3f3",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\01 Caribou.mp3",
+                  "size": 3109462,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "a805d16fde8c45cd",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\02 Vamos.mp3",
+                  "size": 2774194,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "45ef7a3837620aed",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\03 Isla de Encanta.mp3",
+                  "size": 1620772,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "003c0c539953886a",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\04 Ed Is Dead.mp3",
+                  "size": 2398477,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "e5ef901528df291c",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\05 The Holiday Song.mp3",
+                  "size": 2151613,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "0f14efe17b9e6285",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\06 Nimrod's Son.mp3",
+                  "size": 2192896,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "84c6f91b6240d36d",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\07 I've Been Tired.mp3",
+                  "size": 2888452,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "5db1af849059bb34",
+                  "username": "Taube",
+                  "filename": "@@tqhoi\\Music\\Pixies\\Come on Pilgrim [EP]\\08 Levitate Me.mp3",
+                  "size": 2509816,
+                  "score": 98.45,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "7e7f225feb160055",
+            "username": "goforthandkill",
+            "folder": "@@gpqvx/Music - General/Pixies/Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.08,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "fda214dce72ab358",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\01 Caribou.flac",
+                  "size": 21567486,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "e00aaac4e9100ac1",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\02 Vamos.flac",
+                  "size": 20181651,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "253b2ae8c7f393bb",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.flac",
+                  "size": 12202189,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "8a812230a7cf5b39",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.flac",
+                  "size": 17410462,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "e59beec92cd9cace",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\05 The Holiday Song.flac",
+                  "size": 16428652,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "5d4e6f1ce2db9c13",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.flac",
+                  "size": 15955230,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "3a28c9cfbbd939c5",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\07 I've Been Tired.flac",
+                  "size": 20458991,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "1517556945bdccbc",
+                  "username": "goforthandkill",
+                  "filename": "@@gpqvx\\Music - General\\Pixies\\Come On Pilgrim\\08 Levitate Me.flac",
+                  "size": 18123514,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "c3b2b8554ce5840d",
+            "username": "marsellus",
+            "folder": "@@nubpn/zoop/Pixies/[1987] Come On Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.0,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "34a9b4c8738da7f5",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\01 Caribou.mp3",
+                  "size": 6106947,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "9ab40c5bca5b8104",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5316929,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "ccb5daea509af6f1",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 3150509,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "7b8eb73c425571d7",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\04 Ed Is Dead.mp3",
+                  "size": 4578919,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "002a023e6d9e510c",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 4262356,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "fb6aa2870e58c41f",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4375352,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "7e993ff63b5c1b0f",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5575457,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "1d89add628e48c73",
+                  "username": "marsellus",
+                  "filename": "@@nubpn\\zoop\\Pixies\\[1987] Come On Pilgrim\\08 Levitate Me.mp3",
+                  "size": 4601355,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "78142b4cc4a605c0",
+            "username": "rambler12",
+            "folder": "@@ybraf/music/Pixies/Come On Pilgrim (1987)",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 96.96,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "67c64fbcb7fa1d8c",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\01 - Caribou.flac",
+                  "size": 20844499,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "86db0daa18d3f085",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\02 - Vamos.flac",
+                  "size": 19496765,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "343e93fb4d392f08",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\03 - Isla de Encanta.flac",
+                  "size": 11743298,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "b3360d8b8eb1e0a9",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\04 - Ed Is Dead.flac",
+                  "size": 16784597,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "9fc266d7693cd146",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\05 - The Holiday Song.flac",
+                  "size": 15863976,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "8af85f33759208e4",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\06 - Nimrod’s Son.flac",
+                  "size": 15373773,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Nimrod’s Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "33fb8adf54ffaa5b",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\07 - I’ve Been Tired.flac",
+                  "size": 19745744,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "I’ve Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "df3c246dd4e78a55",
+                  "username": "rambler12",
+                  "filename": "@@ybraf\\music\\Pixies\\Come On Pilgrim (1987)\\08 - Levitate Me.flac",
+                  "size": 17482885,
+                  "score": 97.57,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          },
+          {
+            "release_id": "659be8ddfdde5bd5",
+            "username": "gcjensen",
+            "folder": "@@dwnpl/xMusic/The Pixies/Come on Pilgrim",
+            "file_count": 8,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 96.75,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "6ddef35a3646cc1e",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\01 Caribou.mp3",
+                  "size": 3178179,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "1af12797d0bfbf92",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\02 Vamos.mp3",
+                  "size": 2841867,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "fbb5543991583469",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\03 Isla de Encanta.mp3",
+                  "size": 1691523,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Isla de Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "fa3ed1b33c48e93e",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\04 Ed is Dead.mp3",
+                  "size": 2470488,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Ed is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "a939c8e1ca552577",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\05 The Holiday Song.mp3",
+                  "size": 2235937,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "78ce590edc02ab7d",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 2266343,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "68bf0b15208d9c76",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 2961025,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "eadd1e40d0928e62",
+                  "username": "gcjensen",
+                  "filename": "@@dwnpl\\xMusic\\The Pixies\\Come on Pilgrim\\08 Levitate Me.mp3",
+                  "size": 2274030,
+                  "score": 95.5,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        ],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -49925,24 +52946,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "96000e74aa8b142a",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
-              "size": 5138132,
+              "candidate_id": "ae3a4c477e341920",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+              "size": 5649204,
               "score": 100.0,
-              "extension": "mp3",
+              "extension": "",
               "candidate_title": "Vamos",
               "candidate_track_number": 2,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/02 - Vamos.mp3"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -49952,14 +52976,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/02 Vamos.mp3",
+          "filename": "02 Vamos.mp3",
+          "size": 5649204
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -49997,24 +53198,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "ec167c51bc7c3576",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\03 Isla de Encanta.mp3",
-              "size": 3470273,
+              "candidate_id": "72faa1c9a79a3635",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+              "size": 3338736,
               "score": 100.0,
-              "extension": "mp3",
-              "candidate_title": "Isla de Encanta",
+              "extension": "",
+              "candidate_title": "Isla De Encanta",
               "candidate_track_number": 3,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/03 - Isla de Encanta.mp3"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50024,14 +53228,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/03 Isla De Encanta.mp3",
+          "filename": "03 Isla De Encanta.mp3",
+          "size": 3338736
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -50069,24 +53450,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "c274f9082736a0ba",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.mp3",
-              "size": 4589063,
+              "candidate_id": "9ce5943f99459450",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+              "size": 5498893,
               "score": 100.0,
-              "extension": "mp3",
+              "extension": "",
               "candidate_title": "Ed Is Dead",
               "candidate_track_number": 4,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/04 - Ed Is Dead.m4a"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50096,14 +53480,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/04 Ed Is Dead.m4a",
+          "filename": "04 Ed Is Dead.m4a",
+          "size": 5498893
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -50141,24 +53702,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "b2debbe55c438134",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\05 The Holiday Song.mp3",
-              "size": 4125177,
+              "candidate_id": "1eb49afb1aaefbdd",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+              "size": 4985994,
               "score": 100.0,
-              "extension": "mp3",
+              "extension": "",
               "candidate_title": "The Holiday Song",
               "candidate_track_number": 5,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/05 - The Holiday Song.m4a"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50168,14 +53732,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/05 The Holiday Song.m4a",
+          "filename": "05 The Holiday Song.m4a",
+          "size": 4985994
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -50213,24 +53954,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "544f7885bc504776",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\06 Nimrod’s Son.mp3",
-              "size": 4333542,
+              "candidate_id": "3cfaba937a976a8e",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+              "size": 4489792,
               "score": 100.0,
-              "extension": "mp3",
-              "candidate_title": "Nimrod’s Son",
+              "extension": "",
+              "candidate_title": "Nimrod's Son",
               "candidate_track_number": 6,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/06 - Nimrod’s Son.mp3"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50240,14 +53984,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/06 Nimrod's Son.mp3",
+          "filename": "06 Nimrod's Son.mp3",
+          "size": 4489792
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -50285,24 +54206,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "aff27fd925c216b7",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\07 I’ve Been Tired.mp3",
-              "size": 5435404,
+              "candidate_id": "a67b1c7b102ef906",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+              "size": 5859865,
               "score": 100.0,
-              "extension": "mp3",
-              "candidate_title": "I’ve Been Tired",
+              "extension": "",
+              "candidate_title": "I've Been Tired",
               "candidate_track_number": 7,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/07 - I’ve Been Tired.mp3"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50312,14 +54236,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/07 I've Been Tired.mp3",
+          "filename": "07 I've Been Tired.mp3",
+          "size": 5859865
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -50357,24 +54458,27 @@
         "track_ids": []
       },
       "acquisition": {
-        "status": "matched",
+        "status": "published",
         "attempts": 0,
         "match": {
           "candidates": [
             {
-              "candidate_id": "ef5359e4836bb723",
-              "username": "MiamiWise",
-              "filename": "music\\Pixies\\Come On Pilgrim\\08 Levitate Me.mp3",
-              "size": 4527434,
+              "candidate_id": "302b25abfc6592e5",
+              "username": "deepwound1",
+              "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+              "size": 5696854,
               "score": 100.0,
-              "extension": "mp3",
+              "extension": "",
               "candidate_title": "Levitate Me",
               "candidate_track_number": 8,
               "alternate_terms": []
             }
           ]
         },
-        "library": null,
+        "library": {
+          "repo": "music-library-003",
+          "path": "Pixies/Come On Pilgrim/08 - Levitate Me.m4a"
+        },
         "download_attempts": [
           {
             "attempt": 1,
@@ -50384,14 +54488,191 @@
             "score": 97.8,
             "status": "succeeded",
             "timestamp": 1790702495
+          },
+          {
+            "attempt": 1,
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "score": 97.8,
+            "status": "succeeded",
+            "timestamp": 1790772153
           }
-        ]
+        ],
+        "file": {
+          "path": "/home/runner/work/_temp/music-downloads/Come On Pilgrim/08 Levitate Me.m4a",
+          "filename": "08 Levitate Me.m4a",
+          "size": 5696854
+        }
       },
       "enrichment": {
         "artwork": null,
         "lyrics": null
       },
-      "active_source": true
+      "active_source": true,
+      "search": {
+        "mode": "album",
+        "queries": [
+          {
+            "search_id": "5249cad0-8952-49a4-8f7b-db90ceb6863d",
+            "query": "Pixies Come On Pilgrim",
+            "candidate_count": 1321,
+            "timestamp": 1790772112
+          }
+        ],
+        "release_candidates": [],
+        "query": "Pixies Come On Pilgrim"
+      },
+      "matching": {
+        "deterministic": {
+          "version": 7,
+          "mode": "album",
+          "decision": "accept",
+          "release_id": "4c108dfe84dd9e1f",
+          "release": {
+            "release_id": "4c108dfe84dd9e1f",
+            "username": "deepwound1",
+            "folder": "@@mallj/Pixies/Come On Pilgrim",
+            "file_count": 16,
+            "expected_tracks": 8,
+            "matched_tracks": 8,
+            "coverage": 1.0,
+            "score": 97.8,
+            "alternate_count": 0,
+            "decision": "accept",
+            "matches": [
+              {
+                "track_id": "38998a62-a927-390f-a668-73bde5074d2d",
+                "title": "Caribou",
+                "track_number": 1,
+                "candidate": {
+                  "candidate_id": "f2d37c07f37546b7",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\01 Caribou.m4a",
+                  "size": 6964543,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Caribou",
+                  "candidate_track_number": 1,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "840fca57-e66c-3627-8863-02720fe2ff3f",
+                "title": "Vamos",
+                "track_number": 2,
+                "candidate": {
+                  "candidate_id": "ae3a4c477e341920",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\02 Vamos.mp3",
+                  "size": 5649204,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Vamos",
+                  "candidate_track_number": 2,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "5d441a29-0b29-37b6-b3c8-617dca25e592",
+                "title": "Isla de Encanta",
+                "track_number": 3,
+                "candidate": {
+                  "candidate_id": "72faa1c9a79a3635",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\03 Isla De Encanta.mp3",
+                  "size": 3338736,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Isla De Encanta",
+                  "candidate_track_number": 3,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "07f5fc40-abbd-3069-b235-6776c08731fa",
+                "title": "Ed Is Dead",
+                "track_number": 4,
+                "candidate": {
+                  "candidate_id": "9ce5943f99459450",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\04 Ed Is Dead.m4a",
+                  "size": 5498893,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Ed Is Dead",
+                  "candidate_track_number": 4,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "2531cfc6-bae7-3e6f-b31e-ca42c591686c",
+                "title": "The Holiday Song",
+                "track_number": 5,
+                "candidate": {
+                  "candidate_id": "1eb49afb1aaefbdd",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\05 The Holiday Song.m4a",
+                  "size": 4985994,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "The Holiday Song",
+                  "candidate_track_number": 5,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "ff362c77-152f-364d-a883-11538cb92421",
+                "title": "Nimrod’s Son",
+                "track_number": 6,
+                "candidate": {
+                  "candidate_id": "3cfaba937a976a8e",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\06 Nimrod's Son.mp3",
+                  "size": 4489792,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Nimrod's Son",
+                  "candidate_track_number": 6,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "bbb584a8-b4da-38a0-9c74-d49f759bce77",
+                "title": "I’ve Been Tired",
+                "track_number": 7,
+                "candidate": {
+                  "candidate_id": "a67b1c7b102ef906",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\07 I've Been Tired.mp3",
+                  "size": 5859865,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "I've Been Tired",
+                  "candidate_track_number": 7,
+                  "alternate_terms": []
+                }
+              },
+              {
+                "track_id": "8f1d13e5-08e8-30bf-90bf-bda08bd17c46",
+                "title": "Levitate Me",
+                "track_number": 8,
+                "candidate": {
+                  "candidate_id": "302b25abfc6592e5",
+                  "username": "deepwound1",
+                  "filename": "@@mallj\\Pixies\\Come On Pilgrim\\08 Levitate Me.m4a",
+                  "size": 5696854,
+                  "score": 100.0,
+                  "extension": "",
+                  "candidate_title": "Levitate Me",
+                  "candidate_track_number": 8,
+                  "alternate_terms": []
+                }
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "metadata": {
@@ -87849,6 +92130,13 @@
       "blacklisted": false,
       "last_speed": 4856117.178084971,
       "last_speed_timestamp": 1790772075
+    },
+    "deepwound1": {
+      "username": "deepwound1",
+      "slow_transfers": 0,
+      "blacklisted": false,
+      "last_speed": 1797624.9663784716,
+      "last_speed_timestamp": 1790772153
     }
   },
   "failed_transfers": {}
