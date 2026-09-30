@@ -28,3 +28,8 @@ Metadata is a separate commit (Add OneTagger metadata). A OneTagger failure does
 
 The configuration is in onetagger/autotagger.json. It uses MusicBrainz, Bandcamp, Deezer, iTunes, and Musixmatch. Musixmatch does not require a separate API credential in OneTagger's platform implementation.
 
+
+## Removing an album
+
+Put an exact album title on its own line in `remove.txt`. The workflow processes removals before Soulseek starts. It removes the album's tracked library files, including metadata sidecars such as `.lrc`, removes the album's tracks from acquisition state, and commits the deletion separately. Matching is case-insensitive and based on the album title; do not leave a removal request in the file if you later want that album acquired again.
+
