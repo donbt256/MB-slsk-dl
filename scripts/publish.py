@@ -891,14 +891,24 @@ class GitHubClient:
         self._local_repos[repo] = path
         return path
 
+    def _staging_dir(self, repo):
+        root = Path(
+            os.environ.get(
+                "GITHUB_LOCAL_REPO_CACHE",
+                "/tmp/mb-slsk-library-repos",
+            )
+        )
+        staging = root.parent / "mb-slsk-library-staging" / repo
+        staging.mkdir(parents=True, exist_ok=True)
+        return staging
+
     def create_blob(self, repo, content):
         # Keep the existing publish_item interface, but create the Git blob
         # locally. GitHub's REST /git/blobs endpoint rejects sufficiently
         # large request bodies even when the individual file is below GitHub's
         # 100 MiB Git blob limit. Normal Git transport handles these files.
         path = self._local_repo(repo)
-        staging = path / ".mb-slsk-upload"
-        staging.mkdir(parents=True, exist_ok=True)
+        staging = self._staging_dir(repo)
 
         temporary = staging / f"payload-{time.time_ns()}"
         temporary.write_bytes(content)
@@ -924,9 +934,7 @@ class GitHubClient:
         self._run_git(["fetch", "origin", branch], cwd=path)
         self._run_git(["read-tree", f"origin/{branch}"], cwd=path)
 
-        staging = path / ".mb-slsk-upload"
-        paths = []
-
+        staging = self._staging_dir(repo)
         additions = []
         for entry in entries:
             relative = Path(entry["path"])
@@ -940,25 +948,39 @@ class GitHubClient:
                 )
                 continue
 
-            target = path / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-
             source = staging / entry["sha"]
             if not source.is_file():
                 raise RuntimeError(
                     f"Missing staged Git object for {entry['path']}"
                 )
-            shutil.copyfile(source, target)
+
+            # The blob already exists in the local Git object database.
+            # Put that exact object into the index without copying/re-reading
+            # a potentially 100 MiB audio file through the working tree.
+            self._run_git(
+                [
+                    "update-index",
+                    "--add",
+                    "--cacheinfo",
+                    "100644",
+                    entry["sha"],
+                    entry["path"],
+                ],
+                cwd=path,
+            )
             additions.append(entry["path"])
 
-        if additions:
-            self._run_git(["add", "--", *additions], cwd=path)
-
-        status = self._run_git(
-            ["status", "--porcelain"],
+        # Check only the index. The local clone intentionally may contain
+        # stale/untracked working-tree files from previous atomic commits.
+        staged_changes = self._run_git(
+            ["diff", "--cached", "--quiet"],
             cwd=path,
-        ).decode("utf-8", errors="replace").strip()
-        if not status:
+        )
+        if staged_changes == b"":
+            return self._run_git(
+                ["rev-parse", f"origin/{branch}"],
+                cwd=path,
+            ).decode("ascii").strip()
             return self._run_git(
                 ["rev-parse", f"origin/{branch}"],
                 cwd=path,
