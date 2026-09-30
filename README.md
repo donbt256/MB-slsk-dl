@@ -80,6 +80,43 @@ The pipeline is designed to acquire complete releases, publish them atomically w
   - Prints release-by-release progress and a final acquisition-state diagnostic summary.
   - Always attempts to stop the slskd container.
 
+## Configuration
+
+Runtime settings are centralized in `config.yml`. The workflow loads this file before acquisition and exports the relevant values to the pipeline. Python stages also read it directly, so the same settings apply when individual scripts are run manually.
+
+The main configurable areas are:
+
+| Setting | Purpose |
+| --- | --- |
+| `library.repo_prefix` | Prefix for generated music-library repositories |
+| `library.start_number` | First repository number to consider |
+| `library.number_width` | Zero-padding for repository numbers |
+| `library.soft_rollover_bytes` | Normal repository target before rolling over |
+| `library.hard_rollover_bytes` | Maximum size for keeping a release atomic |
+| `library.max_file_bytes` | Maximum individual file size accepted for the library |
+| `library.artwork_reserve_bytes` | Space reserved when estimating release size |
+| `github.upload_retries` | Retries for transient GitHub Git-data failures |
+| `github.request_timeout_seconds` | GitHub API request timeout |
+| `soulseek.*` | Search timeouts, result limits, album+year retries, and download slots |
+| `download.*` | Download directory, polling, timeout, slow-user, and failed-file thresholds |
+| `matcher.max_library_file_bytes` | Matcher-side file-size guard |
+| `metadata.*` | OneTagger executable/configuration paths |
+| `paths.*` | Input, removal, and persistent state file paths |
+
+Example library settings:
+
+```yaml
+library:
+  repo_prefix: "my-music-"
+  start_number: 1
+  number_width: 3
+  soft_rollover_bytes: 943718400 # 900 MiB
+  hard_rollover_bytes: 1073741824 # 1 GiB
+  max_file_bytes: 104857600 # 100 MiB
+```
+
+Secrets remain in GitHub Actions secrets and are not stored in `config.yml`.
+
 ## Input
 
 Edit `input.yaml`.
