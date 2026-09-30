@@ -6,14 +6,15 @@ from collections import defaultdict
 from pathlib import Path
 
 from publish import GitHubClient, normalize_path
+from config import string
 
 
-STATE_PATH = Path("state/tracks.json")
-ONETAGGER = Path(os.environ.get("ONETAGGER_BIN", "onetagger-cli"))
+STATE_PATH = Path(string("paths.state_file", default="state/tracks.json"))
+ONETAGGER = Path(os.environ.get("ONETAGGER_BIN", string("metadata.onetagger_binary", default="onetagger-cli")) )
 CONFIG = Path(
     os.environ.get(
         "ONETAGGER_CONFIG",
-        "onetagger/autotagger.json",
+        string("metadata.onetagger_config", default="onetagger/autotagger.json"),
     )
 )
 
