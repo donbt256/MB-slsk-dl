@@ -474,29 +474,8 @@ def main():
                     flush=True,
                 )
 
-    print("", flush=True)
-    print("=== Updating metadata playlists ===", flush=True)
-
-    try:
-        run_stage("scripts/playlists.py", os.environ.copy())
-
-        # Persist playlist identity, snapshot IDs, configuration state, and
-        # current playlist membership after the playlist stage succeeds.
-        playlist_state = load_state()
-        save_state(playlist_state)
-        save_checkpoint("Playlist state")
-
-    except Exception as exc:
-        failed = True
-        print(
-            f"PLAYLIST UPDATE FAILED: {exc}",
-            file=sys.stderr,
-            flush=True,
-        )
-
     if failed:
         return 1
-
     return 0
 
 
