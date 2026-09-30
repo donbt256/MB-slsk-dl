@@ -6,6 +6,7 @@ import sys
 import time
 from pathlib import Path
 from release import release_key
+from config import integer, string
 
 
 RELEASE_FILTER = os.environ.get("RELEASE_KEY")
@@ -16,33 +17,19 @@ import shutil
 import subprocess
 
 
-STATE_FILE = Path("state/tracks.json")
+STATE_FILE = Path(string("paths.state_file", default="state/tracks.json"))
 
 GITHUB_API = "https://api.github.com"
 
-# Keep normal repositories below 1 GiB.
-REPO_TARGET_BYTES = 900 * 1024 * 1024
+REPO_TARGET_BYTES = integer("library.soft_rollover_bytes", "GITHUB_LIBRARY_SOFT_ROLLOVER_BYTES", 900 * 1024 * 1024)
+ALBUM_ATOMIC_LIMIT_BYTES = integer("library.hard_rollover_bytes", "GITHUB_LIBRARY_HARD_ROLLOVER_BYTES", 1 * 1024 * 1024 * 1024)
+GITHUB_MAX_FILE_BYTES = integer("library.max_file_bytes", "GITHUB_MAX_FILE_BYTES", 100 * 1024 * 1024)
+ALBUM_ART_RESERVE_BYTES = integer("library.artwork_reserve_bytes", "GITHUB_LIBRARY_ARTWORK_RESERVE_BYTES", 2 * 1024 * 1024)
 
-# Albums at or below this size are atomic.
-ALBUM_ATOMIC_LIMIT_BYTES = 1 * 1024 * 1024 * 1024
-
-# GitHub blocks individual Git blobs over 100 MiB. Keep a small margin
-# below the hard limit so the API cannot reject a publishable-looking file.
-GITHUB_MAX_FILE_BYTES = 100 * 1024 * 1024
-
-LIBRARY_PREFIX = os.environ.get(
-    "GITHUB_LIBRARY_PREFIX",
-    "music-library-",
-)
-
-LIBRARY_START_NUMBER = int(
-    os.environ.get(
-        "GITHUB_LIBRARY_START",
-        "1",
-    )
-)
-
-REQUEST_TIMEOUT = 60
+LIBRARY_PREFIX = string("library.repo_prefix", "GITHUB_LIBRARY_PREFIX", "music-library-")
+LIBRARY_START_NUMBER = integer("library.start_number", "GITHUB_LIBRARY_START", 1)
+LIBRARY_NUMBER_WIDTH = integer("library.number_width", "GITHUB_LIBRARY_NUMBER_WIDTH", 3)
+REQUEST_TIMEOUT = integer("github.request_timeout_seconds", "GITHUB_REQUEST_TIMEOUT_SECONDS", 60)
 
 
 def log(message=""):
@@ -389,9 +376,6 @@ def build_items(tracks):
 
     return items
 
-ALBUM_ART_RESERVE_BYTES = 2 * 1024 * 1024
-
-
 def item_size(item):
     size = sum(
         get_download_size(track)
@@ -529,9 +513,7 @@ class GitHubClient:
         return response.json()
 
     def _get_owner(self):
-        configured = os.environ.get(
-            "GITHUB_LIBRARY_OWNER"
-        )
+        configured = string("library.owner", "GITHUB_LIBRARY_OWNER", "")
 
         if configured:
             return configured
@@ -779,7 +761,7 @@ class GitHubClient:
 
     def _write_request(self, method, path, **kwargs):
         max_attempts = int(
-            os.environ.get("GITHUB_UPLOAD_RETRIES", "5")
+            integer("github.upload_retries", "GITHUB_UPLOAD_RETRIES", 5)
         )
 
         for attempt in range(1, max_attempts + 1):
