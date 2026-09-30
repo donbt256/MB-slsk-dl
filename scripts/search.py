@@ -783,6 +783,38 @@ def process_individual_track(
 
     raw_candidates = flatten_responses(result)
 
+    # If the artist term is filtered or otherwise produces no Soulseek
+    # results, retry using the exact track title. Deterministic matching
+    # still requires the candidate filename/path to identify the requested
+    # artist, so this broadens discovery without weakening acceptance.
+    if not raw_candidates:
+        title_query = str(title or "").strip()
+
+        if title_query and title_query.casefold() != query.casefold():
+            print(
+                f"  Artist+title search returned no results; "
+                f"retrying title-only: {title_query}"
+            )
+
+            title_search_id, title_result, title_effective_query = search_one(
+                client,
+                title_query,
+            )
+            title_candidates = flatten_responses(title_result)
+
+            print(
+                f"  Title-only search ID: {title_search_id}"
+            )
+            print(
+                f"  Title-only raw candidates: {len(title_candidates)}"
+            )
+
+            if title_candidates:
+                search_id = title_search_id
+                result = title_result
+                raw_candidates = title_candidates
+                effective_query = title_effective_query
+
     print(
         f"  Search ID: {search_id}"
     )
