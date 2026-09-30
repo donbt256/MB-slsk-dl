@@ -18,3 +18,14 @@ MusicBrainz metadata is retrieved through the public MusicBrainz Web Service wit
 - `GIT_PAT`
 
 Run the GitHub Action manually with `workflow_dispatch`.
+
+## Metadata enrichment
+
+Each release is still committed and pushed to the music-library repository before metadata enrichment begins.
+
+After all acquisition releases have been processed, the workflow runs the headless OneTagger CLI against the already-committed library files. It writes normal metadata, embedded album artwork, synced/unsynced lyrics when available, and optional .lrc lyrics files.
+
+Metadata is a separate commit (Add OneTagger metadata). A OneTagger failure does not undo or invalidate the music commits. The metadata step is intentionally non-fatal to the acquisition workflow.
+
+The configuration is in onetagger/autotagger.json. It uses MusicBrainz, Bandcamp, Deezer, iTunes, and Musixmatch. Musixmatch does not require a separate API credential in OneTagger's platform implementation.
+
