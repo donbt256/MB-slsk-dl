@@ -285,7 +285,11 @@ def run_stage(script, env):
 
 
 def local_file_exists(track):
-    file_info = track.get("acquisition", {}).get("file")
+    acquisition = track.get("acquisition", {})
+    if not isinstance(acquisition, dict):
+        return False
+
+    file_info = acquisition.get("file")
     if not isinstance(file_info, dict):
         return False
 
@@ -347,7 +351,8 @@ def main():
             continue
 
         if all(
-            track.get("acquisition", {}).get("status") == "published"
+            isinstance(track.get("acquisition"), dict)
+            and track.get("acquisition", {}).get("status") == "published"
             for track in current_tracks
         ):
             print(
@@ -380,7 +385,8 @@ def main():
                 track
                 for track in current_tracks
                 if (
-                    track.get("acquisition", {}).get("status")
+                    not isinstance(track.get("acquisition"), dict)
+                    or track.get("acquisition", {}).get("status")
                     not in SUCCESS_STATUSES
                     or (
                         track.get("acquisition", {}).get("status")
@@ -412,8 +418,10 @@ def main():
             unpublished = [
                 track
                 for track in current_tracks
-                if track.get("acquisition", {}).get("status")
-                != "published"
+                if (
+                    not isinstance(track.get("acquisition"), dict)
+                    or track.get("acquisition", {}).get("status") != "published"
+                )
             ]
 
             if unpublished:
