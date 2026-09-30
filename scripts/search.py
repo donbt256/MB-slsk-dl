@@ -118,6 +118,31 @@ def should_skip_track(track):
     return False
 
 
+def primary_artist(track, album=False):
+    data = metadata(track)
+
+    keys = (
+        ("album_artists", "album_artist")
+        if album
+        else ("artists", "artist")
+    )
+
+    for key in keys:
+        value = data.get(key)
+
+        if isinstance(value, list):
+            for item in value:
+                item = str(item or "").strip()
+                if item:
+                    return item
+
+        value = str(value or "").strip()
+        if value:
+            return value
+
+    return ""
+
+
 def album_key(track):
     data = metadata(track)
 
@@ -449,11 +474,9 @@ def set_acquisition_match(
 def process_album_group(client, tracks, index, total):
     first = metadata(tracks[0])
 
-    artist = first.get(
-        "album_artist"
-    ) or first.get(
-        "artist",
-        "",
+    artist = primary_artist(
+        tracks[0],
+        album=True,
     )
 
     album = first.get("album", "")
@@ -757,7 +780,7 @@ def process_individual_track(
 ):
     data = metadata(track)
 
-    artist = data.get("artist", "")
+    artist = primary_artist(track)
     title = data.get("title", "")
 
     query = f"{artist} {title}".strip()
