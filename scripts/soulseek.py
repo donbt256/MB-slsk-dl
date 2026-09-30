@@ -3,6 +3,8 @@ import uuid
 
 import requests
 
+from config import integer
+
 
 class SoulseekClient:
     def __init__(
@@ -31,7 +33,7 @@ class SoulseekClient:
         timeout_ms=15000,
         file_limit=10000,
         response_limit=100,
-        max_retries=5,
+        max_retries=None,
         retry_delay=2,
     ):
         """
@@ -41,6 +43,9 @@ class SoulseekClient:
         search subsystem is still processing another
         request. Retry those conflicts.
         """
+
+        if max_retries is None:
+            max_retries = integer("soulseek.search_max_attempts", "SLSKD_SEARCH_MAX_ATTEMPTS", 5)
 
         last_response = None
 
