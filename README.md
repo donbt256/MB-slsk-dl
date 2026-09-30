@@ -84,7 +84,7 @@ The pipeline is designed to acquire complete releases, publish them atomically w
 
 Runtime settings are centralized in `config.yml`. The workflow loads this file before acquisition and exports the relevant values to the pipeline. Python stages also read it directly, so the same settings apply when individual scripts are run manually.
 
-The main configurable areas are:
+Retry/attempt counts are configured per operation rather than through one global retry value. These are maximum total attempts, including the initial attempt.
 
 | Setting | Purpose |
 | --- | --- |
@@ -95,9 +95,12 @@ The main configurable areas are:
 | `library.hard_rollover_bytes` | Maximum size for keeping a release atomic |
 | `library.max_file_bytes` | Maximum individual file size accepted for the library |
 | `library.artwork_reserve_bytes` | Space reserved when estimating release size |
-| `github.upload_retries` | Retries for transient GitHub Git-data failures |
+| `github.git_data_max_attempts` | Maximum attempts for transient GitHub Git-data writes |
+| `github.file_upload_max_attempts` | Maximum attempts for GitHub file uploads |
+| `github.checkpoint_push_max_attempts` | Maximum attempts to push source-repository checkpoints |
+| `musicbrainz.request_max_attempts` | Maximum attempts for transient MusicBrainz API requests |
 | `github.request_timeout_seconds` | GitHub API request timeout |
-| `soulseek.*` | Search timeouts, result limits, album+year retries, and download slots |
+| `soulseek.*` | Search timeouts, result limits, search retries, album+year attempts, and download slots |
 | `download.*` | Download directory, polling, timeout, slow-user, and failed-file thresholds |
 | `matcher.max_library_file_bytes` | Matcher-side file-size guard |
 | `metadata.*` | OneTagger executable/configuration paths |
@@ -113,6 +116,18 @@ library:
   soft_rollover_bytes: 943718400 # 900 MiB
   hard_rollover_bytes: 1073741824 # 1 GiB
   max_file_bytes: 104857600 # 100 MiB
+
+musicbrainz:
+  request_max_attempts: 5
+
+soulseek:
+  search_max_attempts: 5
+  album_year_attempts: 3
+
+github:
+  git_data_max_attempts: 5
+  file_upload_max_attempts: 5
+  checkpoint_push_max_attempts: 3
 ```
 
 Secrets remain in GitHub Actions secrets and are not stored in `config.yml`.
