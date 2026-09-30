@@ -219,36 +219,22 @@ def build_album_groups(tracks):
     return groups
 
 
-def search_one(client, query):
-    # Perform each search query at most once. If the exact query returns
-    # nothing, try one punctuation-normalized variant. This avoids the
-    # previous 3x retry amplification, which could make a single logical
-    # search take several minutes.
-    search_id = client.search(
-        query,
-        timeout_ms=SEARCH_TIMEOUT_MS,
-        file_limit=FILE_LIMIT,
-        response_limit=RESPONSE_LIMIT,
-    )
+def search_one(client, query, attempts=1, normalize=True):
+    # By default, perform each logical search once. The album+year fallback
+    # can opt into a small number of exact-query retries because that query
+    # is specifically used to recover from transient/filtered artist+album
+    # searches.
+    last_search_id = None
+    last_data = None
 
-    data = client.wait_for_search(
-        search_id,
-        timeout_seconds=SEARCH_WAIT_SECONDS,
-    )
-
-    if flatten_responses(data):
-        return search_id, data, query
-
-    normalized = normalize_search_query(query)
-
-    if normalized and normalized.casefold() != query.casefold():
-        print(
-            f"  Search returned no candidates; "
-            f"trying punctuation-normalized query: {normalized}"
-        )
+    for attempt in range(1, attempts + 1):
+        if attempts > 1:
+            print(
+                f"  Search attempt {attempt}/{attempts}: {query}"
+            )
 
         search_id = client.search(
-            normalized,
+            query,
             timeout_ms=SEARCH_TIMEOUT_MS,
             file_limit=FILE_LIMIT,
             response_limit=RESPONSE_LIMIT,
@@ -259,13 +245,44 @@ def search_one(client, query):
             timeout_seconds=SEARCH_WAIT_SECONDS,
         )
 
+        last_search_id = search_id
+        last_data = data
+
         if flatten_responses(data):
+            return search_id, data, query
+
+    if normalize:
+        normalized = normalize_search_query(query)
+
+        if normalized and normalized.casefold() != query.casefold():
+            print(
+                f"  Search returned no candidates; "
+                f"trying punctuation-normalized query: {normalized}"
+            )
+
+            search_id = client.search(
+                normalized,
+                timeout_ms=SEARCH_TIMEOUT_MS,
+                file_limit=FILE_LIMIT,
+                response_limit=RESPONSE_LIMIT,
+            )
+
+            data = client.wait_for_search(
+                search_id,
+                timeout_seconds=SEARCH_WAIT_SECONDS,
+            )
+
+            if flatten_responses(data):
+                return search_id, data, normalized
+
+            last_search_id = search_id
+            last_data = data
             return search_id, data, normalized
 
     # Do not delete completed searches immediately. slskd can still be
     # finalizing/persisting a search in its background worker, and deleting
     # it here can race that finalization.
-    return search_id, data, normalized if normalized else query
+    return last_search_id, last_data, query
 def ensure_search_state(track):
     return track.setdefault(
         "search",
@@ -511,6 +528,8 @@ def process_album_group(client, tracks, index, total):
         year_search_id, year_data, year_effective_query = search_one(
             client,
             year_query,
+            attempts=3,
+            normalize=False,
         )
         year_candidates = flatten_responses(year_data)
 
