@@ -27,9 +27,17 @@ library:
   owner: ""
 
 github:
-  # Number of retries for transient GitHub Git-data upload failures.
-  upload_retries: 5
+  # Maximum attempts for transient GitHub Git-data API writes.
+  git_data_max_attempts: 5
+  # Maximum attempts for GitHub Contents API file uploads.
+  file_upload_max_attempts: 5
+  # Maximum attempts to push source-repository checkpoints.
+  checkpoint_push_max_attempts: 3
   request_timeout_seconds: 60
+
+musicbrainz:
+  # Maximum attempts for transient MusicBrainz API requests.
+  request_max_attempts: 5
 
 soulseek:
   search_timeout_ms: 12000
@@ -37,7 +45,10 @@ soulseek:
   response_limit: 100
   file_limit: 10000
 
-  # Album+year searches are deliberately retried more than other searches.
+  # Maximum attempts when slskd rejects a search with a transient conflict.
+  search_max_attempts: 5
+
+  # Album+year searches are deliberately attempted more than other searches.
   album_year_attempts: 3
 
   # slskd transfer/download behavior.
