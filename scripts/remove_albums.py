@@ -1,12 +1,14 @@
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 from publish import GitHubClient, normalize_path
+from config import string
 
-STATE_PATH = Path(os.environ.get("MB_SLSK_STATE_FILE", "state/tracks.json"))
-REMOVE_PATH = Path("remove.txt")
+STATE_PATH = Path(string("paths.state_file", default="state/tracks.json"))
+REMOVE_PATH = Path(string("paths.removal_file", default="remove.txt"))
 
 
 def load_state():
