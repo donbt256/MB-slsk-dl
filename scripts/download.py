@@ -1141,6 +1141,7 @@ def release_download(
     tracks,
     release,
     attempt_number,
+    fallback_candidates=None,
 ):
     """
     Attempt one complete album release.
@@ -1199,6 +1200,17 @@ def release_download(
     completed = set()
     failed = set()
     transfers_seen = {}
+
+    # Candidates from other already-accepted release mappings can replace
+    # an individual file that fails during this release. Keep the original
+    # release mapping first, then try alternatives only when necessary.
+    fallback_candidates = fallback_candidates or {}
+    attempted_candidates = {
+        str(track.get("metadata", {}).get("id")): {
+            transfer_key(candidate.get("username"), candidate.get("filename"))
+        }
+        for track, candidate in matches
+    }
 
     release_started = time.monotonic()
     last_nonzero_speed = release_started
@@ -1260,22 +1272,123 @@ def release_download(
             )
 
         if failed:
-            log(
-                f"  Release failed: "
-                f"{len(failed)} transfer(s) failed."
-            )
-            cancel_release_transfers(
-                client,
-                transfers_seen,
-            )
-            mark_release_attempt(
-                tracks,
-                release,
-                attempt_number,
-                "failed",
-            )
-            save_state(state)
-            return False
+            # Replace failed files with the next deterministic candidate
+            # before abandoning the whole release.
+            replacements = []
+            unrecoverable = []
+
+            for failed_key in list(failed):
+                failed_item = wanted.get(failed_key)
+                if failed_item is None:
+                    unrecoverable.append(failed_key)
+                    continue
+
+                failed_track, failed_candidate = failed_item
+                track_id = str(
+                    failed_track.get("metadata", {}).get("id")
+                )
+
+                replacement = None
+                for candidate in fallback_candidates.get(track_id, []):
+                    if not isinstance(candidate, dict):
+                        continue
+
+                    username = candidate.get("username")
+                    filename = candidate.get("filename")
+
+                    if not username or not filename:
+                        continue
+
+                    candidate_key = transfer_key(
+                        username,
+                        filename,
+                    )
+
+                    if candidate_key in attempted_candidates.setdefault(
+                        track_id,
+                        set(),
+                    ):
+                        continue
+
+                    attempted_candidates[track_id].add(candidate_key)
+
+                    if is_user_blacklisted(state, username):
+                        continue
+
+                    if is_transfer_blacklisted(
+                        state,
+                        username,
+                        filename,
+                    ):
+                        continue
+
+                    replacement = candidate
+                    break
+
+                if replacement is None:
+                    unrecoverable.append(failed_key)
+                    continue
+
+                replacements.append(
+                    (
+                        failed_key,
+                        failed_track,
+                        replacement,
+                    )
+                )
+
+            for failed_key, failed_track, replacement in replacements:
+                failed.discard(failed_key)
+                wanted.pop(failed_key, None)
+
+                queued = queue_release(
+                    client,
+                    [(failed_track, replacement)],
+                )
+
+                if not queued:
+                    log(
+                        "    Replacement candidate could not be queued."
+                    )
+                    failed.add(failed_key)
+                    continue
+
+                replacement_track, replacement_candidate = queued[0]
+                replacement_key = transfer_key(
+                    replacement_candidate.get("username"),
+                    replacement_candidate.get("filename"),
+                )
+                wanted[replacement_key] = (
+                    replacement_track,
+                    replacement_candidate,
+                )
+
+                log(
+                    f"    Retrying track with alternate candidate: "
+                    f"{replacement_candidate.get('username')} / "
+                    f"{replacement_candidate.get('filename')}"
+                )
+
+            failed.update(unrecoverable)
+
+            if failed:
+                log(
+                    f"  Release failed: "
+                    f"{len(failed)} transfer(s) have no usable "
+                    "replacement candidate."
+                )
+                cancel_release_transfers(
+                    client,
+                    transfers_seen,
+                )
+                mark_release_attempt(
+                    tracks,
+                    release,
+                    attempt_number,
+                    "failed",
+                )
+                save_state(state)
+                return False
 
         if not wanted and not pending:
             log("  Release has no files to download.")
@@ -1601,12 +1714,28 @@ def process_album(
 
         attempt_number += 1
 
+        fallback_by_track = {}
+        for alternate_release in releases:
+            for item in alternate_release.get("matches", []):
+                if not isinstance(item, dict):
+                    continue
+                track_id = str(item.get("track_id"))
+                candidate = item.get("candidate")
+                if (
+                    track_id
+                    and isinstance(candidate, dict)
+                    and candidate.get("username")
+                    and candidate.get("filename")
+                ):
+                    fallback_by_track.setdefault(track_id, []).append(candidate)
+
         success = release_download(
             client,
             state,
             tracks,
             release,
             attempt_number,
+            fallback_by_track,
         )
 
         if success:
