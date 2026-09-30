@@ -270,6 +270,18 @@ def main():
         if acquisition.get("status") != "published":
             continue
 
+        enrichment = track.get("enrichment", {})
+        onetagger_state = (
+            enrichment.get("onetagger", {})
+            if isinstance(enrichment, dict)
+            else {}
+        )
+        if (
+            isinstance(onetagger_state, dict)
+            and onetagger_state.get("status") == "committed"
+        ):
+            continue
+
         library = acquisition.get("library")
         if not isinstance(library, dict):
             continue
@@ -340,6 +352,38 @@ def main():
                 )
 
     save_state(state)
+
+    # Persist metadata completion in the source repository so a later
+    # workflow run can retry only tracks that were not successfully enriched.
+    subprocess.run(
+        ["git", "config", "user.name", "github-actions[bot]"],
+        check=True,
+    )
+    subprocess.run(
+        [
+            "git",
+            "config",
+            "user.email",
+            "41898282+github-actions[bot]@users.noreply.github.com",
+        ],
+        check=True,
+    )
+    subprocess.run(["git", "add", str(STATE_PATH)], check=True)
+
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        check=False,
+    )
+
+    if staged.returncode != 0:
+        subprocess.run(
+            ["git", "commit", "-m", "Checkpoint metadata state"],
+            check=True,
+        )
+        subprocess.run(
+            ["git", "push", "origin", "HEAD:main"],
+            check=True,
+        )
 
     log("")
     log("=== Metadata summary ===")
