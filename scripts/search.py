@@ -86,14 +86,36 @@ def acquisition_status(track):
     ).get("status", "pending")
 
 
+def local_file_exists(track):
+    acquisition = track.get("acquisition", {})
+    if not isinstance(acquisition, dict):
+        return False
+
+    file_info = acquisition.get("file")
+    if not isinstance(file_info, dict):
+        return False
+
+    path = (
+        file_info.get("path")
+        or file_info.get("local_path")
+        or file_info.get("localPath")
+    )
+
+    return bool(path) and Path(path).is_file()
+
+
 def should_skip_track(track):
     status = acquisition_status(track)
 
-    return status in {
-        "downloaded",
-        "ready_to_publish",
-        "published",
-    }
+    if status == "published":
+        return True
+
+    if status in {"downloaded", "ready_to_publish"}:
+        # Runner-local downloaded files do not survive between GitHub Actions
+        # jobs/runs. If the recorded file is absent, search must reacquire it.
+        return local_file_exists(track)
+
+    return False
 
 
 def album_key(track):
