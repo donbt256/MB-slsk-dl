@@ -4,11 +4,13 @@ import re
 from difflib import SequenceMatcher
 from pathlib import PurePosixPath, PureWindowsPath
 
+from config import integer
+
 
 MATCHER_VERSION = 8
 
 
-MAX_LIBRARY_FILE_BYTES = 100 * 1024 * 1024
+MAX_LIBRARY_FILE_BYTES = integer("matcher.max_library_file_bytes", "GITHUB_MAX_FILE_BYTES", 100 * 1024 * 1024)
 
 
 AUDIO_EXTENSIONS = {
