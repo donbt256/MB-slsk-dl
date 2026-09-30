@@ -111,6 +111,23 @@ jobs:
         run: |
           python scripts/process_releases.py
 
+      - name: Install OneTagger CLI
+        run: |
+          curl --fail --location \
+            https://github.com/Marekkon5/onetagger/releases/download/v1.7.0/onetagger-cli-linux \
+            --output "$RUNNER_TEMP/onetagger-cli"
+          chmod +x "$RUNNER_TEMP/onetagger-cli"
+          "$RUNNER_TEMP/onetagger-cli" --version
+
+      - name: Enrich committed music with OneTagger
+        continue-on-error: true
+        env:
+          GIT_PAT: ${{ secrets.GIT_PAT }}
+          ONETAGGER_BIN: ${{ runner.temp }}/onetagger-cli
+          ONETAGGER_CONFIG: ${{ github.workspace }}/onetagger/autotagger.json
+        run: |
+          python scripts/metadata.py
+
       - name: Diagnostic state summary
         if: always()
         run: |
