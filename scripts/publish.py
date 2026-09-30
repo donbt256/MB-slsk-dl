@@ -761,7 +761,7 @@ class GitHubClient:
 
     def _write_request(self, method, path, **kwargs):
         max_attempts = int(
-            integer("github.upload_retries", "GITHUB_UPLOAD_RETRIES", 5)
+            integer("github.git_data_max_attempts", "GITHUB_GIT_DATA_MAX_ATTEMPTS", 5)
         )
 
         for attempt in range(1, max_attempts + 1):
@@ -1068,10 +1068,7 @@ class GitHubClient:
             payload["sha"] = existing_sha
 
         max_attempts = int(
-            os.environ.get(
-                "GITHUB_UPLOAD_RETRIES",
-                "5",
-            )
+            integer("github.file_upload_max_attempts", "GITHUB_FILE_UPLOAD_MAX_ATTEMPTS", 5)
         )
 
         last_error = None
@@ -1183,7 +1180,7 @@ class GitHubClient:
         if existing_sha:
             payload["sha"] = existing_sha
 
-        max_attempts = int(os.environ.get("GITHUB_UPLOAD_RETRIES", "5"))
+        max_attempts = integer("github.file_upload_max_attempts", "GITHUB_FILE_UPLOAD_MAX_ATTEMPTS", 5)
 
         for attempt in range(1, max_attempts + 1):
             try:
