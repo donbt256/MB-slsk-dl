@@ -1002,7 +1002,6 @@ def set_release_match(
     matches = release_matches(
         release,
         tracks,
-        state,
     )
 
     by_track_id = {
