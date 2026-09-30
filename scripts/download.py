@@ -32,6 +32,11 @@ ZERO_SPEED_SECONDS = 30
 SLOW_USER_SPEED_BYTES = 100 * 1024
 SLOW_USER_STRIKES = 3
 
+# Exact remote files that repeatedly fail should be suppressed even when
+# the Soulseek user is otherwise usable. "File not shared" is immediately
+# deterministic; timeout/cancellation failures require two occurrences.
+TRANSFER_FAILURE_STRIKES = 2
+
 FAILURE_STATES = (
     "rejected",
     "timedout",
@@ -160,6 +165,70 @@ def transfer_key(username, filename):
         str(username or "").lower(),
         str(filename or "").lower(),
     )
+
+
+def transfer_failure_key(username, filename):
+    return (
+        f"{normalize_username(username)}\\x1f"
+        f"{str(filename or '').casefold()}"
+    )
+
+
+def transfer_failure_state(state):
+    failures = state.setdefault("failed_transfers", {})
+    if not isinstance(failures, dict):
+        state["failed_transfers"] = {}
+        failures = state["failed_transfers"]
+    return failures
+
+
+def is_transfer_blacklisted(state, username, filename):
+    key = transfer_failure_key(username, filename)
+    entry = transfer_failure_state(state).get(key)
+    return isinstance(entry, dict) and entry.get("blacklisted") is True
+
+
+def record_transfer_failure(state, username, filename, error):
+    """Suppress a remote file after deterministic/repeated transfer failures."""
+    if not username or not filename:
+        return False
+
+    key = transfer_failure_key(username, filename)
+    failures = transfer_failure_state(state)
+    entry = failures.setdefault(
+        key,
+        {
+            "username": str(username),
+            "filename": str(filename),
+            "strikes": 0,
+            "blacklisted": False,
+        },
+    )
+
+    if entry.get("blacklisted") is True:
+        return True
+
+    message = str(error or "").strip()
+    entry["last_error"] = message
+    entry["last_error_timestamp"] = int(time.time())
+
+    deterministic = "file not shared" in message.casefold()
+    if deterministic:
+        entry["blacklisted"] = True
+    else:
+        entry["strikes"] = int(entry.get("strikes", 0)) + 1
+        if entry["strikes"] >= TRANSFER_FAILURE_STRIKES:
+            entry["blacklisted"] = True
+
+    if entry["blacklisted"]:
+        log(
+            f"  Suppressing failed Soulseek file: "
+            f"{username} / {filename} "
+            f"({message or 'transfer failure'})."
+        )
+        return True
+
+    return False
 
 
 def selected_matches(state):
@@ -338,6 +407,13 @@ def release_matches(release, tracks):
         )
 
         if not username or not filename:
+            continue
+
+        if is_transfer_blacklisted(
+            state,
+            username,
+            filename,
+        ):
             continue
 
         matches.append(
@@ -1341,6 +1417,12 @@ def release_download(
                 for failure in FAILURE_STATES
             ):
                 log(f"    Download failed: {current_state}")
+                record_transfer_failure(
+                    state,
+                    username_now,
+                    filename_now,
+                    current_state,
+                )
                 failed.add(key)
 
         if failed:
@@ -1557,68 +1639,14 @@ def process_individual_track(
         {},
     )
 
-    match = acquisition.get(
-        "match"
-    )
+    match = acquisition.get("match")
 
-    if not isinstance(
-        match,
-        dict,
-    ):
+    if not isinstance(match, dict):
         return False
 
-    candidates = match.get(
-        "candidates"
-    )
+    candidates = match.get("candidates")
 
-    if (
-        not isinstance(
-            candidates,
-            list,
-        )
-        or not candidates
-    ):
-        return False
-
-    candidate = next(
-        (
-            item
-            for item in candidates
-            if isinstance(item, dict)
-            and not is_user_blacklisted(
-                state,
-                item.get("username"),
-            )
-        ),
-        None,
-    )
-
-    if candidate is None:
-        acquisition["status"] = "download_failed"
-        acquisition["download_error"] = "All matched users are blacklisted for slow transfers."
-        return False
-
-    username = candidate.get(
-        "username"
-    )
-
-    filename = candidate.get(
-        "filename"
-    )
-
-    size = candidate.get(
-        "size"
-    )
-
-    if not username or not filename:
-        acquisition["status"] = (
-            "download_failed"
-        )
-
-        acquisition[
-            "download_error"
-        ] = "Missing username or filename."
-
+    if not isinstance(candidates, list) or not candidates:
         return False
 
     title = track.get(
@@ -1629,278 +1657,195 @@ def process_individual_track(
         "?",
     )
 
-    log("")
-    log(
-        f"Track: {title}"
-    )
-    log(
-        f"  User: {username}"
-    )
-    log(
-        f"  File: {filename}"
-    )
+    for candidate in candidates:
+        if not isinstance(candidate, dict):
+            continue
 
-    known_files = (
-        snapshot_download_files()
-    )
+        username = candidate.get("username")
+        filename = candidate.get("filename")
+        size = candidate.get("size")
 
-    try:
-        client.enqueue_download(
-            username=username,
-            filename=filename,
-            size=size,
-        )
+        if not username or not filename:
+            continue
 
-    except Exception as exc:
-        log(
-            f"  Queue failed: {exc}"
-        )
+        if is_user_blacklisted(state, username):
+            continue
 
-        acquisition["status"] = (
-            "download_failed"
-        )
+        if is_transfer_blacklisted(state, username, filename):
+            log(
+                f"  Skipping previously failed remote file: "
+                f"{username} / {filename}"
+            )
+            continue
 
-        acquisition[
-            "download_error"
-        ] = str(exc)
+        log("")
+        log(f"Track: {title}")
+        log(f"  User: {username}")
+        log(f"  File: {filename}")
 
-        save_state(state)
+        known_files = snapshot_download_files()
 
-        return False
-
-    acquisition["status"] = (
-        "downloading"
-    )
-
-    save_state(state)
-
-    wanted_key = transfer_key(
-        username,
-        filename,
-    )
-
-    deadline = (
-        time.monotonic()
-        + TIMEOUT_SECONDS
-    )
-
-    last_nonzero_speed = (
-        time.monotonic()
-    )
-
-    while time.monotonic() < deadline:
         try:
-            data = client.get_downloads()
-
+            client.enqueue_download(
+                username=username,
+                filename=filename,
+                size=size,
+            )
         except Exception as exc:
-            log(
-                f"  Unable to read download "
-                f"status: {exc}"
-            )
-
-            time.sleep(
-                POLL_SECONDS
-            )
-
-            continue
-
-        transfers = extract_transfers(
-            data
-        )
-
-        matching_transfer = None
-
-        for transfer in transfers:
-            key = transfer_key(
-                transfer_username(
-                    transfer
-                ),
-                transfer_filename(
-                    transfer
-                ),
-            )
-
-            if key == wanted_key:
-                matching_transfer = (
-                    transfer
-                )
-                break
-
-        if matching_transfer is None:
-            time.sleep(
-                POLL_SECONDS
-            )
-            continue
-
-        current_state = (
-            transfer_state(
-                matching_transfer
-            ).lower()
-        )
-
-        total, downloaded, speed = (
-            transfer_progress(
-                matching_transfer
-            )
-        )
-
-        if speed > 0:
-            last_nonzero_speed = (
-                time.monotonic()
-            )
-
-        if total:
-            percent = (
-                downloaded
-                / total
-                * 100
-            )
-
-            log(
-                f"  State: "
-                f"{current_state}"
-            )
-
-            log(
-                f"  Progress: "
-                f"{format_bytes(downloaded)} / "
-                f"{format_bytes(total)} "
-                f"({percent:.1f}%)"
-            )
-
-            log(
-                f"  Speed: "
-                f"{format_speed(speed)}"
-            )
-
-        if "succeeded" in current_state:
-            local_filename = transfer_local_filename(
-                matching_transfer
-            )
-
-            path = None
-
-            if local_filename:
-                local_path = Path(local_filename)
-
-                if (
-                    local_path.is_file()
-                    and (
-                        size is None
-                        or local_path.stat().st_size
-                        == int(size)
-                    )
-                ):
-                    path = local_path
-
-            if path is None:
-                path = find_downloaded_file(
-                    DOWNLOAD_ROOT,
-                    filename,
-                    expected_size=size,
-                    known_files=known_files,
-                )
-
-            if path is None:
-                log(
-                    "  Transfer succeeded, "
-                    "but the downloaded file "
-                    "was not found yet."
-                )
-
-                time.sleep(
-                    POLL_SECONDS
-                )
-
-                continue
-
-            actual_size = path.stat().st_size
-
-            acquisition["status"] = (
-                "downloaded"
-            )
-
-            acquisition["file"] = {
-                "path": str(path),
-                "filename": path.name,
-                "size": actual_size,
-            }
-
-            record_user_speed(
+            log(f"  Queue failed: {exc}")
+            record_transfer_failure(
                 state,
                 username,
-                speed,
+                filename,
+                exc,
             )
+            save_state(state)
+            continue
 
+        acquisition["status"] = "downloading"
+        save_state(state)
+
+        wanted_key = transfer_key(username, filename)
+        deadline = time.monotonic() + TIMEOUT_SECONDS
+        last_nonzero_speed = time.monotonic()
+
+        while time.monotonic() < deadline:
+            try:
+                data = client.get_downloads()
+            except Exception as exc:
+                log(f"  Unable to read download status: {exc}")
+                time.sleep(POLL_SECONDS)
+                continue
+
+            matching_transfer = None
+
+            for transfer in extract_transfers(data):
+                key = transfer_key(
+                    transfer_username(transfer),
+                    transfer_filename(transfer),
+                )
+                if key == wanted_key:
+                    matching_transfer = transfer
+                    break
+
+            if matching_transfer is None:
+                time.sleep(POLL_SECONDS)
+                continue
+
+            current_state = transfer_state(matching_transfer).lower()
+            total, downloaded, speed = transfer_progress(matching_transfer)
+
+            if speed > 0:
+                last_nonzero_speed = time.monotonic()
+
+            if total:
+                percent = downloaded / total * 100
+                log(f"  State: {current_state}")
+                log(
+                    f"  Progress: {format_bytes(downloaded)} / "
+                    f"{format_bytes(total)} ({percent:.1f}%)"
+                )
+                log(f"  Speed: {format_speed(speed)}")
+
+            if "succeeded" in current_state:
+                local_filename = transfer_local_filename(matching_transfer)
+                path = None
+
+                if local_filename:
+                    local_path = Path(local_filename)
+                    if (
+                        local_path.is_file()
+                        and (
+                            size is None
+                            or local_path.stat().st_size == int(size)
+                        )
+                    ):
+                        path = local_path
+
+                if path is None:
+                    path = find_downloaded_file(
+                        DOWNLOAD_ROOT,
+                        filename,
+                        expected_size=size,
+                        known_files=known_files,
+                    )
+
+                if path is None:
+                    log(
+                        "  Transfer succeeded, but the downloaded "
+                        "file was not found yet."
+                    )
+                    time.sleep(POLL_SECONDS)
+                    continue
+
+                actual_size = path.stat().st_size
+                acquisition["status"] = "downloaded"
+                acquisition["file"] = {
+                    "path": str(path),
+                    "filename": path.name,
+                    "size": actual_size,
+                }
+
+                record_user_speed(state, username, speed)
+                save_state(state)
+                log(f"  Downloaded: {path}")
+                return True
+
+            if any(
+                failure in current_state
+                for failure in FAILURE_STATES
+            ):
+                log(f"  Download failed: {current_state}")
+                record_transfer_failure(
+                    state,
+                    username,
+                    filename,
+                    current_state,
+                )
+                acquisition["status"] = "download_failed"
+                acquisition["download_error"] = current_state
+                save_state(state)
+                break
+
+            if (
+                time.monotonic() - last_nonzero_speed
+                >= ZERO_SPEED_SECONDS
+            ):
+                log(
+                    f"  Transfer has had zero speed for "
+                    f"{ZERO_SPEED_SECONDS} seconds."
+                )
+                cancel_transfer(client, matching_transfer)
+                record_transfer_failure(
+                    state,
+                    username,
+                    filename,
+                    "zero_speed",
+                )
+                acquisition["status"] = "download_failed"
+                acquisition["download_error"] = "zero_speed"
+                save_state(state)
+                break
+
+            time.sleep(POLL_SECONDS)
+        else:
+            log("  Download timed out.")
+            record_transfer_failure(
+                state,
+                username,
+                filename,
+                "timeout",
+            )
+            acquisition["status"] = "download_timeout"
+            acquisition["download_error"] = "timeout"
             save_state(state)
 
-            log(
-                f"  Downloaded: {path}"
-            )
-
-            return True
-
-        if any(
-            failure in current_state
-            for failure in FAILURE_STATES
-        ):
-            acquisition["status"] = (
-                "download_failed"
-            )
-
-            acquisition[
-                "download_error"
-            ] = current_state
-
-            save_state(state)
-
-            log(
-                f"  Download failed: "
-                f"{current_state}"
-            )
-
-            return False
-
-        if (
-            time.monotonic()
-            - last_nonzero_speed
-            >= ZERO_SPEED_SECONDS
-        ):
-            log(
-                f"  Transfer has had zero "
-                f"speed for "
-                f"{ZERO_SPEED_SECONDS} seconds."
-            )
-
-            cancel_transfer(
-                client,
-                matching_transfer,
-            )
-
-            acquisition["status"] = (
-                "download_failed"
-            )
-
-            acquisition[
-                "download_error"
-            ] = "zero_speed"
-
-            save_state(state)
-
-            return False
-
-        time.sleep(
-            POLL_SECONDS
-        )
-
-    acquisition["status"] = (
-        "download_timeout"
+    acquisition["status"] = "download_failed"
+    acquisition["download_error"] = (
+        "All available matched candidates failed or were suppressed."
     )
-
     save_state(state)
-
     return False
-
 
 def main():
     log(
