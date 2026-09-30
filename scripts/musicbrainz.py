@@ -4,6 +4,8 @@ from urllib.parse import quote
 
 import requests
 
+from config import integer
+
 
 MUSICBRAINZ_API_URL = "https://musicbrainz.org/ws/2"
 MUSICBRAINZ_USER_AGENT = (
@@ -18,7 +20,7 @@ class MusicBrainzClient:
         self._next_request_at = 0.0
 
     def _request(self, endpoint, params=None):
-        max_attempts = 5
+        max_attempts = integer("musicbrainz.request_max_attempts", "MUSICBRAINZ_REQUEST_MAX_ATTEMPTS", 5)
 
         for attempt in range(1, max_attempts + 1):
             wait = self._next_request_at - time.monotonic()
