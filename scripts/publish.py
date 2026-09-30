@@ -973,10 +973,10 @@ class GitHubClient:
         # Check only the index. The local clone intentionally may contain
         # stale/untracked working-tree files from previous atomic commits.
         staged_changes = self._run_git(
-            ["diff", "--cached", "--quiet"],
+            ["diff", "--cached", "--name-only"],
             cwd=path,
-        )
-        if staged_changes == b"":
+        ).decode("utf-8", errors="replace").strip()
+        if not staged_changes:
             return self._run_git(
                 ["rev-parse", f"origin/{branch}"],
                 cwd=path,
