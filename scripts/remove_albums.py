@@ -5,7 +5,7 @@ from pathlib import Path
 
 from publish import GitHubClient, normalize_path
 
-STATE_PATH = Path("state/tracks.json")
+STATE_PATH = Path(os.environ.get("MB_SLSK_STATE_FILE", "state/tracks.json"))
 REMOVE_PATH = Path("remove.txt")
 
 
