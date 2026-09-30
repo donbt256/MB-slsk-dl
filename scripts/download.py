@@ -169,7 +169,7 @@ def transfer_key(username, filename):
 
 def transfer_failure_key(username, filename):
     return (
-        f"{normalize_username(username)}\\x1f"
+        f"{normalize_username(username)}\x1f"
         f"{str(filename or '').casefold()}"
     )
 
@@ -239,6 +239,9 @@ def selected_matches(state):
             "acquisition",
             {},
         )
+
+        if not isinstance(acquisition, dict):
+            continue
 
         if acquisition.get("status") != "matched":
             continue
