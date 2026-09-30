@@ -124,6 +124,11 @@ def record_user_speed(state, username, speed):
     except (TypeError, ValueError):
         return False
 
+    # A missing/zero speed measurement is not evidence that the user is
+    # slow. Only measured positive speeds can accumulate slow-user strikes.
+    if speed <= 0:
+        return False
+
     users = slow_user_state(state)
     entry = users.setdefault(
         key,
