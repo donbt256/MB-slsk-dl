@@ -661,7 +661,21 @@ def process_album_group(client, tracks, index, total):
         print("  No viable releases.")
         return False
 
-    best = releases[0]
+    # Prefer the highest-ranked release that actually passes the
+    # deterministic acceptance rules. The highest-scoring release overall
+    # can be a deluxe/live/compilation release with extra or alternate
+    # versions, even when a valid exact release is also present.
+    accepted_releases = [
+        release
+        for release in releases
+        if release.get("decision") == "accept"
+    ]
+
+    best = (
+        accepted_releases[0]
+        if accepted_releases
+        else releases[0]
+    )
 
     print(
         f"  Release candidates: {len(releases)}"
@@ -679,6 +693,12 @@ def process_album_group(client, tracks, index, total):
     print(
         f"  Score: {best['score']}"
     )
+
+    if accepted_releases:
+        print(
+            f"  Accepted release candidates: "
+            f"{len(accepted_releases)}"
+        )
 
     decision = best["decision"]
 
@@ -889,16 +909,6 @@ def main():
         for track in group
     }
 
-    pending_individual = [
-        track
-        for track in tracks
-        if (
-            not should_skip_track(track)
-            and track_key(track)
-            not in album_track_ids
-        )
-    ]
-
     album_total = len(album_groups)
 
     for index, group in enumerate(
@@ -919,6 +929,22 @@ def main():
         f"Album searches completed: "
         f"{album_total}"
     )
+
+    # Recompute individual work after album searches. Rejected/incomplete
+    # album matches are deliberately retried track-by-track rather than
+    # being silently left with status "unmatched".
+    pending_individual = [
+        track
+        for track in tracks
+        if (
+            not should_skip_track(track)
+            and (
+                track_key(track)
+                not in album_track_ids
+                or acquisition_status(track) != "matched"
+            )
+        )
+    ]
 
     individual_total = len(pending_individual)
 
