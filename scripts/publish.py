@@ -1242,7 +1242,7 @@ def discover_library_repos(client):
     while True:
         repo = (
             f"{LIBRARY_PREFIX}"
-            f"{number:03d}"
+            f"{number:0{LIBRARY_NUMBER_WIDTH}d}"
         )
 
         if not client.repo_exists(repo):
