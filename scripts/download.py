@@ -1483,8 +1483,21 @@ def release_download(
                     log(
                         f"    File exists but size does not match "
                         f"expected size: {format_bytes(actual_size)} "
-                        f"vs {format_bytes(expected_size)}"
+                        f"vs {format_bytes(expected_size)} "
+                        f"({actual_size} bytes vs {int(expected_size)} bytes)"
                     )
+
+                    # A succeeded slskd transfer with the wrong local size
+                    # must not remain active forever. Mark it failed so the
+                    # normal deterministic replacement logic can select the
+                    # next candidate, or fail the release if none exists.
+                    record_transfer_failure(
+                        state,
+                        username_now,
+                        filename_now,
+                        "size_mismatch",
+                    )
+                    failed.add(key)
                     continue
 
                 track.setdefault(
