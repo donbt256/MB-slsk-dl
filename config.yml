@@ -1,0 +1,73 @@
+# MB-slsk-dl runtime configuration.
+#
+# Values here are intentionally non-secret. Credentials belong in GitHub
+# Actions secrets, not this file.
+
+library:
+  # Repositories are created as: <prefix><number>, zero-padded to number_width.
+  repo_prefix: "music-library-"
+  start_number: 1
+  number_width: 3
+
+  # Soft rollover: normal repositories stop accepting new releases once
+  # this many bytes would be exceeded.
+  soft_rollover_bytes: 943718400 # 900 MiB
+
+  # Hard rollover: an individual release at or below this size is kept
+  # together. Releases larger than this may be split when necessary.
+  hard_rollover_bytes: 1073741824 # 1 GiB
+
+  # GitHub's per-blob limit. Files at or above this limit are rejected.
+  max_file_bytes: 104857600 # 100 MiB
+
+  # Estimated space reserved for embedded artwork when deciding release size.
+  artwork_reserve_bytes: 2097152 # 2 MiB
+
+  # Optional owner override. Leave blank to derive it from GITHUB_REPO/token.
+  owner: ""
+
+github:
+  # Number of retries for transient GitHub Git-data upload failures.
+  upload_retries: 5
+  request_timeout_seconds: 60
+
+soulseek:
+  search_timeout_ms: 12000
+  search_wait_seconds: 20
+  response_limit: 100
+  file_limit: 10000
+
+  # Album+year searches are deliberately retried more than other searches.
+  album_year_attempts: 3
+
+  # slskd transfer/download behavior.
+  download_slots: 8
+
+download:
+  root: "/home/runner/music-downloads"
+  incomplete_root: "/home/runner/music-downloads-incomplete"
+
+  poll_seconds: 5
+  timeout_seconds: 3600
+  zero_speed_seconds: 30
+
+  # A Soulseek user is blacklisted after this many consecutive completed
+  # transfers at or below slow_user_speed_bytes_per_second.
+  slow_user_speed_bytes_per_second: 102400 # 100 KiB/s
+  slow_user_strikes: 3
+
+  # Remote files are suppressed after this many non-deterministic failures.
+  transfer_failure_strikes: 2
+
+matcher:
+  # Keep this synchronized with the acceptance rules in matcher.py.
+  max_library_file_bytes: 104857600 # 100 MiB
+
+metadata:
+  onetagger_binary: "onetagger-cli"
+  onetagger_config: "onetagger/autotagger.json"
+
+paths:
+  state_file: "state/tracks.json"
+  input_file: "input.yaml"
+  removal_file: "remove.txt"
