@@ -3,12 +3,13 @@ from pathlib import Path
 
 from input_parser import parse_input_file
 from musicbrainz import resolve_requests
+from config import string
 
 
 ROOT = Path(__file__).resolve().parent.parent
-INPUT_FILE = ROOT / "input.yaml"
+INPUT_FILE = ROOT / string("paths.input_file", default="input.yaml")
 STATE_DIR = ROOT / "state"
-TRACKS_FILE = STATE_DIR / "tracks.json"
+TRACKS_FILE = ROOT / string("paths.state_file", default="state/tracks.json")
 
 
 def load_existing_state():
