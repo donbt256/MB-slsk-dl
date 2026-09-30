@@ -126,7 +126,8 @@ def main():
 
     by_repo = {}
     for track in matched:
-        library = track.get("acquisition", {}).get("library", {})
+        acquisition = track.get("acquisition") or {}
+        library = acquisition.get("library") or {}
         repo = str(library.get("repo") or "").strip()
         path = normalize_path(library.get("path") or "")
         if repo and path:
