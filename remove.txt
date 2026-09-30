@@ -1,4 +1,4 @@
 # Albums to remove before acquisition starts.
 # Matching is exact on album title, case-insensitive.
 # The album artist/artist is used as an additional safeguard when supplied.
-Yoshimi 20th
+yoshimi Battles the Pink Robots (20th Anniversary Deluxe Edition)
