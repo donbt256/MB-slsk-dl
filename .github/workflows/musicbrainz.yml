@@ -30,6 +30,43 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Load runtime configuration
+        run: |
+          python - <<'PY'
+          import os
+          import sys
+          sys.path.insert(0, "scripts")
+          from config import integer, string
+          values = {
+              "GITHUB_LIBRARY_PREFIX": string("library.repo_prefix", default="music-library-"),
+              "GITHUB_LIBRARY_START": str(integer("library.start_number", default=1)),
+              "GITHUB_LIBRARY_NUMBER_WIDTH": str(integer("library.number_width", default=3)),
+              "GITHUB_LIBRARY_SOFT_ROLLOVER_BYTES": str(integer("library.soft_rollover_bytes", default=943718400)),
+              "GITHUB_LIBRARY_HARD_ROLLOVER_BYTES": str(integer("library.hard_rollover_bytes", default=1073741824)),
+              "GITHUB_MAX_FILE_BYTES": str(integer("library.max_file_bytes", default=104857600)),
+              "GITHUB_LIBRARY_ARTWORK_RESERVE_BYTES": str(integer("library.artwork_reserve_bytes", default=2097152)),
+              "GITHUB_UPLOAD_RETRIES": str(integer("github.upload_retries", default=5)),
+              "GITHUB_REQUEST_TIMEOUT_SECONDS": str(integer("github.request_timeout_seconds", default=60)),
+              "SLSKD_SEARCH_TIMEOUT_MS": str(integer("soulseek.search_timeout_ms", default=12000)),
+              "SLSKD_SEARCH_WAIT_SECONDS": str(integer("soulseek.search_wait_seconds", default=20)),
+              "SLSKD_RESPONSE_LIMIT": str(integer("soulseek.response_limit", default=100)),
+              "SLSKD_FILE_LIMIT": str(integer("soulseek.file_limit", default=10000)),
+              "SLSKD_ALBUM_YEAR_ATTEMPTS": str(integer("soulseek.album_year_attempts", default=3)),
+              "SLSKD_DOWNLOAD_SLOTS": str(integer("soulseek.download_slots", default=8)),
+              "SOULSEEK_DOWNLOAD_DIR": string("download.root", default="/home/runner/music-downloads"),
+              "SOULSEEK_INCOMPLETE_DIR": string("download.incomplete_root", default="/home/runner/music-downloads-incomplete"),
+              "SOULSEEK_POLL_SECONDS": str(integer("download.poll_seconds", default=5)),
+              "SOULSEEK_TIMEOUT_SECONDS": str(integer("download.timeout_seconds", default=3600)),
+              "SOULSEEK_ZERO_SPEED_SECONDS": str(integer("download.zero_speed_seconds", default=30)),
+              "SOULSEEK_SLOW_USER_SPEED_BYTES": str(integer("download.slow_user_speed_bytes_per_second", default=102400)),
+              "SOULSEEK_SLOW_USER_STRIKES": str(integer("download.slow_user_strikes", default=3)),
+              "SOULSEEK_TRANSFER_FAILURE_STRIKES": str(integer("download.transfer_failure_strikes", default=2)),
+          }
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as handle:
+              for key, value in values.items():
+                  handle.write(f"{key}={value}\n")
+          PY
+
       - name: Resolve MusicBrainz releases
         run: |
           python scripts/main.py
@@ -46,8 +83,8 @@ jobs:
           SOULSEEK_PASSWORD: ${{ secrets.SOULSEEK_PASSWORD }}
         run: |
           mkdir -p "$RUNNER_TEMP/slskd"
-          mkdir -p "$RUNNER_TEMP/music-downloads"
-          mkdir -p "$RUNNER_TEMP/music-downloads-incomplete"
+          mkdir -p "$SOULSEEK_DOWNLOAD_DIR"
+          mkdir -p "$SOULSEEK_INCOMPLETE_DIR"
 
           docker run \
             --detach \
@@ -58,12 +95,12 @@ jobs:
             --env "SLSKD_SLSK_PASSWORD=$SOULSEEK_PASSWORD" \
             --env "SLSKD_NO_AUTH=true" \
             --env "SLSKD_REMOTE_CONFIGURATION=false" \
-            --env "SLSKD_DOWNLOAD_SLOTS=8" \
+            --env "SLSKD_DOWNLOAD_SLOTS=$SLSKD_DOWNLOAD_SLOTS" \
             --env "SLSKD_DOWNLOADS_DIR=/downloads" \
             --env "SLSKD_INCOMPLETE_DIR=/incomplete" \
             --volume "$RUNNER_TEMP/slskd:/app" \
-            --volume "$RUNNER_TEMP/music-downloads:/downloads" \
-            --volume "$RUNNER_TEMP/music-downloads-incomplete:/incomplete" \
+            --volume "$SOULSEEK_DOWNLOAD_DIR:/downloads" \
+            --volume "$SOULSEEK_INCOMPLETE_DIR:/incomplete" \
             slskd/slskd:latest
 
       - name: Wait for slskd
@@ -108,11 +145,6 @@ jobs:
       - name: Process releases independently
         env:
           SLSKD_URL: http://127.0.0.1:5030
-          SLSKD_SEARCH_TIMEOUT_MS: "12000"
-          SLSKD_SEARCH_WAIT_SECONDS: "20"
-          SLSKD_RESPONSE_LIMIT: "100"
-          SLSKD_FILE_LIMIT: "10000"
-          SOULSEEK_DOWNLOAD_DIR: ${{ runner.temp }}/music-downloads
           GIT_PAT: ${{ secrets.GIT_PAT }}
         run: |
           python scripts/process_releases.py
