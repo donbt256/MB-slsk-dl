@@ -8,34 +8,21 @@ from pathlib import Path
 from soulseek import SoulseekClient
 from release import release_key as metadata_release_key
 from matcher import has_audio_extension
+from config import integer, string
 
 
 RELEASE_FILTER = os.environ.get("RELEASE_KEY")
 
 
-STATE_FILE = Path("state/tracks.json")
+STATE_FILE = Path(string("paths.state_file", default="state/tracks.json"))
 
-DOWNLOAD_ROOT = Path(
-    os.environ.get(
-        "SOULSEEK_DOWNLOAD_DIR",
-        "/home/runner/music-downloads",
-    )
-)
-
-POLL_SECONDS = 5
-TIMEOUT_SECONDS = 60 * 60
-
-ZERO_SPEED_SECONDS = 30
-
-# A user is considered consistently slow after this many completed
-# transfers whose observed transfer speed stays at or below the threshold.
-SLOW_USER_SPEED_BYTES = 100 * 1024
-SLOW_USER_STRIKES = 3
-
-# Exact remote files that repeatedly fail should be suppressed even when
-# the Soulseek user is otherwise usable. "File not shared" is immediately
-# deterministic; timeout/cancellation failures require two occurrences.
-TRANSFER_FAILURE_STRIKES = 2
+DOWNLOAD_ROOT = Path(string("download.root", "SOULSEEK_DOWNLOAD_DIR", "/home/runner/music-downloads"))
+POLL_SECONDS = integer("download.poll_seconds", "SOULSEEK_POLL_SECONDS", 5)
+TIMEOUT_SECONDS = integer("download.timeout_seconds", "SOULSEEK_TIMEOUT_SECONDS", 60 * 60)
+ZERO_SPEED_SECONDS = integer("download.zero_speed_seconds", "SOULSEEK_ZERO_SPEED_SECONDS", 30)
+SLOW_USER_SPEED_BYTES = integer("download.slow_user_speed_bytes_per_second", "SOULSEEK_SLOW_USER_SPEED_BYTES", 100 * 1024)
+SLOW_USER_STRIKES = integer("download.slow_user_strikes", "SOULSEEK_SLOW_USER_STRIKES", 3)
+TRANSFER_FAILURE_STRIKES = integer("download.transfer_failure_strikes", "SOULSEEK_TRANSFER_FAILURE_STRIKES", 2)
 
 FAILURE_STATES = (
     "rejected",
