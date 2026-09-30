@@ -16,28 +16,19 @@ from matcher import (
 )
 from soulseek import SoulseekClient, flatten_responses
 from release import release_key
+from config import integer, string
 
 
 RELEASE_FILTER = os.environ.get("RELEASE_KEY")
 
 
-STATE_PATH = Path("state/tracks.json")
+STATE_PATH = Path(string("paths.state_file", default="state/tracks.json"))
 
-SEARCH_TIMEOUT_MS = int(
-    os.environ.get("SLSKD_SEARCH_TIMEOUT_MS", "12000")
-)
-
-SEARCH_WAIT_SECONDS = int(
-    os.environ.get("SLSKD_SEARCH_WAIT_SECONDS", "20")
-)
-
-RESPONSE_LIMIT = int(
-    os.environ.get("SLSKD_RESPONSE_LIMIT", "100")
-)
-
-FILE_LIMIT = int(
-    os.environ.get("SLSKD_FILE_LIMIT", "10000")
-)
+SEARCH_TIMEOUT_MS = integer("soulseek.search_timeout_ms", "SLSKD_SEARCH_TIMEOUT_MS", 12000)
+SEARCH_WAIT_SECONDS = integer("soulseek.search_wait_seconds", "SLSKD_SEARCH_WAIT_SECONDS", 20)
+RESPONSE_LIMIT = integer("soulseek.response_limit", "SLSKD_RESPONSE_LIMIT", 100)
+FILE_LIMIT = integer("soulseek.file_limit", "SLSKD_FILE_LIMIT", 10000)
+ALBUM_YEAR_ATTEMPTS = integer("soulseek.album_year_attempts", "SLSKD_ALBUM_YEAR_ATTEMPTS", 3)
 
 
 def load_state():
@@ -528,7 +519,7 @@ def process_album_group(client, tracks, index, total):
         year_search_id, year_data, year_effective_query = search_one(
             client,
             year_query,
-            attempts=3,
+            attempts=ALBUM_YEAR_ATTEMPTS,
             normalize=False,
         )
         year_candidates = flatten_responses(year_data)
