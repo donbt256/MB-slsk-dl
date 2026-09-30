@@ -242,7 +242,7 @@ def save_checkpoint(label):
                 break
 
             print(
-                f"Checkpoint push rejected (attempt {attempt}/{max_attempts}); 
+                f"Checkpoint push rejected (attempt {attempt}/{max_attempts}); "
                 "rebasing onto the current remote main...",
                 flush=True,
             )
