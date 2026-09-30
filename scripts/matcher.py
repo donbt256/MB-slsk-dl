@@ -5,7 +5,7 @@ from difflib import SequenceMatcher
 from pathlib import PurePosixPath, PureWindowsPath
 
 
-MATCHER_VERSION = 7
+MATCHER_VERSION = 8
 
 
 MAX_LIBRARY_FILE_BYTES = 100 * 1024 * 1024
@@ -58,6 +58,34 @@ def normalize(value):
 
 def tokens(value):
     return set(normalize(value).split())
+
+
+def primary_artist(metadata, album=False):
+    """
+    Return the primary credited artist when MusicBrainz supplied the
+    individual artist list. Multi-artist credits otherwise make a
+    Soulseek path match unnecessarily strict.
+    """
+    keys = (
+        ("album_artists", "album_artist")
+        if album
+        else ("artists", "artist")
+    )
+
+    for key in keys:
+        value = metadata.get(key)
+
+        if isinstance(value, list):
+            for item in value:
+                item = str(item or "").strip()
+                if item:
+                    return item
+
+        value = str(value or "").strip()
+        if value:
+            return value
+
+    return ""
 
 
 def similarity(a, b):
@@ -258,6 +286,7 @@ def score_candidate(track, candidate):
     metadata = track.get("metadata", track)
 
     artist = metadata.get("artist", "")
+    primary = primary_artist(metadata)
     album = metadata.get("album", "")
     title = metadata.get("title", "")
     track_number = metadata.get("track_number")
@@ -303,6 +332,8 @@ def score_candidate(track, candidate):
             artist_path_similarity,
             similarity(part, artist),
             token_similarity(part, artist),
+            similarity(part, primary),
+            token_similarity(part, primary),
         )
 
         album_path_similarity = max(
@@ -488,12 +519,19 @@ def score_release(album_tracks, release):
     if not files:
         return None
 
-    artist = album_tracks[0]["metadata"].get(
+    first_metadata = album_tracks[0]["metadata"]
+
+    artist = first_metadata.get(
         "artist",
         "",
     )
 
-    album = album_tracks[0]["metadata"].get(
+    primary = primary_artist(
+        first_metadata,
+        album=True,
+    )
+
+    album = first_metadata.get(
         "album",
         "",
     )
@@ -503,9 +541,9 @@ def score_release(album_tracks, release):
         "",
     )
 
-    artist_similarity = similarity(
-        folder,
-        artist,
+    artist_similarity = max(
+        similarity(folder, artist),
+        similarity(folder, primary),
     )
 
     album_similarity = similarity(
