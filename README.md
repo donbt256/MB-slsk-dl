@@ -14,7 +14,6 @@ MusicBrainz metadata is retrieved through the public MusicBrainz Web Service wit
 
 - `SOULSEEK_USERNAME`
 - `SOULSEEK_PASSWORD`
-- `OPENAI_API_KEY`
 - `GIT_PAT`
 
 Run the GitHub Action manually with `workflow_dispatch`.
