@@ -8,6 +8,14 @@ from difflib import SequenceMatcher
 from collections import defaultdict
 from pathlib import Path
 
+try:
+    from mutagen import File as MutagenFile
+    from mutagen.easyid3 import EasyID3
+    from mutagen.flac import FLAC
+    from mutagen.mp4 import MP4
+except ImportError:
+    MutagenFile = EasyID3 = FLAC = MP4 = None
+
 from publish import GitHubClient, normalize_path
 from config import string
 
@@ -240,6 +248,84 @@ def read_failed_playlist(path):
         return []
     return [line.strip() for line in lines if line.strip() and not line.lstrip().startswith("#")]
 
+def seed_identifying_tags(file_path, entry):
+    metadata = entry.get("track", {}).get("metadata", {})
+    artist = str(metadata.get("artist") or "").strip()
+    album = str(metadata.get("album") or "").strip()
+    title = str(metadata.get("title") or metadata.get("name") or "").strip()
+    album_artist = str(metadata.get("album_artist") or metadata.get("albumArtist") or artist).strip()
+    track_number = track_number_from_entry(entry)
+
+    if not any((artist, album, title, track_number)):
+        return False
+    if MutagenFile is None:
+        raise RuntimeError("mutagen is required to seed identifying tags before OneTagger")
+
+    suffix = file_path.suffix.lower()
+    try:
+        if suffix == ".mp3":
+            try:
+                audio = EasyID3(str(file_path))
+            except Exception:
+                audio = EasyID3()
+            if artist:
+                audio["artist"] = [artist]
+            if album_artist:
+                audio["albumartist"] = [album_artist]
+            if album:
+                audio["album"] = [album]
+            if title:
+                audio["title"] = [title]
+            if track_number is not None:
+                audio["tracknumber"] = [str(track_number)]
+            audio.save(str(file_path))
+        elif suffix == ".flac":
+            audio = FLAC(str(file_path))
+            if artist:
+                audio["artist"] = [artist]
+            if album_artist:
+                audio["albumartist"] = [album_artist]
+            if album:
+                audio["album"] = [album]
+            if title:
+                audio["title"] = [title]
+            if track_number is not None:
+                audio["tracknumber"] = [str(track_number)]
+            audio.save()
+        elif suffix == ".m4a":
+            audio = MP4(str(file_path))
+            if artist:
+                audio["\xa9ART"] = [artist]
+            if album_artist:
+                audio["aART"] = [album_artist]
+            if album:
+                audio["\xa9alb"] = [album]
+            if title:
+                audio["\xa9nam"] = [title]
+            if track_number is not None:
+                audio["trkn"] = [(track_number, 0)]
+            audio.save()
+        else:
+            audio = MutagenFile(str(file_path), easy=True)
+            if audio is None:
+                return False
+            if artist:
+                audio["artist"] = [artist]
+            if album_artist:
+                audio["albumartist"] = [album_artist]
+            if album:
+                audio["album"] = [album]
+            if title:
+                audio["title"] = [title]
+            if track_number is not None:
+                audio["tracknumber"] = [str(track_number)]
+            audio.save()
+    except Exception as exc:
+        raise RuntimeError(f"Failed to seed identifying tags in {file_path}: {exc}") from exc
+
+    return True
+
+
 def run_onetagger(path):
     command = [
         str(ONETAGGER),
@@ -396,6 +482,9 @@ def process_repo(client, repo, branch, track_entries):
                 f"{file_path.relative_to(repo_path)}"
             )
 
+        log("  Seeding identifying tags from acquisition metadata...")
+        for file_path in files:
+            seed_identifying_tags(file_path, next(entry for entry, matched_path in matches if matched_path == file_path))
         log("  Starting OneTagger...")
         return_code, new_playlists = run_onetagger(directory)
         failed_playlists.extend(new_playlists)
