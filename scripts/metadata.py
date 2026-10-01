@@ -108,15 +108,20 @@ def git_changed_files(client, repo_path):
 
 
 def run_onetagger(path):
-    result = run(
-        [
-            str(ONETAGGER),
-            "autotagger",
-            "--config",
-            str(CONFIG.resolve()),
-            "--path",
-            str(path),
-        ]
+    command = [
+        str(ONETAGGER),
+        "autotagger",
+        "--config",
+        str(CONFIG.resolve()),
+        "--path",
+        str(path),
+    ]
+
+    log("$ " + " ".join(str(part) for part in command))
+    result = subprocess.run(
+        command,
+        cwd=path,
+        check=False,
     )
 
     return result.returncode
@@ -165,12 +170,35 @@ def process_repo(client, repo, branch, track_entries):
         directories.items(),
         key=lambda item: str(item[0]),
     ):
+        relative_directory = directory.relative_to(repo_path)
+
+        log("")
         log(
             f"Tagging {len(files)} file(s) in "
-            f"{directory.relative_to(repo_path)}"
+            f"{relative_directory}"
         )
 
-        if run_onetagger(directory) != 0:
+        for index, file_path in enumerate(files, 1):
+            log(
+                f"  [{index}/{len(files)}] "
+                f"{file_path.relative_to(repo_path)}"
+            )
+
+        log("  Starting OneTagger...")
+        return_code = run_onetagger(directory)
+
+        if return_code == 0:
+            log(
+                f"  OneTagger completed successfully for "
+                f"{relative_directory}"
+            )
+        else:
+            log(
+                f"  OneTagger exited with code {return_code} for "
+                f"{relative_directory}"
+            )
+
+        if return_code != 0:
             failed = True
             log(
                 f"OneTagger failed for "
@@ -178,6 +206,14 @@ def process_repo(client, repo, branch, track_entries):
             )
 
     changed = git_changed_files(client, repo_path)
+
+    log("")
+    log("Metadata changes detected:")
+    if changed:
+        for relative in changed:
+            log(f"  changed: {relative}")
+    else:
+        log("  none")
 
     if not changed:
         log("No metadata changes were produced.")
