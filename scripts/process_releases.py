@@ -374,7 +374,25 @@ def main():
 
         try:
             run_stage("scripts/search.py", env)
-            run_stage("scripts/download.py", env)
+
+            try:
+                run_stage("scripts/download.py", env)
+            except RuntimeError as download_error:
+                # An album can have a complete deterministic match but still
+                # fail because the selected Soulseek releases are unavailable,
+                # rejected, or otherwise unusable at transfer time. On that
+                # path, force a second search pass that also performs
+                # individual-track searches, then retry the download once.
+                print(
+                    f"Download stage failed for {label}; "
+                    "refreshing individual-track candidates and retrying...",
+                    flush=True,
+                )
+                retry_env = env.copy()
+                retry_env["FORCE_INDIVIDUAL_SEARCH"] = "1"
+
+                run_stage("scripts/search.py", retry_env)
+                run_stage("scripts/download.py", retry_env)
 
             current_state = load_state()
             current_tracks = [
