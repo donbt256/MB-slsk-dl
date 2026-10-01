@@ -211,6 +211,35 @@ def git_changed_files(client, repo_path):
     return changed
 
 
+def find_failed_playlists(search_roots):
+    found = []
+    seen = set()
+    for root in search_roots:
+        if not root or not root.exists():
+            continue
+        try:
+            iterator = root.rglob("failed-*.m3u")
+        except OSError:
+            continue
+        for candidate in iterator:
+            try:
+                resolved = candidate.resolve()
+            except OSError:
+                resolved = candidate
+            key = str(resolved)
+            if key in seen or not candidate.is_file():
+                continue
+            seen.add(key)
+            found.append(candidate)
+    return sorted(found, key=lambda path: str(path))
+
+def read_failed_playlist(path):
+    try:
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return []
+    return [line.strip() for line in lines if line.strip() and not line.lstrip().startswith("#")]
+
 def run_onetagger(path):
     command = [
         str(ONETAGGER),
@@ -223,6 +252,8 @@ def run_onetagger(path):
 
     log("$ " + " ".join(str(part) for part in command))
     log("  OneTagger output will be streamed live below.")
+
+    before_playlists = set(find_failed_playlists([Path.home() / ".config" / "onetagger", Path.home() / ".local" / "share" / "onetagger", Path(os.environ.get("RUNNER_TEMP", "/tmp")), path]))
 
     process = subprocess.Popen(
         command,
@@ -266,7 +297,8 @@ def run_onetagger(path):
         f"after {minutes:02d}:{seconds:02d}"
     )
 
-    return return_code
+    after_playlists = set(find_failed_playlists([Path.home() / ".config" / "onetagger", Path.home() / ".local" / "share" / "onetagger", Path(os.environ.get("RUNNER_TEMP", "/tmp")), path]))
+    return return_code, sorted(after_playlists - before_playlists, key=lambda item: str(item))
 
 
 def process_repo(client, repo, branch, track_entries):
@@ -343,6 +375,8 @@ def process_repo(client, repo, branch, track_entries):
         directories[file_path.parent].append(file_path)
 
     failed = False
+    failed_playlists = []
+    failed_directories = []
 
     for directory, files in sorted(
         directories.items(),
@@ -363,7 +397,8 @@ def process_repo(client, repo, branch, track_entries):
             )
 
         log("  Starting OneTagger...")
-        return_code = run_onetagger(directory)
+        return_code, new_playlists = run_onetagger(directory)
+        failed_playlists.extend(new_playlists)
 
         if return_code == 0:
             log(
@@ -376,6 +411,7 @@ def process_repo(client, repo, branch, track_entries):
                 f"{relative_directory}"
             )
             failed = True
+            failed_directories.append(str(relative_directory))
 
     changed = git_changed_files(client, repo_path)
 
@@ -399,6 +435,8 @@ def process_repo(client, repo, branch, track_entries):
                 for entry, path in matches
             },
             "unmatched": unmatched,
+            "failed_playlists": failed_playlists,
+            "failed_directories": failed_directories,
         }
 
     entries = []
@@ -465,7 +503,52 @@ def process_repo(client, repo, branch, track_entries):
             for entry, path in matches
         },
         "unmatched": unmatched,
+        "failed_playlists": failed_playlists,
+        "failed_directories": failed_directories,
     }
+
+
+def write_failure_report(repo, result):
+    report_dir = Path("state/metadata-failures")
+    report_dir.mkdir(parents=True, exist_ok=True)
+    safe_repo = re.sub(r"[^A-Za-z0-9._-]+", "_", repo)
+    report_path = report_dir / (safe_repo + ".md")
+    lines = [
+        "# OneTagger failures: " + repo,
+        "",
+        "Generated: " + time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
+        "",
+        "Status: " + ("OK" if result["success"] else "FAILED"),
+        "Matched state entries: " + str(len(result.get("matched", {}))),
+        "Unmatched state entries: " + str(len(result.get("unmatched", []))),
+        "",
+        "## Failed songs",
+        "",
+    ]
+    seen = set()
+    playlists = result.get("failed_playlists", [])
+    for playlist in playlists:
+        lines.append("### " + playlist.name)
+        for song in read_failed_playlist(playlist):
+            if song not in seen:
+                seen.add(song)
+                lines.append("- `" + song + "`")
+        lines.append("")
+    if not playlists:
+        lines.append("No OneTagger failed-song playlist was produced.")
+        lines.append("")
+    if result.get("failed_directories"):
+        lines += ["## Directories with OneTagger errors", ""]
+        lines += ["- `" + value + "`" for value in result["failed_directories"]]
+        lines.append("")
+    if result.get("unmatched"):
+        lines += ["## Metadata entries not matched to a library file", ""]
+        for entry in result["unmatched"]:
+            metadata = entry.get("track", {}).get("metadata", {})
+            lines.append("- " + str(metadata.get("artist", "?")) + " - " + str(metadata.get("title", "?")))
+        lines.append("")
+    report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return report_path
 
 
 def main():
@@ -540,6 +623,7 @@ def main():
         )
 
         committed_by_repo[repo] = result
+        result["failure_report"] = str(write_failure_report(repo, result))
 
         if not result["success"]:
             overall_success = False
@@ -594,7 +678,7 @@ def main():
         ],
         check=True,
     )
-    subprocess.run(["git", "add", str(STATE_PATH)], check=True)
+    subprocess.run(["git", "add", str(STATE_PATH), "state/metadata-failures"], check=True)
 
     staged = subprocess.run(
         ["git", "diff", "--cached", "--quiet"],
@@ -619,7 +703,7 @@ def main():
             f"{repo}: "
             f"{len(result['changed'])} file(s) changed, "
             f"commit={result['commit'] or 'none'}, "
-            f"status={'ok' if result['success'] else 'failed'}"
+            f"status={'ok' if result['success'] else 'failed'}, " f"failed_songs={sum(len(read_failed_playlist(p)) for p in result.get('failed_playlists', []))}, " f"report={result.get('failure_report', 'none')}"
         )
 
     if overall_success:
