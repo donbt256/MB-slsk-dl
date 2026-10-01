@@ -856,6 +856,11 @@ class GitHubClient:
         remote = f"https://github.com/{self.owner}/{repo}.git"
 
         if not (path / ".git").is_dir():
+            print(
+                f"Preparing local metadata checkout for {repo}: "
+                f"cloning repository...",
+                flush=True,
+            )
             if path.exists():
                 shutil.rmtree(path)
             self._run_git(
@@ -867,8 +872,20 @@ class GitHubClient:
                     str(path),
                 ]
             )
+            print(
+                f"Finished cloning {repo}.",
+                flush=True,
+            )
         else:
+            print(
+                f"Refreshing local metadata checkout for {repo}...",
+                flush=True,
+            )
             self._run_git(["fetch", "origin"], cwd=path)
+            print(
+                f"Finished refreshing {repo}.",
+                flush=True,
+            )
 
         self._local_repos[repo] = path
         return path
