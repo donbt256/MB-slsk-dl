@@ -545,10 +545,15 @@ def main():
             overall_success = False
 
         changed = set(result["changed"])
+        matched_by_state_path = {
+            id(entry["track"]): actual_path
+            for actual_path, entry in result.get("matched", {}).items()
+        }
 
         for entry in entries:
             track = entry["track"]
-            path = entry["path"]
+            state_path = entry["path"]
+            path = matched_by_state_path.get(id(track), state_path)
             enrichment = track.setdefault(
                 "enrichment",
                 {
