@@ -3,6 +3,8 @@ import os
 import subprocess
 import time
 import sys
+import re
+from difflib import SequenceMatcher
 from collections import defaultdict
 from pathlib import Path
 
@@ -63,18 +65,119 @@ def local_repo_path(client, repo):
     return path
 
 
-def checkout_files(client, repo, branch, paths):
+def normalize_match_text(value):
+    value = str(value or "").casefold()
+    value = re.sub(r"\\.(mp3|flac|m4a|aac|ogg|opus|wav|alac|aiff|ape|wma)$", "", value)
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
+def track_number_from_entry(entry):
+    metadata = entry.get("track", {}).get("metadata", {})
+    value = (
+        metadata.get("track_number")
+        or metadata.get("track")
+        or metadata.get("track_number_display")
+        or ""
+    )
+    match = re.search(r"\\d+", str(value))
+    return int(match.group()) if match else None
+
+
+def expected_parts(entry):
+    metadata = entry.get("track", {}).get("metadata", {})
+    return {
+        "artist": normalize_match_text(metadata.get("artist")),
+        "album": normalize_match_text(metadata.get("album")),
+        "title": normalize_match_text(
+            metadata.get("title")
+            or metadata.get("name")
+        ),
+        "track_number": track_number_from_entry(entry),
+    }
+
+
+def filename_parts(path):
+    stem = path.stem
+    match = re.match(r"^\\s*(\\d{1,3})(?:[ ._-]+)(.*)$", stem)
+    number = int(match.group(1)) if match else None
+    title = match.group(2) if match else stem
+
+    parent = path.parent.name
+    artist = path.parent.parent.name if path.parent.parent != path.parent else ""
+
+    return {
+        "artist": normalize_match_text(artist),
+        "album": normalize_match_text(parent),
+        "title": normalize_match_text(title),
+        "track_number": number,
+    }
+
+
+def similarity(left, right):
+    if not left or not right:
+        return 0.0
+    return SequenceMatcher(None, left, right).ratio()
+
+
+def fuzzy_match_track(entry, audio_files, used):
+    expected = expected_parts(entry)
+    candidates = []
+
+    for path in audio_files:
+        normalized = normalize_path(str(path))
+        if normalized in used:
+            continue
+
+        actual = filename_parts(path)
+        title_score = similarity(expected["title"], actual["title"])
+        artist_score = similarity(expected["artist"], actual["artist"])
+        album_score = similarity(expected["album"], actual["album"])
+
+        if title_score < 0.72:
+            continue
+
+        score = (
+            title_score * 0.60
+            + artist_score * 0.20
+            + album_score * 0.15
+        )
+
+        if (
+            expected["track_number"] is not None
+            and actual["track_number"] is not None
+        ):
+            if expected["track_number"] == actual["track_number"]:
+                score += 0.05
+            else:
+                score -= 0.10
+
+        candidates.append((score, title_score, path))
+
+    if not candidates:
+        return None, 0.0
+
+    candidates.sort(
+        key=lambda item: (item[0], item[1], str(item[2])),
+        reverse=True,
+    )
+    best_score, _, best_path = candidates[0]
+
+    # Require a strong overall match and a meaningful margin over the
+    # runner-up so a similarly named track is not tagged accidentally.
+    if best_score < 0.78:
+        return None, best_score
+
+    if len(candidates) > 1 and best_score - candidates[1][0] < 0.04:
+        return None, best_score
+
+    return best_path, best_score
+
+
+def checkout_files(client, repo, branch):
     path = local_repo_path(client, repo)
     client._run_git(["checkout", "--force", branch], cwd=path)
     client._run_git(["reset", "--hard", f"origin/{branch}"], cwd=path)
-
-    for relative in sorted(paths):
-        relative = normalize_path(relative)
-        client._run_git(
-            ["checkout", f"origin/{branch}", "--", relative],
-            cwd=path,
-        )
-
     return path
 
 
@@ -167,40 +270,76 @@ def run_onetagger(path):
 
 
 def process_repo(client, repo, branch, track_entries):
-    paths = {
-        normalize_path(entry["path"])
-        for entry in track_entries
-        if entry.get("path")
-    }
+    log("")
+    log(f"=== Metadata: {repo} ===")
+    log("Refreshing the complete library checkout for fuzzy metadata matching...")
 
-    if not paths:
+    repo_path = checkout_files(client, repo, branch)
+
+    audio_files = sorted(
+        path
+        for path in repo_path.rglob("*")
+        if path.is_file()
+        and path.suffix.lower() in AUDIO_EXTENSIONS
+        and ".git" not in path.parts
+    )
+
+    log(f"Found {len(audio_files)} audio file(s) in {repo}.")
+
+    matches = []
+    used = set()
+    unmatched = []
+
+    for index, entry in enumerate(track_entries, 1):
+        metadata = entry["track"].get("metadata", {})
+        label = (
+            f"{metadata.get('artist', '?')} - "
+            f"{metadata.get('title', '?')}"
+        )
+
+        matched, score = fuzzy_match_track(
+            entry,
+            audio_files,
+            used,
+        )
+
+        if matched is None:
+            unmatched.append(entry)
+            log(
+                f"  [{index}/{len(track_entries)}] "
+                f"UNMATCHED: {label} "
+                f"(best score {score:.2f})"
+            )
+            continue
+
+        normalized = normalize_path(str(matched.relative_to(repo_path)))
+        used.add(normalized)
+        matches.append((entry, matched))
+        log(
+            f"  [{index}/{len(track_entries)}] "
+            f"MATCH {score:.2f}: {label} -> {normalized}"
+        )
+
+    if unmatched:
+        log(
+            f"Unmatched metadata entries: "
+            f"{len(unmatched)}/{len(track_entries)}"
+        )
+
+    if not matches:
+        log("No library files matched metadata entries.")
         return {
             "repo": repo,
             "changed": [],
             "success": True,
             "commit": None,
+            "matched": {},
+            "unmatched": unmatched,
         }
 
-    log("")
-    log(f"=== Metadata: {repo} ===")
-
-    repo_path = checkout_files(
-        client,
-        repo,
-        branch,
-        paths,
-    )
-
-    # Only the files belonging to this metadata run are checked out. Group
-    # them by directory so OneTagger can perform album-level matching without
-    # accidentally processing the entire library repository.
     directories = defaultdict(list)
 
-    for relative in sorted(paths):
-        file_path = repo_path / relative
-        if not file_path.is_file():
-            log(f"Missing library file: {relative}")
-            continue
+    for entry, file_path in matches:
         directories[file_path.parent].append(file_path)
 
     failed = False
@@ -213,7 +352,7 @@ def process_repo(client, repo, branch, track_entries):
 
         log("")
         log(
-            f"Tagging {len(files)} file(s) in "
+            f"Tagging {len(files)} matched file(s) in "
             f"{relative_directory}"
         )
 
@@ -236,13 +375,7 @@ def process_repo(client, repo, branch, track_entries):
                 f"  OneTagger exited with code {return_code} for "
                 f"{relative_directory}"
             )
-
-        if return_code != 0:
             failed = True
-            log(
-                f"OneTagger failed for "
-                f"{directory.relative_to(repo_path)}"
-            )
 
     changed = git_changed_files(client, repo_path)
 
@@ -261,6 +394,11 @@ def process_repo(client, repo, branch, track_entries):
             "changed": [],
             "success": not failed,
             "commit": None,
+            "matched": {
+                normalize_path(str(path.relative_to(repo_path))): entry
+                for entry, path in matches
+            },
+            "unmatched": unmatched,
         }
 
     entries = []
@@ -271,9 +409,6 @@ def process_repo(client, repo, branch, track_entries):
         local = repo_path / normalized
 
         if not local.is_file():
-            # Do not accidentally commit deletions created by a failed
-            # tagger invocation. Metadata processing only updates existing
-            # library files and optional LRC sidecars.
             continue
 
         if (
@@ -301,6 +436,11 @@ def process_repo(client, repo, branch, track_entries):
             "changed": [],
             "success": not failed,
             "commit": None,
+            "matched": {
+                normalize_path(str(path.relative_to(repo_path))): entry
+                for entry, path in matches
+            },
+            "unmatched": unmatched,
         }
 
     commit = client.create_tree_commit(
@@ -320,6 +460,11 @@ def process_repo(client, repo, branch, track_entries):
         "changed": changed_paths,
         "success": not failed,
         "commit": commit,
+        "matched": {
+            normalize_path(str(path.relative_to(repo_path))): entry
+            for entry, path in matches
+        },
+        "unmatched": unmatched,
     }
 
 
