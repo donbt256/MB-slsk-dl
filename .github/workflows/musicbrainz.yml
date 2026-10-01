@@ -153,6 +153,10 @@ jobs:
         run: |
           python scripts/process_releases.py
 
+      - name: Install metadata tag writer
+        run: |
+          python -m pip install --disable-pip-version-check --quiet mutagen
+
       - name: Install OneTagger CLI
         run: |
           mkdir -p "$RUNNER_TEMP/onetagger"
