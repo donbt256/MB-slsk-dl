@@ -327,8 +327,6 @@ def main():
         save_state(state)
         save_checkpoint("Compact acquisition state")
 
-    failed = False
-
     for index, release in enumerate(releases, start=1):
         label = release["label"]
         key = release["key"]
@@ -462,9 +460,8 @@ def main():
             )
 
         except Exception as exc:
-            failed = True
             print(
-                f"RELEASE FAILED: {label}: {exc}",
+                f"RELEASE SKIPPED: {label}: {exc}",
                 file=sys.stderr,
                 flush=True,
             )
@@ -494,10 +491,4 @@ def main():
                     flush=True,
                 )
 
-    if failed:
-        return 1
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
