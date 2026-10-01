@@ -2023,6 +2023,11 @@ def main():
     # checkpointed download states whose local files disappeared between runs.
     repair_stale_download_states(state, processing_tracks)
 
+    force_individual = os.environ.get(
+        "FORCE_INDIVIDUAL_SEARCH",
+        "",
+    ).strip().lower() in {"1", "true", "yes"}
+
     groups = album_groups_from_state(
         processing_state
     )
@@ -2042,6 +2047,13 @@ def main():
             for track in tracks
         )
     }
+
+    if force_individual:
+        log(
+            "Forced individual-track retry enabled; "
+            "skipping album download attempts."
+        )
+        album_groups = {}
 
     album_track_ids = {
         str(
@@ -2111,8 +2123,10 @@ def main():
 
         if (
             status == "matched"
-            and track_id
-            not in album_track_ids
+            and (
+                force_individual
+                or track_id not in album_track_ids
+            )
         ):
             pending_individual.append(
                 track
