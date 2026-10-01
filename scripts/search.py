@@ -973,14 +973,19 @@ def main():
     # Recompute individual work after album searches. Rejected/incomplete
     # album matches are deliberately retried track-by-track rather than
     # being silently left with status "unmatched".
+    force_individual = os.environ.get(
+        "FORCE_INDIVIDUAL_SEARCH",
+        "",
+    ).strip().lower() in {"1", "true", "yes"}
+
     pending_individual = [
         track
         for track in tracks
         if (
             not should_skip_track(track)
             and (
-                track_key(track)
-                not in album_track_ids
+                force_individual
+                or track_key(track) not in album_track_ids
                 or acquisition_status(track) != "matched"
             )
         )
