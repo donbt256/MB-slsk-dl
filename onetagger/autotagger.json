@@ -2,7 +2,7 @@
   "platforms": [
     "musicbrainz",
     "bandcamp",
-        "musixmatch"
+    "musixmatch"
   ],
   "path": null,
   "tags": [
