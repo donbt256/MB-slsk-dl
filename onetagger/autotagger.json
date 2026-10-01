@@ -64,7 +64,7 @@
   "trackNumberLeadingZeroes": 0,
   "enableShazam": false,
   "forceShazam": false,
-  "skipTagged": false,
+  "skipTagged": true,
   "includeSubfolders": false,
   "onlyYear": false,
   "titleRegex": null,
