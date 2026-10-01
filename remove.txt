@@ -3,3 +3,4 @@
 # The album artist/artist is used as an additional safeguard when supplied.
 yoshimi Battles the Pink Robots (20th Anniversary Deluxe Edition)
 color me in kindness
+The Soft Bulletin (25th Anniversary)
