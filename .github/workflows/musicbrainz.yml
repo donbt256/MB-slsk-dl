@@ -155,9 +155,20 @@ jobs:
 
       - name: Install OneTagger CLI
         run: |
+          mkdir -p "$RUNNER_TEMP/onetagger"
           curl --fail --location \
-            https://github.com/Marekkon5/onetagger/releases/download/v1.7.0/onetagger-cli-linux \
-            --output "$RUNNER_TEMP/onetagger-cli"
+            https://github.com/Marekkon5/onetagger/releases/download/1.7.0/OneTagger-linux-cli.tar.gz \
+            --output "$RUNNER_TEMP/onetagger-cli.tar.gz"
+          tar -xzf "$RUNNER_TEMP/onetagger-cli.tar.gz" -C "$RUNNER_TEMP/onetagger"
+
+          ONETAGGER_EXECUTABLE="$(find "$RUNNER_TEMP/onetagger" -type f -iname 'onetagger-cli' -print -quit)"
+          if [ -z "$ONETAGGER_EXECUTABLE" ]; then
+            echo "OneTagger CLI executable was not found in the release archive."
+            find "$RUNNER_TEMP/onetagger" -maxdepth 2 -type f -print
+            exit 1
+          fi
+
+          cp "$ONETAGGER_EXECUTABLE" "$RUNNER_TEMP/onetagger-cli"
           chmod +x "$RUNNER_TEMP/onetagger-cli"
           "$RUNNER_TEMP/onetagger-cli" --version
 
