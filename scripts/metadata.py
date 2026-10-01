@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import time
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -118,13 +119,51 @@ def run_onetagger(path):
     ]
 
     log("$ " + " ".join(str(part) for part in command))
-    result = subprocess.run(
+    log("  OneTagger output will be streamed live below.")
+
+    process = subprocess.Popen(
         command,
         cwd=path,
-        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1,
     )
 
-    return result.returncode
+    started = time.monotonic()
+    next_heartbeat = started + 30
+
+    while True:
+        line = process.stdout.readline()
+
+        if line:
+            print(line.rstrip("\n"), flush=True)
+            continue
+
+        return_code = process.poll()
+        if return_code is not None:
+            break
+
+        now = time.monotonic()
+        if now >= next_heartbeat:
+            elapsed = int(now - started)
+            minutes, seconds = divmod(elapsed, 60)
+            log(
+                f"  OneTagger still running... "
+                f"elapsed {minutes:02d}:{seconds:02d}"
+            )
+            next_heartbeat = now + 30
+
+        time.sleep(0.2)
+
+    elapsed = int(time.monotonic() - started)
+    minutes, seconds = divmod(elapsed, 60)
+    log(
+        f"  OneTagger process exited with code {return_code} "
+        f"after {minutes:02d}:{seconds:02d}"
+    )
+
+    return return_code
 
 
 def process_repo(client, repo, branch, track_entries):
