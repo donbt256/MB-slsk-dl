@@ -181,6 +181,31 @@ jobs:
         run: |
           python scripts/metadata.py
 
+      - name: Collect OneTagger failed-song playlists
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/onetagger-failures"
+          found=0
+          while IFS= read -r file; do
+            [ -n "$file" ] || continue
+            found=1
+            base="$(basename "$file")"
+            cp "$file" "$RUNNER_TEMP/onetagger-failures/$base"
+            echo "Found failed-song playlist: $file"
+          done < <(find "$HOME" "$RUNNER_TEMP" "$GITHUB_WORKSPACE" -type f -iname 'failed-*.m3u' -print 2>/dev/null | sort -u)
+          if [ "$found" -eq 0 ]; then
+            echo "No OneTagger failed-song playlists found."
+          fi
+
+      - name: Upload OneTagger failed-song playlists
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: onetagger-failed-songs-${{ github.run_id }}
+          path: ${{ runner.temp }}/onetagger-failures
+          if-no-files-found: ignore
+          retention-days: 30
+
       - name: Diagnostic state summary
         if: always()
         run: |
