@@ -187,6 +187,24 @@ The workflow expects:
 
 No OpenAI or Spotify credential is required.
 
+## Google Drive backup
+
+The workflow can also copy the contents of the rolling `music-library-*` repositories into the `Music/` folder of a Google Drive account using rclone. This runs after OneTagger metadata enrichment, so the Drive copy includes metadata updates made during that run.
+
+Configure these repository secrets under **Settings → Secrets and variables → Actions**:
+
+| Secret | Value |
+| --- | --- |
+| `RCLONE_DRIVE_CLIENT_ID` | OAuth client ID from Google Cloud Console |
+| `RCLONE_DRIVE_CLIENT_SECRET` | OAuth client secret from Google Cloud Console |
+| `RCLONE_DRIVE_TOKEN` | Complete rclone OAuth token JSON, including its `refresh_token` |
+
+The existing `GIT_PAT` secret is also used to read the private music-library repositories.
+
+To create the token, configure an rclone Google Drive remote using your own OAuth client and sign in through the browser-based OAuth flow. Copy the complete `token` JSON object from the resulting `rclone.conf` into `RCLONE_DRIVE_TOKEN`. Do not put the token in the repository or workflow logs. Publish the OAuth consent app (rather than leaving it in Testing mode) to avoid Google's seven-day refresh-token expiry for testing apps. See the [rclone Google Drive guide](https://rclone.org/drive/#making-your-own-client-id).
+
+The destination is `gdrive:Music`. Each library repository is copied into that shared folder, preserving artist/album paths. This uses `rclone copy`, not `sync`: it does not delete Drive files when an album is removed from GitHub. Until all three rclone secrets are configured, the upload step safely skips itself.
+
 ## Workflow
 
 The main workflow is `.github/workflows/musicbrainz.yml`.
